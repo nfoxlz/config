@@ -1,0 +1,1 @@
+row["Real_Selling_Amount"] = (decimal)row["Selling_Amount"] * (decimal)row["Deduction_Rate"];

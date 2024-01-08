@@ -1,0 +1,1 @@
+filter= AND (Role_Barcode = :filter OR Role_Code LIKE :filter OR Role_Name LIKE '%' || :filter || '%' OR Role_Mnemonic_Code LIKE '%' || :filter || '%')

@@ -1,0 +1,2 @@
+INSERT INTO Customer (Customer_Code, Customer_Name, Customer_Mnemonic_Code, Customer_Barcode, Customer_Description, Tenant_Id, Address, Tel_No, Taxpayer_Id_No, Bank, Account_No, Credit_Volume, Credit_Period, Creator_User_Id, Last_Modifier_User_Id, Comment)
+    VALUES (:Customer_Code, :Customer_Name, :Customer_Mnemonic_Code, :Customer_Barcode, :Customer_Description, :tenant, :Address, :Tel_No, :Taxpayer_Id_No, :Bank, :Account_No, :Credit_Volume, :Credit_Period, :user, :user, :Comment)

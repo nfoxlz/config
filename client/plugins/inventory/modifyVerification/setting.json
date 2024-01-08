@@ -1,0 +1,44 @@
+{
+	"Title": "盘点",
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"InvisibleColumns": {
+		"master_1": [
+			"Piece"
+		]
+	},
+	"EditableColumns": {
+		"master_1": [
+			"Quantity",
+			"Unit",
+			"Packing_Size",
+			"Piece",
+			"Comment"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Bill_Code",
+			"Wareroom_Id"
+		]
+	},
+	"SaveColumns": {
+		"Master": [
+			"Bill_Id",
+			"Manual_Code",
+			"Department_Id",
+			"Owner_Id",
+			"Comment"
+		],
+		"Detail": [
+			"Bill_Detail_Id",
+			"Quantity",
+			"Unit",
+			"Packing_Size",
+			"Piece",
+			"Comment"
+		]
+	}
+}

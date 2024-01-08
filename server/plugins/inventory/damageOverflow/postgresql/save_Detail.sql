@@ -1,0 +1,2 @@
+INSERT INTO Damage_Overflow_Bill_Detail (Bill_Id, Sn, Material_Id, Quantity, Unit, Packing_Size, Piece, Retail_Amount, Cost_Amount, Comment)
+	VALUES (CURRVAL('damage_overflow_bill_bill_id_seq'::regclass), :Sn, :Material_Id, :Quantity, :Unit, :Packing_Size, :Piece, :Retail_Amount::NUMERIC::MONEY, Reducing_Inventory_Detail(:tenant, :Material_Id, :Quantity * :Packing_Size), :Comment)

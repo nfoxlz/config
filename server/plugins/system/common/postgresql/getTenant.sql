@@ -1,0 +1,1 @@
+SELECT * FROM Tenant WHERE Tenant_Id = :id AND NOT Is_Deleted AND Is_Active

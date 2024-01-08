@@ -1,0 +1,2 @@
+INSERT INTO Wareroom (Wareroom_Code, Wareroom_Name, Wareroom_Mnemonic_Code, Wareroom_Barcode, Wareroom_Description, Tenant_Id, Creator_User_Id, Last_Modifier_User_Id, Comment)
+    VALUES (:Wareroom_Code, :Wareroom_Name, :Wareroom_Mnemonic_Code, :Wareroom_Barcode, :Wareroom_Description, :tenant, :user, :user, :Comment)

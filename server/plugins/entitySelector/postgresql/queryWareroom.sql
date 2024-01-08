@@ -1,0 +1,1 @@
+SELECT * FROM Wareroom WHERE Tenant_Id = :tenant AND NOT Is_Deleted AND Is_Active{filter} ORDER BY Wareroom_Code OFFSET :begin_No LIMIT :page_Size

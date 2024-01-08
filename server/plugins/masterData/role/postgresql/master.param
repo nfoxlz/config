@@ -1,0 +1,4 @@
+Code= AND Role_Code LIKE :Code || '%'
+Name= AND Role_Name LIKE '%' || :Name || '%'
+Mnemonic_Code= AND Role_Mnemonic_Code LIKE '%' || :Mnemonic_Code || '%'
+Barcode= AND Role_Barcode = :Barcode

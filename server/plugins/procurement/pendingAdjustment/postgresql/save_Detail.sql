@@ -1,0 +1,2 @@
+INSERT INTO Procurement_Pending_Adjustment_Bill_Detail (Bill_Id, Sn, Material_Id, Purchasing_Amount, Input_Tax_Rate, Comment)
+	VALUES (CURRVAL('procurement_pending_adjustment_bill_bill_id_seq'::regclass), :Sn, :Material_Id, :Amount::NUMERIC::MONEY, :Input_Tax_Rate, :Comment)

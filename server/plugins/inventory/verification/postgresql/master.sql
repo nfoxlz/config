@@ -1,0 +1,15 @@
+SELECT B.Bill_Id,
+		B.Bill_Code,
+		B.Manual_Code,
+		B.Bill_Date,
+		D.Department_Name,
+		P.Person_Name Owner_Name
+	FROM Inventory_Verification_Bill B
+		LEFT JOIN Department D ON B.Department_Id = D.Department_Id
+		LEFT JOIN Person P ON B.Owner_Id = P.Person_Id
+	WHERE B.Wareroom_Id = :Wareroom_Id
+		{Department_Id}
+		{Owner_Id}
+		{Begin_Bill_Date}
+		{End_Bill_Date}
+	ORDER BY B.Bill_Date, B.Creation_Date_Time

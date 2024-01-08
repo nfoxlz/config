@@ -1,0 +1,80 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Supplier_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id",
+		"Material_Code",
+		"Payment_Mode"
+	],
+	"ConditionDataColumnSettings": [
+		{
+			"ColumnName": "End_Bill_Date",
+			"DefaultSystemValue": 3
+		}
+	],
+	"ConditionRequiredColumns": [
+		"Supplier_Id"
+	],
+	"QueryConditionExcludedColumns": [
+		"Payment_Mode"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"AdditionalDataColumns": {
+		"master": [
+			"Propayment_Amount",
+			"Discount_Payment_Amount",
+			"Residual_Payment_Amount"
+		]
+	},
+	"ColumnDisplayIndexes": {
+		"master": {
+			"Propayment_Amount": 19,
+			"Discount_Payment_Amount": 20,
+			"Residual_Payment_Amount": 21		
+		}
+	},
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Bill_Type",
+			"Sn",
+			"Input_Tax_Rate",
+			"Tax_Amount"		]
+	},
+	"EditableColumns": {
+		"master": [
+			"Propayment_Amount",
+			"Discount_Payment_Amount"
+		]
+	},
+	"ColumnVerifyScriptFileNames": {
+		"master": {
+			"Propayment_Amount": "master_Propayment_Amount.cs",
+			"Discount_Payment_Amount": "master_Discount_Payment_Amount.cs"
+		}
+	},
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Supplier_Id",
+		"Payment_Mode"
+	],
+	"SaveColumns": {
+		"master": [
+			"Bill_Type",
+			"Bill_Detail_Id",
+			"Department_Id",
+			"Owner_Id",
+			"Material_Id",
+			"Propayment_Amount",
+			"Discount_Payment_Amount",
+			"Version",
+			"Comment"
+		]
+	}
+}

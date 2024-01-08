@@ -1,0 +1,6 @@
+row["Purchasing_Amount"] = (decimal)row["Purchasing_Price"] * (decimal)row["Purchasing_Quantity"];
+row["Untaxed_Amount"] = Math.Round((decimal)row["Purchasing_Amount"] / (1 + (decimal)row["Input_Tax_Rate"]), 2);
+row["Tax_Amount"] = (decimal)row["Purchasing_Amount"] - (decimal)row["Untaxed_Amount"];
+row["Untaxed_Price"] = Math.Round((decimal)row["Untaxed_Amount"] / (decimal)row["Purchasing_Quantity"], 2);
+row["Purchasing_Real_Amount"] = (decimal)row["Purchasing_Amount"] * (decimal)row["Deduction_Rate"];
+row["Retail_Amount"] = (decimal)row["Retail_Price"] * (decimal)row["Purchasing_Quantity"] * (long)row["Purchasing_Packing_Size"] / (long)row["Retail_Packing_Size"];

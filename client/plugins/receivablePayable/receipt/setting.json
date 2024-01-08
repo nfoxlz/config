@@ -1,0 +1,80 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Client_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id",
+		"Material_Code",
+		"Payment_Mode"
+	],
+	"ConditionDataColumnSettings": [
+		{
+			"ColumnName": "End_Bill_Date",
+			"DefaultSystemValue": 3
+		}
+	],
+	"ConditionRequiredColumns": [
+		"Client_Id"
+	],
+	"QueryConditionExcludedColumns": [
+		"Payment_Mode"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"AdditionalDataColumns": {
+		"master": [
+			"Proreceipt_Amount",
+			"Discount_Receipt_Amount",
+			"Residual_Receipt_Amount"
+		]
+	},
+	"ColumnDisplayIndexes": {
+		"master": {
+			"Proreceipt_Amount": 19,
+			"Discount_Receipt_Amount": 20,
+			"Residual_Receipt_Amount": 21		
+		}
+	},
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Bill_Type",
+			"Sn",
+			"Input_Tax_Rate",
+			"Tax_Amount"		]
+	},
+	"EditableColumns": {
+		"master": [
+			"Proreceipt_Amount",
+			"Discount_Receipt_Amount"
+		]
+	},
+	"ColumnVerifyScriptFileNames": {
+		"master": {
+			"Proreceipt_Amount": "master_Proreceipt_Amount.cs",
+			"Discount_Receipt_Amount": "master_Discount_Receipt_Amount.cs"
+		}
+	},
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Client_Id",
+		"Payment_Mode"
+	],
+	"SaveColumns": {
+		"master": [
+			"Bill_Type",
+			"Bill_Detail_Id",
+			"Department_Id",
+			"Owner_Id",
+			"Material_Id",
+			"Proreceipt_Amount",
+			"Discount_Receipt_Amount",
+			"Version",
+			"Comment"
+		]
+	}
+}

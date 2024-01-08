@@ -1,0 +1,1 @@
+UPDATE Serial_No_Info SET Serial_No = :serial_No WHERE Tenant_Id = :tenant AND Serial_Setting_No = :no AND Period = :period

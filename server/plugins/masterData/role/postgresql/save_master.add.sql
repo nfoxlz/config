@@ -1,0 +1,2 @@
+INSERT INTO Role (Role_Code, Role_Name, Role_Mnemonic_Code, Role_Barcode, Role_Description, Tenant_Id, Creator_User_Id, Last_Modifier_User_Id, Comment)
+    VALUES (:Role_Code, :Role_Name, :Role_Mnemonic_Code, :Role_Barcode, :Role_Description, :tenant, :user, :user, :Comment)

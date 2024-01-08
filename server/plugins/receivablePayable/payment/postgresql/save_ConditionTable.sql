@@ -1,0 +1,1 @@
+INSERT INTO AP_Payment_Bill (Tenant_Id, Bill_Code, Supplier_Id, Payment_Mode, Creator_User_Id) VALUES (:tenant, :new_Bill_Code, :Supplier_Id, :Payment_Mode, :user)

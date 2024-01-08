@@ -1,0 +1,1 @@
+SELECT Wareroom_Id Outbound_Wareroom_Id, Wareroom_Code Outbound_Wareroom_Code, Wareroom_Name Outbound_Wareroom_Name, Wareroom_Barcode Outbound_Wareroom_Barcode, Wareroom_Description Outbound_Wareroom_Description FROM Wareroom WHERE Wareroom_Id = :id AND Tenant_Id = :tenant AND NOT Is_Deleted AND Is_Active

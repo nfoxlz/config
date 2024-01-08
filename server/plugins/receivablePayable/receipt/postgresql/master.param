@@ -1,0 +1,5 @@
+Begin_Bill_Date= AND T1.Bill_Date >= :Begin_Bill_Date
+End_Bill_Date= AND T1.Bill_Date <= :End_Bill_Date
+Department_Id= AND T1.Department_Id = :Department_Id
+Owner_Id= AND T1.Owner_Id = :Owner_Id
+Material_Code= AND T2.Material_Code LIKE :Material_Code || '%'

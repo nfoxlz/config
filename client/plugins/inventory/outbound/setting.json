@@ -1,0 +1,110 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Customer_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id",
+		"Material_Code"
+	],
+	"ConditionDataColumnSettings": [
+		{
+			"ColumnName": "End_Bill_Date",
+			"DefaultSystemValue": 3
+		}
+	],
+	"ConditionRequiredColumns": [
+		"Customer_Id"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"AdditionalDataColumns": {
+		"master": [
+			"Wareroom_Id",
+			"Wareroom_Name",
+			"Real_Outbound_Quantity",
+			"Discount_Outbound_Quantity",
+			"Residual_Outbound_Quantity",
+			"Real_Outbound_Piece",
+			"Discount_Outbound_Piece",
+			"Residual_Outbound_Piece"
+		]
+	},
+	"ColumnDisplayIndexes": {
+		"master": {
+			"Wareroom_Id": 19,
+			"Wareroom_Name": 20,
+			"Real_Outbound_Quantity": 21,
+			"Discount_Outbound_Quantity": 22,
+			"Residual_Outbound_Quantity": 25,
+			"Real_Outbound_Piece": 26,
+			"Discount_Outbound_Piece": 27,
+			"Residual_Outbound_Piece": 28			
+		}
+	},
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Bill_Type",
+			"Sn",
+			"Piece",
+			"No_Outbound_Piece",
+			"Tax_Rate",
+			"Tax_Amount",
+			"Outbound_Piece",
+			"Real_Outbound_Piece",
+			"Residual_Outbound_Piece",
+			"Discount_Outbound_Piece"
+		]
+	},
+	"EditableColumns": {
+		"master": [
+			"Wareroom_Id",
+			"Real_Outbound_Quantity",
+			"Discount_Outbound_Quantity",
+			"Outbound_Unit",
+			"Outbound_Packing_Size",
+			"Real_Outbound_Piece",
+			"Discount_Outbound_Piece"
+		]
+	},
+	"ColumnVerifyScriptFileNames": {
+		"master": {
+			"Real_Outbound_Quantity": "master_Real_Outbound_Quantity.cs",
+			"Discount_Outbound_Quantity": "master_Discount_Outbound_Quantity.cs",
+			"Outbound_Packing_Size": "master_Outbound_Packing_Size.cs",
+			"Real_Outbound_Piece": "master_Real_Outbound_Piece.cs",
+			"Discount_Outbound_Piece": "master_Discount_Outbound_Piece.cs"
+		}
+	},
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Customer_Id"
+	],
+	"SaveColumns": {
+		"master": [
+			"Bill_Type",
+			"Bill_Detail_Id",
+			"Department_Id",
+			"Owner_Id",
+			"Wareroom_Id",
+			"Material_Id",
+			"Quantity",
+			"Packing_Size",
+			"Real_Amount",
+			"Tax_Rate",
+			"Real_Outbound_Quantity",
+			"Discount_Outbound_Quantity",
+			"Outbound_Unit",
+			"Outbound_Packing_Size",
+			"Real_Outbound_Piece",
+			"Discount_Outbound_Piece",
+			"Retail_Packing_Size",
+			"Version",
+			"Comment"
+		]
+	}
+}

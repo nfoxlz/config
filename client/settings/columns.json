@@ -1,0 +1,2334 @@
+[
+	{
+		"ColumnName": "Id",
+		"Caption": "内码",
+		"Comment": "内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Code",
+		"Caption": "编码",
+		"Comment": "编码",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Name",
+		"Caption": "名称",
+		"Comment": "名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Mnemonic_Code",
+		"Caption": "助记码",
+		"Comment": "助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Barcode",
+		"Caption": "条码",
+		"Comment": "条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Description",
+		"Caption": "描述",
+		"Comment": "描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Tenant_Id",
+		"Caption": "租户",
+		"Comment": "租户内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Tenant_Code",
+		"Caption": "租户编码",
+		"Comment": "租户编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Tenant_Name",
+		"Caption": "租户名称",
+		"Comment": "租户名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Tenant_Mnemonic_Code",
+		"Caption": "租户助记码",
+		"Comment": "租户助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Tenant_Barcode",
+		"Caption": "租户条码",
+		"Comment": "租户条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Tenant_Description",
+		"Caption": "租户描述",
+		"Comment": "租户描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Db_Server_Name",
+		"Caption": "数据库服务器名称",
+		"Comment": "数据库服务器名称",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Read_Only_Db_Server_Name",
+		"Caption": "只读数据库服务器名称",
+		"Comment": "只读数据库服务器名称",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Is_Deleted",
+		"Caption": "删除标记",
+		"Comment": "删除标记",
+		"DefaultValue": "false",
+		"IsVisible": false,
+		"DbDataType": 3,
+		"DbPhysicalType": "BOOL"
+	},
+	{
+		"ColumnName": "Is_Active",
+		"Caption": "活动标记",
+		"Comment": "活动标记",
+		"DefaultValue": "true",
+		"IsVisible": false,
+		"DbDataType": 3,
+		"DbPhysicalType": "BOOL"
+	},
+	{
+		"ColumnName": "Creator_User_Id",
+		"Caption": "创建人",
+		"Comment": "创建人内码",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Creation_Date_Time",
+		"Caption": "创建日期时间",
+		"Comment": "创建日期时间",
+		"IsReadOnly": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Last_Modifier_User_Id",
+		"Caption": "最后修改人",
+		"Comment": "最后修改人",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Last_Modification_DateTime",
+		"Caption": "最后修改日期时间",
+		"Comment": "最后修改日期时间",
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Deleter_User_Id",
+		"Caption": "删除人",
+		"Comment": "删除人",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Deletion_Date_Time",
+		"Caption": "删除日期时间",
+		"Comment": "删除日期时间",
+		"IsVisible": false,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "Version",
+		"Caption": "版本",
+		"Comment": "版本",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Comment",
+		"Caption": "备注",
+		"Comment": "备注",
+		"DbDataType": 16,
+		"DbPhysicalType": "TEXT"
+	},
+	{
+		"ColumnName": "Entity_Id",
+		"Caption": "实体",
+		"Comment": "实体内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Entity_Code",
+		"Caption": "实体编码",
+		"Comment": "实体编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Entity_Name",
+		"Caption": "实体名称",
+		"Comment": "实体名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Entity_Mnemonic_Code",
+		"Caption": "实体助记码",
+		"Comment": "实体助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Entity_Barcode",
+		"Caption": "实体条码",
+		"Comment": "实体条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Entity_Description",
+		"Caption": "实体描述",
+		"Comment": "实体描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Last_Modification_Date_Time",
+		"Caption": "最后修改日期时间",
+		"Comment": "最后修改日期时间",
+		"IsReadOnly": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Person_Id",
+		"Caption": "人员",
+		"Comment": "人员内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Person_Code",
+		"Caption": "人员编码",
+		"Comment": "人员编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Person_Name",
+		"Caption": "人员名称",
+		"Comment": "人员名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Person_Mnemonic_Code",
+		"Caption": "人员助记码",
+		"Comment": "人员助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Person_Barcode",
+		"Caption": "人员条码",
+		"Comment": "人员条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Person_Description",
+		"Caption": "人员描述",
+		"Comment": "人员描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Department_Id",
+		"Caption": "部门",
+		"Comment": "部门内码",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Role_Id",
+		"Caption": "角色",
+		"Comment": "角色内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "User_Password",
+		"Caption": "口令",
+		"Comment": "口令",
+		"MaxLength": 44,
+		"IsVisible": false,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(44)"
+	},
+	{
+		"ColumnName": "Postion",
+		"Caption": "岗位",
+		"Comment": "岗位",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Role_Code",
+		"Caption": "角色编码",
+		"Comment": "角色编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Role_Name",
+		"Caption": "角色名称",
+		"Comment": "角色名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Role_Mnemonic_Code",
+		"Caption": "角色助记码",
+		"Comment": "角色助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Role_Barcode",
+		"Caption": "角色条码",
+		"Comment": "角色条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Role_Description",
+		"Caption": "角色描述",
+		"Comment": "角色描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Application",
+		"Caption": "应用",
+		"Comment": "应用",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Client_Side",
+		"Caption": "客户端",
+		"Comment": "客户端",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Menu_No",
+		"Caption": "菜单编号",
+		"Comment": "菜单编号",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Parent_Menu_No",
+		"Caption": "父菜单编号",
+		"Comment": "父菜单编号",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Sn",
+		"Caption": "序号",
+		"Comment": "序号",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Display_Name",
+		"Caption": "显示名",
+		"Comment": "显示名",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Tooltip",
+		"Caption": "提示",
+		"Comment": "提示",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Plugin_No",
+		"Caption": "插件编号",
+		"Comment": "插件编号",
+		"MaxLength": 8,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Plugin_Setting",
+		"Caption": "插件配置",
+		"Comment": "插件配置",
+		"MaxLength": 260,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(260)"
+	},
+	{
+		"ColumnName": "Plugin_Parameter",
+		"Caption": "插件参数",
+		"Comment": "插件参数",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Authorition",
+		"Caption": "内部权限",
+		"Comment": "内部权限",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "-1",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Bill_Id",
+		"Caption": "单据",
+		"Comment": "单据内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Bill_Code",
+		"Caption": "单据编号",
+		"Comment": "单据编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Manual_Code",
+		"Caption": "手工编号",
+		"Comment": "手工编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Bill_Date",
+		"Caption": "单据日期",
+		"Comment": "单据日期",
+		"IsReadOnly": true,
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 4
+	},
+	{
+		"ColumnName": "Begin_Bill_Date",
+		"Caption": "起始单据日期",
+		"Comment": "起始单据日期",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE"
+	},
+	{
+		"ColumnName": "End_Bill_Date",
+		"Caption": "终止单据日期",
+		"Comment": "终止单据日期",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE"
+	},
+	{
+		"ColumnName": "Owner_Id",
+		"Caption": "业务员",
+		"Comment": "业务员内码",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Bill_State",
+		"Caption": "单据状态",
+		"Comment": "删除标记",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "CreatorUserId",
+		"Caption": "创建人内码",
+		"Comment": "创建人内码",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "CreationDateTime",
+		"Caption": "创建日期时间",
+		"Comment": "创建日期时间",
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "LastModifierUserId",
+		"Caption": "最后修改人",
+		"Comment": "最后修改人",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "LastModificationDateTime",
+		"Caption": "最后修改日期时间",
+		"Comment": "最后修改日期时间",
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Department_Code",
+		"Caption": "部门编码",
+		"Comment": "部门编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Department_Name",
+		"Caption": "部门名称",
+		"Comment": "部门名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Department_Mnemonic_Code",
+		"Caption": "部门助记码",
+		"Comment": "部门助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Department_Barcode",
+		"Caption": "部门条码",
+		"Comment": "部门条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Department_Description",
+		"Caption": "部门描述",
+		"Comment": "部门描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Bill_Detail_Id",
+		"Caption": "单据明细",
+		"Comment": "单据明细内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Supplier_Id",
+		"Caption": "供应商",
+		"Comment": "供应商内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Material_Id",
+		"Caption": "商品",
+		"Comment": "商品内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Purchasing_Quantity",
+		"Caption": "采购数量",
+		"Comment": "采购数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Purchasing_Packing_Size",
+		"Caption": "采购包装规格",
+		"Comment": "采购包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Purchasing_Piece",
+		"Caption": "采购件数",
+		"Comment": "采购件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Purchasing_Amount",
+		"Caption": "采购金额",
+		"Comment": "采购金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Purchasing_Amount",
+		"Caption": "采购实际金额",
+		"Comment": "采购实际金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Untaxed_Amount",
+		"Caption": "无税金额",
+		"Comment": "无税金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Tax_Amount",
+		"Caption": "税额",
+		"Comment": "税额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Deduction_Rate",
+		"Caption": "扣率",
+		"Comment": "扣率",
+		"MaxLength": 5,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"Precision": 4,
+		"MaxValue": 1,
+		"MinValue": 0,
+		"Format": "P1",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(5,4)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Input_Tax_Rate",
+		"Caption": "进项税率",
+		"Comment": "进项税率",
+		"MaxLength": 5,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 4,
+		"MinValue": 0,
+		"Format": "P1",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(5,4)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Retail_Amount",
+		"Caption": "零售金额",
+		"Comment": "零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Supplier_Code",
+		"Caption": "供应商编码",
+		"Comment": "供应商编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Supplier_Name",
+		"Caption": "供应商名称",
+		"Comment": "供应商名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Supplier_Mnemonic_Code",
+		"Caption": "供应商助记码",
+		"Comment": "供应商助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Supplier_Barcode",
+		"Caption": "供应商条码",
+		"Comment": "供应商条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Supplier_Description",
+		"Caption": "供应商描述",
+		"Comment": "供应商描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Address",
+		"Caption": "地址",
+		"Comment": "地址",
+		"MaxLength": 100,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(100)"
+	},
+	{
+		"ColumnName": "Tel_No",
+		"Caption": "电话",
+		"Comment": "电话",
+		"MaxLength": 15,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(15)"
+	},
+	{
+		"ColumnName": "Taxpayer_Id_No",
+		"Caption": "纳税人识别号",
+		"Comment": "纳税人识别号",
+		"MaxLength": 18,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(18)"
+	},
+	{
+		"ColumnName": "Bank",
+		"Caption": "开户行",
+		"Comment": "开户行",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Account_No",
+		"Caption": "账号",
+		"Comment": "账号",
+		"MaxLength": 19,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(19)"
+	},
+	{
+		"ColumnName": "Credit_Volume",
+		"Caption": "信贷额",
+		"Comment": "信贷额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "-1",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Credit_Period",
+		"Caption": "信贷期",
+		"Comment": "信贷期",
+		"MaxLength": 4,
+		"AllowDBNull": false,
+		"DefaultValue": "-1",
+		"IsRequired": true,
+		"DbDataType": 11,
+		"DbPhysicalType": "INT4"
+	},
+	{
+		"ColumnName": "Wareroom_Id",
+		"Caption": "仓库",
+		"Comment": "仓库",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Wareroom_Code",
+		"Caption": "仓库编码",
+		"Comment": "仓库编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Wareroom_Name",
+		"Caption": "仓库名称",
+		"Comment": "仓库名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Wareroom_Mnemonic_Code",
+		"Caption": "仓库助记码",
+		"Comment": "仓库助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Wareroom_Barcode",
+		"Caption": "仓库条码",
+		"Comment": "仓库条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Wareroom_Description",
+		"Caption": "仓库描述",
+		"Comment": "仓库描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Serial_Setting_No",
+		"Caption": "序列号配置编号",
+		"Comment": "序列号配置编号",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Period",
+		"Caption": "周期",
+		"Comment": "周期",
+		"MaxLength": 4,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 11,
+		"DbPhysicalType": "INT4"
+	},
+	{
+		"ColumnName": "Serial_No",
+		"Caption": "序列号",
+		"Comment": "序列号",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Enum_Name",
+		"Caption": "枚举名称",
+		"Comment": "枚举名称",
+		"MaxLength": 17,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(17)"
+	},
+	{
+		"ColumnName": "Enum_Value",
+		"Caption": "枚举值",
+		"Comment": "枚举值",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Enum_Display_Name",
+		"Caption": "枚举显示名",
+		"Comment": "枚举显示名",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Material_Code",
+		"Caption": "商品编码",
+		"Comment": "商品编码",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Material_Name",
+		"Caption": "商品名称",
+		"Comment": "商品名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Material_Mnemonic_Code",
+		"Caption": "商品助记码",
+		"Comment": "商品助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Material_Barcode",
+		"Caption": "商品条码",
+		"Comment": "商品条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Material_Description",
+		"Caption": "商品描述",
+		"Comment": "商品描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Specification",
+		"Caption": "规格型号",
+		"Comment": "规格型号",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Origin",
+		"Caption": "产地",
+		"Comment": "产地",
+		"MaxLength": 20,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(20)"
+	},
+	{
+		"ColumnName": "Trademark",
+		"Caption": "商标",
+		"Comment": "商标",
+		"MaxLength": 20,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(20)"
+	},
+	{
+		"ColumnName": "Approval_No",
+		"Caption": "批准文号",
+		"Comment": "批准文号",
+		"MaxLength": 20,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(20)"
+	},
+	{
+		"ColumnName": "Purchasing_Price",
+		"Caption": "进价",
+		"Comment": "进价",
+		"MaxLength": 13,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(13,2)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Untaxed_Price",
+		"Caption": "无税价",
+		"Comment": "无税价",
+		"MaxLength": 17,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 6,
+		"MinValue": 0,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(17,6)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Purchasing_Unit",
+		"Caption": "采购单位",
+		"Comment": "采购单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Selling_Price",
+		"Caption": "售价",
+		"Comment": "售价",
+		"MaxLength": 13,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(13,2)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Selling_Unit",
+		"Caption": "销售单位",
+		"Comment": "销售单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Selling_Packing_Size",
+		"Caption": "销售包装规格",
+		"Comment": "销售包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Retail_Price",
+		"Caption": "零售价",
+		"Comment": "零售价",
+		"MaxLength": 13,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(13,2)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Retail_Unit",
+		"Caption": "零售单位",
+		"Comment": "零售单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Retail_Packing_Size",
+		"Caption": "零售包装规格",
+		"Comment": "零售包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Output_Tax_Rate",
+		"Caption": "销项税率",
+		"Comment": "销项税率",
+		"MaxLength": 5,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 4,
+		"MinValue": 0,
+		"Format": "P1",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(5,4)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "Cost_Accounting_Method",
+		"Caption": "成本核算方法",
+		"Comment": "成本核算方法",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Inventory_Quantity",
+		"Caption": "库存数量",
+		"Comment": "库存数量",
+		"MaxLength": 18,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Inventory_Piece",
+		"Caption": "库存件数",
+		"Comment": "库存件数",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Inventory_Cost",
+		"Caption": "库存成本",
+		"Comment": "库存成本",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Inventory_Retail_Amount",
+		"Caption": "库存零售金额",
+		"Comment": "库存零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Available_Inventory_Quantity",
+		"Caption": "可用库存数量",
+		"Comment": "可用库存数量",
+		"MaxLength": 18,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Available_Inventory_Piece",
+		"Caption": "可用库存件数",
+		"Comment": "可用库存件数",
+		"MaxLength": 8,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Inventory_Ceiling",
+		"Caption": "库存上限",
+		"Comment": "库存上限",
+		"MaxLength": 18,
+		"DefaultValue": "-1",
+		"IsReadOnly": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Inventory_Floor",
+		"Caption": "库存下限",
+		"Comment": "库存下限",
+		"MaxLength": 18,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Id",
+		"Caption": "内码",
+		"Comment": "创建日期时间",
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL"
+	},
+	{
+		"ColumnName": "Inventory_Quantity",
+		"Caption": "库存数量",
+		"Comment": "库存数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Inventory_Amount",
+		"Caption": "库存金额",
+		"Comment": "库存金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Bill_Type",
+		"Caption": "单据类型",
+		"Comment": "单据类型",
+		"MaxLength": 5,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 18,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Supply_Marketing_Id",
+		"Caption": "供销单位",
+		"Comment": "供销单位",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "In_Quantity",
+		"Caption": "入库数量",
+		"Comment": "入库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "In_Packing_Size",
+		"Caption": "入库包装规格",
+		"Comment": "入库包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "In_Piece",
+		"Caption": "入库件数",
+		"Comment": "入库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "In_Amount",
+		"Caption": "入库金额",
+		"Comment": "入库金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "In_Retail_Amount",
+		"Caption": "入库零售金额",
+		"Comment": "入库零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Out_Quantity",
+		"Caption": "出库数量",
+		"Comment": "出库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Out_Packing_Size",
+		"Caption": "出库包装规格",
+		"Comment": "出库包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Out_Piece",
+		"Caption": "出库件数",
+		"Comment": "出库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Out_Amount",
+		"Caption": "出库金额",
+		"Comment": "出库金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Out_Retail_Amount",
+		"Caption": "出库零售金额",
+		"Comment": "出库零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Sequence_No",
+		"Caption": "序列编号",
+		"Comment": null,
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Sequence_Name",
+		"Caption": "序列名称",
+		"Comment": null,
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "周期",
+		"Caption": "周期",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Id",
+		"Caption": "操作员内码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Code",
+		"Caption": "操作员编码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Name",
+		"Caption": "操作员名称",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Mnemonic_Code",
+		"Caption": "操作员助记码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Barcode",
+		"Caption": "操作员条码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Operator_Description",
+		"Caption": "操作员描述",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Owner_Code",
+		"Caption": "业务员编码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Owner_Name",
+		"Caption": "业务员名称",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Owner_Mnemonic_Code",
+		"Caption": "业务员助记码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Owner_Barcode",
+		"Caption": "业务员条码",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Owner_Description",
+		"Caption": "业务员描述",
+		"Comment": null,
+		"DbDataType": 16,
+		"DbPhysicalType": null
+	},
+	{
+		"ColumnName": "Quantity",
+		"Caption": "数量",
+		"Comment": "数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Unit",
+		"Caption": "单位",
+		"Comment": "单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Packing_Size",
+		"Caption": "包装规格",
+		"Comment": "包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"TargetNullValue": null,
+		"ErrorText": "【{0}】不能小于1。",
+		"Control": 0,
+		"Parameters": null
+	},
+	{
+		"ColumnName": "Piece",
+		"Caption": "件数",
+		"Comment": "件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Amount",
+		"Caption": "金额",
+		"Comment": "金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Amount",
+		"Caption": "实际金额",
+		"Comment": "金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Tax_Rate",
+		"Caption": "税率",
+		"Comment": "税率",
+		"MaxLength": 5,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 4,
+		"MinValue": 0,
+		"Format": "P1",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(5,4)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "No_Inbound_Quantity",
+		"Caption": "未入库数量",
+		"Comment": "未入库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "No_Inbound_Piece",
+		"Caption": "未入库件数",
+		"Comment": "未入库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Inbound_Unit",
+		"Caption": "入库单位",
+		"Comment": "入库单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Inbound_Packing_Size",
+		"Caption": "入库包装规格",
+		"Comment": "入库包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Inbound_Quantity",
+		"Caption": "入库数量",
+		"Comment": "入库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Real_Inbound_Quantity",
+		"Caption": "实际入库数量",
+		"Comment": "实际入库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Discount_Inbound_Quantity",
+		"Caption": "折扣入库数量",
+		"Comment": "折扣入库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Residual_Inbound_Quantity",
+		"Caption": "剩余入库数量",
+		"Comment": "剩余入库数量",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)",
+		"Expression": "No_Inbound_Quantity - (Real_Inbound_Quantity + Discount_Inbound_Quantity) * Inbound_Packing_Size"
+	},
+	{
+		"ColumnName": "Inbound_Piece",
+		"Caption": "入库件数",
+		"Comment": "入库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Real_Inbound_Piece",
+		"Caption": "实际入库件数",
+		"Comment": "实际入库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Discount_Inbound_Piece",
+		"Caption": "折扣入库件数",
+		"Comment": "折扣入库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Residual_Inbound_Piece",
+		"Caption": "剩余入库件数",
+		"Comment": "剩余入库件数",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"Expression": "No_Inbound_Piece - Real_Inbound_Piece - Discount_Inbound_Piece"
+	},
+	{
+		"ColumnName": "Payment_Amount",
+		"Caption": "支付金额",
+		"Comment": "支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Payment_Amount",
+		"Caption": "实际支付金额",
+		"Comment": "实际支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "No_Payment_Amount",
+		"Caption": "未支付金额",
+		"Comment": "未支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Propayment_Amount",
+		"Caption": "预支付金额",
+		"Comment": "预支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Discount_Payment_Amount",
+		"Caption": "折扣支付金额",
+		"Comment": "折扣支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Residual_Payment_Amount",
+		"Caption": "剩余支付金额",
+		"Comment": "剩余支付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY",
+		"Expression": "No_Payment_Amount - Propayment_Amount - Discount_Payment_Amount"
+	},
+	{
+		"ColumnName": "Payment_Mode",
+		"Caption": "支付方式",
+		"Comment": "支付方式",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Customer_Id",
+		"Caption": "客户",
+		"Comment": "客户内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Customer_Code",
+		"Caption": "客户编码",
+		"Comment": "客户编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Customer_Name",
+		"Caption": "客户名称",
+		"Comment": "客户名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Customer_Mnemonic_Code",
+		"Caption": "客户助记码",
+		"Comment": "客户助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Customer_Barcode",
+		"Caption": "客户条码",
+		"Comment": "客户条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Customer_Description",
+		"Caption": "客户描述",
+		"Comment": "客户描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Selling_Quantity",
+		"Caption": "销售数量",
+		"Comment": "销售数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Selling_Piece",
+		"Caption": "销售件数",
+		"Comment": "销售件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Selling_Amount",
+		"Caption": "销售金额",
+		"Comment": "销售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Selling_Amount",
+		"Caption": "销售实际金额",
+		"Comment": "销售实际金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Last_Purchasing_Price",
+		"Caption": "最后进价",
+		"Comment": "最后进价",
+		"MaxLength": 13,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(13,2)",
+		"Regex": "^\\d\u002B(\\.\\d\u002B)?$",
+		"ErrorText": "【{0}】不能为负数。"
+	},
+	{
+		"ColumnName": "No_Outbound_Quantity",
+		"Caption": "未出库数量",
+		"Comment": "未出库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "No_Outbound_Piece",
+		"Caption": "未出库件数",
+		"Comment": "未出库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Outbound_Unit",
+		"Caption": "出库单位",
+		"Comment": "出库单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Outbound_Packing_Size",
+		"Caption": "出库包装规格",
+		"Comment": "出库包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
+	},
+	{
+		"ColumnName": "Outbound_Quantity",
+		"Caption": "出库数量",
+		"Comment": "出库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Real_Outbound_Quantity",
+		"Caption": "实际出库数量",
+		"Comment": "实际出库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Discount_Outbound_Quantity",
+		"Caption": "折扣出库数量",
+		"Comment": "折扣出库数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Residual_Outbound_Quantity",
+		"Caption": "剩余出库数量",
+		"Comment": "剩余出库数量",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)",
+		"Expression": "No_Outbound_Quantity - (Real_Outbound_Quantity + Discount_Outbound_Quantity) * Outbound_Packing_Size"
+	},
+	{
+		"ColumnName": "Outbound_Piece",
+		"Caption": "出库件数",
+		"Comment": "出库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Real_Outbound_Piece",
+		"Caption": "实际出库件数",
+		"Comment": "实际出库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Discount_Outbound_Piece",
+		"Caption": "折扣出库件数",
+		"Comment": "折扣出库件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Residual_Outbound_Piece",
+		"Caption": "剩余出库件数",
+		"Comment": "剩余出库件数",
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"Expression": "No_Outbound_Piece - Real_Outbound_Piece - Discount_Outbound_Piece"
+	},
+	{
+		"ColumnName": "Receipt_Amount",
+		"Caption": "收入金额",
+		"Comment": "收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Receipt_Amount",
+		"Caption": "实际收入金额",
+		"Comment": "实际收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "No_Receipt_Amount",
+		"Caption": "未收入金额",
+		"Comment": "未收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Proreceipt_Amount",
+		"Caption": "预收入金额",
+		"Comment": "预收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Discount_Receipt_Amount",
+		"Caption": "折扣收入金额",
+		"Comment": "折扣收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"MinValue": 0,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Residual_Receipt_Amount",
+		"Caption": "剩余收入金额",
+		"Comment": "剩余收入金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY",
+		"Expression": "No_Receipt_Amount - Proreceipt_Amount - Discount_Receipt_Amount"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Id",
+		"Caption": "出库仓库",
+		"Comment": "出库仓库",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Code",
+		"Caption": "出库仓库编码",
+		"Comment": "出库仓库编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Name",
+		"Caption": "出库仓库名称",
+		"Comment": "出库仓库名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Mnemonic_Code",
+		"Caption": "出库仓库助记码",
+		"Comment": "出库仓库助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Barcode",
+		"Caption": "出库仓库条码",
+		"Comment": "出库仓库条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Outbound_Wareroom_Description",
+		"Caption": "出库仓库描述",
+		"Comment": "出库仓库描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Id",
+		"Caption": "入库仓库",
+		"Comment": "入库仓库",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Code",
+		"Caption": "入库仓库编码",
+		"Comment": "入库仓库编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Name",
+		"Caption": "入库仓库名称",
+		"Comment": "入库仓库名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Mnemonic_Code",
+		"Caption": "入库仓库助记码",
+		"Comment": "入库仓库助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Barcode",
+		"Caption": "入库仓库条码",
+		"Comment": "入库仓库条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Inbound_Wareroom_Description",
+		"Caption": "入库仓库描述",
+		"Comment": "入库仓库描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	}
+]

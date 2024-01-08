@@ -1,0 +1,108 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Outbound_Wareroom_Id",
+		"Inbound_Wareroom_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id",
+		"Material_Code"
+	],
+	"ConditionDataColumnSettings": [
+		{
+			"ColumnName": "End_Bill_Date",
+			"DefaultSystemValue": 3
+		}
+	],
+	"ConditionRequiredColumns": [
+		"Outbound_Wareroom_Id",
+		"Inbound_Wareroom_Id"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"AdditionalDataColumns": {
+		"master": [
+			"Real_Inbound_Quantity",
+			"Discount_Inbound_Quantity",
+			"Residual_Inbound_Quantity",
+			"Real_Inbound_Piece",
+			"Discount_Inbound_Piece",
+			"Residual_Inbound_Piece"
+		]
+	},
+	"ColumnDisplayIndexes": {
+		"master": {
+			"Real_Inbound_Quantity": 16,
+			"Discount_Inbound_Quantity": 17,
+			"Residual_Inbound_Quantity": 18,
+			"Real_Inbound_Piece": 21,
+			"Discount_Inbound_Piece": 22,
+			"Residual_Inbound_Piece": 23			
+		}
+	},
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Bill_Type",
+			"Sn",
+			"Piece",
+			"No_Inbound_Piece",
+			"Inbound_Piece",
+			"Real_Inbound_Piece",
+			"Residual_Inbound_Piece",
+			"Discount_Inbound_Piece"
+		]
+	},
+	"EditableColumns": {
+		"master": [
+			"Wareroom_Id",
+			"Real_Inbound_Quantity",
+			"Discount_Inbound_Quantity",
+			"Inbound_Unit",
+			"Inbound_Packing_Size",
+			"Real_Inbound_Piece",
+			"Discount_Inbound_Piece"
+		]
+	},
+	"ConditionVerifyScriptFileNames": {
+		"Outbound_Wareroom_Id": "Condition_Outbound_Wareroom_Id.cs",
+		"Inbound_Wareroom_Id": "Condition_Inbound_Wareroom_Id.cs"
+	},
+	"ColumnVerifyScriptFileNames": {
+		"master": {
+			"Real_Inbound_Quantity": "master_Real_Inbound_Quantity.cs",
+			"Discount_Inbound_Quantity": "master_Discount_Inbound_Quantity.cs",
+			"Inbound_Packing_Size": "master_Inbound_Packing_Size.cs",
+			"Real_Inbound_Piece": "master_Real_Inbound_Piece.cs",
+			"Discount_Inbound_Piece": "master_Discount_Inbound_Piece.cs"
+		}
+	},
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Outbound_Wareroom_Id"
+	],
+	"SaveColumns": {
+		"master": [
+			"Bill_Type",
+			"Bill_Detail_Id",
+			"Department_Id",
+			"Owner_Id",
+			"Material_Id",
+			"Quantity",
+			"Packing_Size",
+			"Real_Inbound_Quantity",
+			"Discount_Inbound_Quantity",
+			"Inbound_Unit",
+			"Inbound_Packing_Size",
+			"Real_Inbound_Piece",
+			"Discount_Inbound_Piece",
+			"Retail_Price",
+			"Retail_Packing_Size",
+			"Version",
+			"Comment"
+		]
+	}
+}

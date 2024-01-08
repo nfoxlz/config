@@ -1,0 +1,86 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Department_Name",
+			"Owner_Id",
+			"Owner_Name",
+			"Customer_Id",
+			"Customer_Name",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Material_Name",
+			"Untaxed_Amount",
+			"Output_Tax_Rate",
+			"Tax_Amount",
+			"Amount",
+			"Comment"
+		]
+	},
+	"RequiredTables": {
+		"Detail": "明细项不能无数据。"
+	},
+	"InvisibleColumns": {
+		"Master": [
+			"Department_Name",
+			"Owner_Name",
+			"Customer_Name"
+		],
+		"Detail": [
+			"Untaxed_Amount",
+			"Output_Tax_Rate",
+			"Tax_Amount"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Bill_Code"
+		],
+		"Detail": [
+			"Material_Name"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Department_Id",
+			"Owner_Id",
+			"Customer_Id"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Amount",
+			"Caption": "金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		}
+	],
+	"ColumnCalculateScriptFileNames": {
+		"Detail": {
+			"Untaxed_Amount": "Detail_Untaxed_Amount.cs",
+			"Output_Tax_Rate": "Detail_Output_Tax_Rate.cs",
+			"Tax_Amount": "Detail_Tax_Amount.cs",
+			"Amount": "Detail_Amount.cs"
+		}
+	},
+	"SaveColumns": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Owner_Id",
+			"Customer_Id",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Output_Tax_Rate",
+			"Amount",
+			"Comment"
+		]
+	}
+}

@@ -1,0 +1,1 @@
+SELECT * FROM Owner WHERE Tenant_Id = :tenant{filter} ORDER BY Owner_Code OFFSET :begin_No LIMIT :page_Size

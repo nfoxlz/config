@@ -1,0 +1,1 @@
+INSERT INTO Procurement_Inbound_Bill (Tenant_Id, Bill_Code, Supplier_Id, Creator_User_Id) VALUES (:tenant, :new_Bill_Code, :Supplier_Id, :user)

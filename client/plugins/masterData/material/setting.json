@@ -1,0 +1,63 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Code",
+		"Name",
+		"Mnemonic_Code",
+		"Barcode"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"InvisibleColumns": {
+		"master": [
+			"Material_Id",
+			"Tenant_Id",
+			"Is_Deleted"
+		]
+	},
+	"RequiredColumns": {
+		"master": [
+			"Material_Code"
+		]
+	},
+	"IsDifferentiated": true,
+	"DifferentiatedSaveColumns": {
+		"master": {
+			"DeletedColumns": [
+				"Material_Id",
+				"Version"
+			],
+			"ModifiedOriginalColumns": [
+				"Material_Id",
+				"Version"
+			]
+		}
+	},
+	"DifferentiatedSaveRemoveColumns": {
+		"master": {
+			"AddedColumns": [
+				"Material_Id",
+				"Tenant_Id",
+				"Is_Deleted",
+				"Creator_User_Id",
+				"Creation_Date_Time",
+				"Last_Modifier_User_Id",
+				"Last_Modification_Date_Time",
+				"Deleter_User_Id",
+				"Deletion_Date_Time",
+				"Version"
+			],
+			"ModifiedColumns": [
+				"Material_Id",
+				"Tenant_Id",
+				"Is_Deleted",
+				"Creator_User_Id",
+				"Creation_Date_Time",
+				"Last_Modifier_User_Id",
+				"Last_Modification_Date_Time",
+				"Deleter_User_Id",
+				"Deletion_Date_Time",
+				"Version"
+			]
+		}
+	}
+}

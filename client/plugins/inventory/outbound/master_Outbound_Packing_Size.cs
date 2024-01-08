@@ -1,0 +1,1 @@
+return Math.Abs(((decimal)row["Real_Outbound_Quantity"] + (decimal)row["Discount_Outbound_Quantity"]) * (long)proposedValue)  > Math.Abs((decimal)row["No_Outbound_Quantity"]) ? "Message.OutboundQuantityError" : string.Empty;

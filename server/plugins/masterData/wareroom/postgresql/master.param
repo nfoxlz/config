@@ -1,0 +1,4 @@
+Code= AND Wareroom_Code LIKE :Code || '%'
+Name= AND Wareroom_Name LIKE '%' || :Name || '%'
+Mnemonic_Code= AND Wareroom_Mnemonic_Code LIKE '%' || :Mnemonic_Code || '%'
+Barcode= AND Wareroom_Barcode = :Barcode

@@ -1,0 +1,1 @@
+SELECT Serial_No FROM Serial_No_Info WHERE Tenant_Id = :tenant AND Serial_Setting_No = :no AND Period = :period

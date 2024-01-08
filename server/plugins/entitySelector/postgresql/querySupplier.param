@@ -1,0 +1,1 @@
+filter= AND (Supplier_Barcode = :filter OR Supplier_Code LIKE :filter OR Supplier_Name LIKE '%' || :filter || '%' OR Supplier_Mnemonic_Code LIKE '%' || :filter || '%')

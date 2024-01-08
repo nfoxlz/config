@@ -1,0 +1,1 @@
+INSERT INTO Selling_Outbound_Bill (Tenant_Id, Bill_Code, Customer_Id, Creator_User_Id) VALUES (:tenant, :new_Bill_Code, :Customer_Id, :user)

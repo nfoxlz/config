@@ -1,0 +1,125 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Department_Name",
+			"Owner_Id",
+			"Owner_Name",
+			"Customer_Id",
+			"Customer_Name",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Material_Name",
+			"Selling_Quantity",
+			"Selling_Unit",
+			"Selling_Packing_Size",
+			"Selling_Piece",
+			"Selling_Price",
+			"Untaxed_Price",
+			"Untaxed_Amount",
+			"Output_Tax_Rate",
+			"Tax_Amount",
+			"Selling_Amount",
+			"Deduction_Rate",
+			"Real_Selling_Amount",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount",
+			"Comment"
+		]
+	},
+	"RequiredTables": {
+		"Detail": "明细项不能无数据。"
+	},
+	"InvisibleColumns": {
+		"Master": [
+			"Department_Name",
+			"Owner_Name",
+			"Customer_Name"
+		],
+		"Detail": [
+			"Selling_Piece",
+			"Untaxed_Price",
+			"Untaxed_Amount",
+			"Output_Tax_Rate",
+			"Tax_Amount",
+			"Deduction_Rate",
+			"Real_Selling_Amount"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Bill_Code"
+		],
+		"Detail": [
+			"Material_Name",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Department_Id",
+			"Owner_Id",
+			"Customer_Id"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Selling_Amount",
+			"Caption": "金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		},
+		{
+			"Name": "Retail_Amount",
+			"Caption": "零售金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		}
+	],
+	"ColumnCalculateScriptFileNames": {
+		"Detail": {
+			"Selling_Quantity": "Detail_Selling_Quantity.cs",
+			"Selling_Price": "Detail_Selling_Price.cs",
+			"Untaxed_Price": "Detail_Untaxed_Price.cs",
+			"Untaxed_Amount": "Detail_Untaxed_Amount.cs",
+			"Output_Tax_Rate": "Detail_Output_Tax_Rate.cs",
+			"Tax_Amount": "Detail_Tax_Amount.cs",
+			"Selling_Amount": "Detail_Selling_Amount.cs",
+			"Deduction_Rate": "Detail_Deduction_Rate.cs",
+			"Real_Selling_Amount": "Detail_Real_Selling_Amount.cs",
+			"Selling_Packing_Size": "Detail_Selling_Packing_Size.cs",
+			"Retail_Price": "Detail_Retail_Price.cs"
+		}
+	},
+	"SaveColumns": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Owner_Id",
+			"Customer_Id",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Selling_Quantity",
+			"Selling_Unit",
+			"Selling_Packing_Size",
+			"Selling_Piece",
+			"Output_Tax_Rate",
+			"Selling_Amount",
+			"Real_Selling_Amount",
+			"Retail_Amount",
+			"Comment"
+		]
+	}
+}

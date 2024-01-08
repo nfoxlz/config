@@ -1,0 +1,4 @@
+Code= AND Supplier_Code LIKE :Code || '%'
+Name= AND Supplier_Name LIKE '%' || :Name || '%'
+Mnemonic_Code= AND Supplier_Mnemonic_Code LIKE '%' || :Mnemonic_Code || '%'
+Barcode= AND Supplier_Barcode = :Barcode

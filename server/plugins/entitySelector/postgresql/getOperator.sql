@@ -1,0 +1,1 @@
+SELECT * FROM Operator WHERE Operator_Id = :id AND Tenant_Id = :tenant

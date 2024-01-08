@@ -1,0 +1,1 @@
+filter= AND (Department_Barcode = :filter OR Department_Code LIKE :filter OR Department_Name LIKE '%' || :filter || '%' OR Department_Mnemonic_Code LIKE '%' || :filter || '%')

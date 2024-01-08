@@ -1,0 +1,2 @@
+INSERT INTO Supplier (Supplier_Code, Supplier_Name, Supplier_Mnemonic_Code, Supplier_Barcode, Supplier_Description, Tenant_Id, Address, Tel_No, Taxpayer_Id_No, Bank, Account_No, Credit_Volume, Credit_Period, Creator_User_Id, Last_Modifier_User_Id, Comment)
+    VALUES (:Supplier_Code, :Supplier_Name, :Supplier_Mnemonic_Code, :Supplier_Barcode, :Supplier_Description, :tenant, :Address, :Tel_No, :Taxpayer_Id_No, :Bank, :Account_No, :Credit_Volume, :Credit_Period, :user, :user, :Comment)

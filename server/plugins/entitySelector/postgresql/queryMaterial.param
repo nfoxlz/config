@@ -1,0 +1,1 @@
+filter= AND (Material_Barcode = :filter OR Material_Code LIKE :filter OR Material_Name LIKE '%' || :filter || '%' OR Material_Mnemonic_Code LIKE '%' || :filter || '%')

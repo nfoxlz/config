@@ -1,0 +1,1 @@
+SELECT Enum_Name AS Name, Enum_Value AS Value, Enum_Display_Name AS Display_Name, Sn FROM Enum_Info

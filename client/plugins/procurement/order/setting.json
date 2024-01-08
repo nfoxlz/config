@@ -1,0 +1,108 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Owner_Id",
+			"Supplier_Id",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Material_Name",
+			"Purchasing_Quantity",
+			"Purchasing_Unit",
+			"Purchasing_Packing_Size",
+			"Purchasing_Piece",
+			"Purchasing_Price",
+			"Untaxed_Price",
+			"Untaxed_Amount",
+			"Input_Tax_Rate",
+			"Tax_Amount",
+			"Purchasing_Amount",
+			"Deduction_Rate",
+			"Purchasing_Real_Amount",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount",
+			"Comment"
+		]
+	},
+	"RequiredTables": {
+		"Detail": "明细项不能无数据。"
+	},
+	"InvisibleColumns": {
+		"Detail": [
+			"Purchasing_Piece",
+			"Untaxed_Price",
+			"Untaxed_Amount",
+			"Input_Tax_Rate",
+			"Tax_Amount",
+			"Deduction_Rate",
+			"Purchasing_Real_Amount"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Bill_Code"
+		],
+		"Detail": [
+			"Material_Name",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Department_Id",
+			"Owner_Id",
+			"Supplier_Id"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Purchasing_Amount",
+			"Caption": "金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		},
+		{
+			"Name": "Retail_Amount",
+			"Caption": "零售金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		}
+	],
+	"ColumnCalculateScriptFileNames": {
+		"Detail": {
+			"Purchasing_Quantity": "Detail_Purchasing_Quantity.cs",
+			"Purchasing_Price": "Detail_Purchasing_Price.cs",
+			"Untaxed_Price": "Detail_Untaxed_Price.cs",
+			"Untaxed_Amount": "Detail_Untaxed_Amount.cs",
+			"Input_Tax_Rate": "Detail_Input_Tax_Rate.cs",
+			"Tax_Amount": "Detail_Tax_Amount.cs",
+			"Purchasing_Amount": "Detail_Purchasing_Amount.cs",
+			"Deduction_Rate": "Detail_Deduction_Rate.cs",
+			"Purchasing_Real_Amount": "Detail_Purchasing_Real_Amount.cs",
+			"Retail_Price": "Detail_Retail_Price.cs"
+		}
+	},
+	"SaveColumns": {
+		"Detail": [
+			"Material_Id",
+			"Purchasing_Quantity",
+			"Purchasing_Unit",
+			"Purchasing_Packing_Size",
+			"Purchasing_Piece",
+			"Input_Tax_Rate",
+			"Purchasing_Amount",
+			"Purchasing_Real_Amount",
+			"Retail_Amount",
+			"Comment"
+		]
+	}
+}

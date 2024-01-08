@@ -1,0 +1,2 @@
+INSERT INTO Movement_Bill (Tenant_Id, Bill_Code, Manual_Code, Department_Id, Owner_Id, Outbound_Wareroom_Id, Inbound_Wareroom_Id, Creator_User_Id, Comment)
+	VALUES (:tenant, :new_Bill_Code, :Manual_Code, :Department_Id, :Owner_Id, :Outbound_Wareroom_Id, :Inbound_Wareroom_Id, :user, :Comment)

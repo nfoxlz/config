@@ -1,0 +1,1 @@
+row["Deduction_Rate"] = Math.Round((decimal)row["Real_Selling_Amount"] / (decimal)row["Selling_Amount"], 2);

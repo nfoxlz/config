@@ -1,0 +1,2 @@
+INSERT INTO Department (Department_Code, Department_Name, Department_Mnemonic_Code, Department_Barcode, Department_Description, Tenant_Id, Creator_User_Id, Last_Modifier_User_Id, Comment)
+    VALUES (:Department_Code, :Department_Name, :Department_Mnemonic_Code, :Department_Barcode, :Department_Description, :tenant, :user, :user, :Comment)

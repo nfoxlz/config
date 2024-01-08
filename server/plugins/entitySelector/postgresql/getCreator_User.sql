@@ -1,0 +1,1 @@
+SELECT Person_Id Creator_User_Id, Person_Code Creator_User_Code, Person_Name Creator_User_Name, Person_Description Creator_User_Description FROM Person WHERE Person_Id = :id AND Tenant_Id = :tenant

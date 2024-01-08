@@ -1,0 +1,1 @@
+row["Retail_Amount"] = (decimal)row["Retail_Price"] * (decimal)row["Selling_Quantity"] * (long)row["Selling_Packing_Size"] / (long)row["Retail_Packing_Size"];

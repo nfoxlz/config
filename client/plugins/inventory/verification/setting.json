@@ -1,0 +1,36 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Wareroom_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id"
+	],
+	"ConditionDataColumnSettings": [
+		{
+			"ColumnName": "End_Bill_Date",
+			"DefaultSystemValue": 3
+		}
+	],
+	"ConditionRequiredColumns": [
+		"Wareroom_Id"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Bill_Type"
+		]
+	},
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Wareroom_Id"
+	],
+	"RunColumns": [
+		"Bill_Id"
+	]
+}

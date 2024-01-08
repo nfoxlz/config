@@ -1,0 +1,104 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Department_Name",
+			"Owner_Id",
+			"Owner_Name",
+			"Outbound_Wareroom_Id",
+			"Outbound_Wareroom_Name",
+			"Inbound_Wareroom_Id",
+			"Inbound_Wareroom_Name",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Material_Name",
+			"Quantity",
+			"Unit",
+			"Packing_Size",
+			"Piece",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount",
+			"Comment"
+		]
+	},
+	"RequiredTables": {
+		"Detail": "明细项不能无数据。"
+	},
+	"InvisibleColumns": {
+		"Master": [
+			"Department_Name",
+			"Owner_Name",
+			"Outbound_Wareroom_Name",
+			"Inbound_Wareroom_Name"
+		],
+		"Detail": [
+			"Piece",
+			"Real_Selling_Amount"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Bill_Code"
+		],
+		"Detail": [
+			"Material_Name",
+			"Retail_Unit",
+			"Retail_Packing_Size",
+			"Retail_Price",
+			"Retail_Amount"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Department_Id",
+			"Owner_Id"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Retail_Amount",
+			"Caption": "零售金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		}
+	],
+	"ColumnVerifyScriptFileNames": {
+		"Master": {
+			"Outbound_Wareroom_Id": "Master_Outbound_Wareroom_Id.cs",
+			"Inbound_Wareroom_Id": "Master_Inbound_Wareroom_Id.cs"
+		}
+	},
+	"ColumnCalculateScriptFileNames": {
+		"Detail": {
+			"Quantity": "Detail.cs",
+			"Packing_Size": "Detail.cs",
+			"Retail_Price": "Detail.cs"
+		}
+	},
+	"SaveColumns": {
+		"Master": [
+			"Bill_Date",
+			"Manual_Code",
+			"Department_Id",
+			"Owner_Id",
+			"Outbound_Wareroom_Id",
+			"Inbound_Wareroom_Id",
+			"Comment"
+		],
+		"Detail": [
+			"Material_Id",
+			"Quantity",
+			"Unit",
+			"Packing_Size",
+			"Piece",
+			"Retail_Amount",
+			"Comment"
+		]
+	}
+}
