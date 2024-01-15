@@ -6,7 +6,7 @@ INSERT INTO Material_Inventory (Material_Id, Tenant_Id, Inventory_Cost)
 ON CONFLICT (Material_Id)
 DO UPDATE SET Inventory_Cost = Material_Inventory.Inventory_Cost + EXCLUDED.Inventory_Cost;
 
-INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Supply_Marketing_Id, Department_Id, Owner_Id, Material_Id,
+INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Supplier_Customer_Id, Department_Id, Owner_Id, Material_Id,
 		In_Amount, Real_In_Amount, Input_Tax_Rate,
 		Creator_User_Id, Comment)
 	SELECT 103, D.Bill_Detail_Id, D.Bill_Id, D.Sn, B.Tenant_Id, B.Bill_Date, B.Bill_Code, B.Manual_Code, B.Supplier_Id, B.Department_Id, B.Owner_Id, D.Material_Id,

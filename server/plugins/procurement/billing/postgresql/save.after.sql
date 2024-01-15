@@ -20,7 +20,7 @@ DO UPDATE SET Inventory_Quantity = Material_Inventory.Inventory_Quantity + EXCLU
 	Available_Inventory_Quantity = Material_Inventory.Available_Inventory_Quantity + EXCLUDED.Available_Inventory_Quantity,
     Available_Inventory_Piece = Material_Inventory.Available_Inventory_Piece + EXCLUDED.Available_Inventory_Piece;
 
-INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Supply_Marketing_Id, Department_Id, Owner_Id, Material_Id,
+INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Supplier_Customer_Id, Department_Id, Owner_Id, Material_Id,
 		In_Quantity, In_Unit, In_Packing_Size, In_Piece, In_Amount, Real_In_Amount, Input_Tax_Rate, In_Retail_Amount,
 		Creator_User_Id, Comment)
 	SELECT 101, D.Bill_Detail_Id, D.Bill_Id, D.Sn, B.Tenant_Id, B.Bill_Date, B.Bill_Code, B.Manual_Code, B.Supplier_Id, B.Department_Id, B.Owner_Id, D.Material_Id,
@@ -30,7 +30,7 @@ INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id,
 		INNER JOIN Procurement_Billing_Bill_Detail D ON B.Bill_Id = D.Bill_Id
 	WHERE B.Bill_Id = CURRVAL('procurement_billing_bill_bill_id_seq'::regclass);
 
-INSERT INTO Material_Inventory_Detail (Bill_Detail_Id, Tenant_Id, Material_Id, Quantity, Cost)
+INSERT INTO Material_Inventory_Detail (Bill_Detail_Id, Tenant_Id, Material_Id, Quantity, Cost_Amount)
 	SELECT Bill_Detail_Id, :tenant, Material_Id, Purchasing_Quantity * Purchasing_Packing_Size, Real_Purchasing_Amount
 	FROM Procurement_Billing_Bill_Detail
 	WHERE Bill_Id = CURRVAL('procurement_billing_bill_bill_id_seq'::regclass);

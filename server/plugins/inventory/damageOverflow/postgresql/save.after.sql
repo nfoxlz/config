@@ -21,10 +21,10 @@ INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id,
 	WHERE B.Bill_Id = CURRVAL('damage_overflow_bill_bill_id_seq'::regclass);
 
 INSERT INTO Wareroom_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Material_Id, Wareroom_Id, Department_Id, Owner_Id,
-		In_Quantity, In_Packing_Size, In_Piece, 
+		Out_Quantity, Out_Unit, Out_Packing_Size, Out_Piece,
 		Creator_User_Id, Comment)
 	SELECT 303, D.Bill_Detail_Id, D.Bill_Id, D.Sn, B.Tenant_Id, B.Bill_Date, B.Bill_Code, B.Manual_Code, D.Material_Id, D.Wareroom_Id, B.Department_Id, B.Owner_Id,
-		D.Quantity, D.Packing_Size, D.Piece,
+		D.Quantity, D.Unit, D.Packing_Size, D.Piece,
 		B.Creator_User_Id, D.Comment
 	FROM Damage_Overflow_Bill B
 		INNER JOIN Damage_Overflow_Bill_Detail D ON B.Bill_Id = D.Bill_Id

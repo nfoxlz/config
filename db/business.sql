@@ -12,7 +12,7 @@
  Target Server Version : 160000 (160000)
  File Encoding         : 65001
 
- Date: 06/01/2024 18:35:29
+ Date: 11/01/2024 10:52:24
 */
 
 
@@ -626,6 +626,12 @@ INSERT INTO "public"."action" VALUES (E'\\361AQ\\200\\027\\301zB\\240\\211\\271\
 INSERT INTO "public"."action" VALUES (E'\\225\\313M\\004\\221u\\370L\\254\\376?i\\265\\216{\\257');
 INSERT INTO "public"."action" VALUES (E'\\213\\376\\313y\\301o\\356C\\276\\301\\234\\325\\362\\027\\302\\206');
 INSERT INTO "public"."action" VALUES (E'\\201\\032\\223e\\201\\024\\307O\\205\\024N\\022\\354P\\220\\274');
+INSERT INTO "public"."action" VALUES (E'\\235},]\\012o\\210B\\262x\\367]\\014R\\214\\\\');
+INSERT INTO "public"."action" VALUES (E'\\253''\\270\\256\\3548\\351I\\241s\\221\\356\\316j\\200\\322');
+INSERT INTO "public"."action" VALUES (E'\\312\\234m\\002*>8E\\267\\307\\252U \\360\\376\\373');
+INSERT INTO "public"."action" VALUES (E':D\\337F\\264\\365/G\\253H\\312$>\\351\\\\\\003');
+INSERT INTO "public"."action" VALUES (E'\\243\\323\\367\\024\\373q\\365G\\211|c\\234rk\\006}');
+INSERT INTO "public"."action" VALUES (E'\\207\\304R\\355\\226\\006\\266A\\264|\\261v?\\2363\\374');
 INSERT INTO "public"."action" VALUES (E'\\263\\372\\222\\356\\326HwK\\234\\360\\273\\316!\\360\\234\\036');
 INSERT INTO "public"."action" VALUES (E'wy\\346c\\221\\206ZL\\272\\200|Y>\\311\\006^');
 INSERT INTO "public"."action" VALUES (E'1\\227\\1771\\365k*F\\235\\374\\314\\254\\032\\361\\001\\221');
@@ -653,7 +659,7 @@ COMMENT ON TABLE "public"."ap" IS '应付账款';
 -- Records of ap
 -- ----------------------------
 INSERT INTO "public"."ap" VALUES (2, 1, '$1,475.00');
-INSERT INTO "public"."ap" VALUES (1, 1, '$30,920.00');
+INSERT INTO "public"."ap" VALUES (1, 1, '$31,520.00');
 
 -- ----------------------------
 -- Table structure for ap_account
@@ -706,6 +712,34 @@ INSERT INTO "public"."ap_account" VALUES (101, 112, 1, '45', NULL, '2023-12-14',
 INSERT INTO "public"."ap_account" VALUES (103, 35, 1, '3', NULL, '2023-12-21', 1, '$10.00', 0, '$0.00', 1, '2023-12-21 23:14:59.446181+08', NULL);
 INSERT INTO "public"."ap_account" VALUES (101, 113, 1, '46', NULL, '2023-12-28', 1, '$30.00', 0, '$0.00', 1, '2023-12-28 05:02:29.2216+08', NULL);
 INSERT INTO "public"."ap_account" VALUES (102, 43, 1, '4', NULL, '2023-12-28', 1, '-$30.00', 0, '$0.00', 1, '2023-12-28 05:05:31.2176+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 114, 1, '47', NULL, '2024-01-08', 1, '$600.00', 0, '$0.00', 1, '2024-01-08 23:07:16.358525+08', NULL);
+
+-- ----------------------------
+-- Table structure for ap_carry_over
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."ap_carry_over";
+CREATE TABLE "public"."ap_carry_over" (
+  "bill_date" date NOT NULL DEFAULT CURRENT_DATE,
+  "supplier_id" int8 NOT NULL,
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "payable_amount" money NOT NULL DEFAULT 0,
+  "payment_amount" money NOT NULL DEFAULT 0,
+  "creator_user_id" int8 NOT NULL DEFAULT 0,
+  "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+;
+COMMENT ON COLUMN "public"."ap_carry_over"."bill_date" IS '单据日期';
+COMMENT ON COLUMN "public"."ap_carry_over"."supplier_id" IS '供应商内码';
+COMMENT ON COLUMN "public"."ap_carry_over"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."ap_carry_over"."payable_amount" IS '应付金额';
+COMMENT ON COLUMN "public"."ap_carry_over"."payment_amount" IS '支付金额';
+COMMENT ON COLUMN "public"."ap_carry_over"."creator_user_id" IS '创建人内码';
+COMMENT ON COLUMN "public"."ap_carry_over"."creation_date_time" IS '创建日期时间';
+COMMENT ON TABLE "public"."ap_carry_over" IS '应付结转';
+
+-- ----------------------------
+-- Records of ap_carry_over
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for ap_non_payment
@@ -789,6 +823,7 @@ INSERT INTO "public"."ap_non_payment" VALUES (101, 169, 63, 2, 1, '32', NULL, '2
 INSERT INTO "public"."ap_non_payment" VALUES (101, 170, 63, 3, 1, '32', NULL, '2023-12-05', 2, 2, 1, 4, 30, '箱', 24, 1, '$1,200.00', '$1,200.00', 0.0000, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 11:24:31.018985+08', 0, '2023-12-05 11:24:31.018985+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 171, 64, 0, 1, '33', NULL, '2023-12-05', 1, 2, 1, 1, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 11:26:20.635437+08', 0, '2023-12-05 11:26:20.635437+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 172, 64, 1, 1, '33', NULL, '2023-12-05', 1, 2, 1, 2, 2, '箱', 12, 1, '$50.00', '$50.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 11:26:20.635437+08', 0, '2023-12-05 11:26:20.635437+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 235, 114, 0, 1, '47', NULL, '2024-01-08', 1, 2, 1, 1, 20, '箱', 12, 0, '$600.00', '$600.00', 0.1700, '$720.00', '$0.00', '$0.00', 1, '2024-01-08 23:07:16.358525+08', 0, '2024-01-08 23:07:16.358525+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 185, 71, 0, 1, '34', NULL, '2023-12-05', 1, 2, 1, 1, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 11:44:38.929982+08', 0, '2023-12-05 11:44:38.929982+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 186, 71, 1, 1, '34', NULL, '2023-12-05', 1, 2, 1, 2, 1, '箱', 12, 1, '$25.00', '$25.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 11:44:38.929982+08', 0, '2023-12-05 11:44:38.929982+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 187, 72, 0, 1, '35', NULL, '2023-12-05', 2, 2, 1, 1, 1000, '箱', 12, 1, '$30,000.00', '$30,000.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2023-12-05 14:40:24.233228+08', 0, '2023-12-05 14:40:24.233228+08', 0, NULL);
@@ -955,6 +990,33 @@ INSERT INTO "public"."ar_account" VALUES (203, 62, 1, '6', NULL, '2023-12-23', 1
 INSERT INTO "public"."ar_account" VALUES (203, 63, 1, '7', NULL, '2023-12-23', 1, '$15.00', 0, '$0.00', 1, '2023-12-23 12:33:23.097703+08', NULL);
 INSERT INTO "public"."ar_account" VALUES (201, 103, 1, '7', NULL, '2023-12-28', 1, '$35.00', 0, '$0.00', 1, '2023-12-28 05:37:45.255621+08', NULL);
 INSERT INTO "public"."ar_account" VALUES (202, 3, 1, '3', NULL, '2023-12-28', 1, '-$35.00', 0, '$0.00', 1, '2023-12-28 05:38:02.049606+08', NULL);
+
+-- ----------------------------
+-- Table structure for ar_carry_over
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."ar_carry_over";
+CREATE TABLE "public"."ar_carry_over" (
+  "bill_date" date NOT NULL DEFAULT CURRENT_DATE,
+  "customer_id" int8 NOT NULL,
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "receivable_amount" money NOT NULL DEFAULT 0,
+  "receipt_amount" money NOT NULL DEFAULT 0,
+  "creator_user_id" int8 NOT NULL DEFAULT 0,
+  "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+;
+COMMENT ON COLUMN "public"."ar_carry_over"."bill_date" IS '单据日期';
+COMMENT ON COLUMN "public"."ar_carry_over"."customer_id" IS '客户内码';
+COMMENT ON COLUMN "public"."ar_carry_over"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."ar_carry_over"."receivable_amount" IS '应收金额';
+COMMENT ON COLUMN "public"."ar_carry_over"."receipt_amount" IS '收款金额';
+COMMENT ON COLUMN "public"."ar_carry_over"."creator_user_id" IS '创建人内码';
+COMMENT ON COLUMN "public"."ar_carry_over"."creation_date_time" IS '创建日期时间';
+COMMENT ON TABLE "public"."ar_carry_over" IS '应收结转';
+
+-- ----------------------------
+-- Records of ar_carry_over
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for ar_non_receipt
@@ -4398,7 +4460,7 @@ CREATE TABLE "public"."business_account" (
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
   "material_id" int8 NOT NULL,
-  "supply_marketing_id" int8 NOT NULL DEFAULT 0,
+  "supplier_customer_id" int8 NOT NULL DEFAULT 0,
   "department_id" int8 NOT NULL DEFAULT 0,
   "owner_id" int8 NOT NULL DEFAULT 0,
   "in_quantity" numeric(18,0) NOT NULL DEFAULT 0,
@@ -4432,7 +4494,7 @@ COMMENT ON COLUMN "public"."business_account"."bill_date" IS '单据日期';
 COMMENT ON COLUMN "public"."business_account"."bill_code" IS '单据编号';
 COMMENT ON COLUMN "public"."business_account"."manual_code" IS '手工编号';
 COMMENT ON COLUMN "public"."business_account"."material_id" IS '商品内码';
-COMMENT ON COLUMN "public"."business_account"."supply_marketing_id" IS '供销单位';
+COMMENT ON COLUMN "public"."business_account"."supplier_customer_id" IS '供销商客户';
 COMMENT ON COLUMN "public"."business_account"."department_id" IS '部门内码';
 COMMENT ON COLUMN "public"."business_account"."owner_id" IS '业务员内码';
 COMMENT ON COLUMN "public"."business_account"."in_quantity" IS '入库数量';
@@ -4484,6 +4546,7 @@ INSERT INTO "public"."business_account" VALUES (303, 28, 37, 0, 1, '2023-12-23',
 INSERT INTO "public"."business_account" VALUES (101, 234, 113, 0, 1, '2023-12-28', '46', NULL, 1, 1, 1, 2, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2023-12-28 05:02:29.2216+08', NULL);
 INSERT INTO "public"."business_account" VALUES (201, 171, 103, 0, 1, '2023-12-28', '7', NULL, 1, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 1, '箱', 12, 1, '$30.00', '$35.00', '$35.00', 0.0000, '$36.00', 1, '2023-12-28 05:37:45.255621+08', NULL);
 INSERT INTO "public"."business_account" VALUES (202, 7, 3, 0, 1, '2023-12-28', '3', NULL, 1, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', -1, '箱', 12, -1, '-$30.00', '-$35.00', '-$35.00', 0.0000, '-$36.00', 1, '2023-12-28 05:38:02.049606+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 235, 114, 0, 1, '2024-01-08', '47', NULL, 1, 1, 1, 2, 20, '箱', 12, 0, '$600.00', '$600.00', 0.1700, '$720.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-01-08 23:07:16.358525+08', NULL);
 INSERT INTO "public"."business_account" VALUES (101, 225, 107, 0, 1, '2023-12-10', '40', NULL, 1, 1, 1, 2, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2023-12-10 01:11:41.689746+08', NULL);
 INSERT INTO "public"."business_account" VALUES (101, 226, 108, 0, 1, '2023-12-10', '41', NULL, 1, 1, 1, 2, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2023-12-10 01:17:49.796144+08', NULL);
 INSERT INTO "public"."business_account" VALUES (203, 53, 61, 0, 1, '2023-12-23', '5', NULL, 1, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 0, NULL, 1, 0, '$0.00', '$10.00', '$10.00', 0.0000, '$0.00', 1, '2023-12-23 11:57:12.661742+08', NULL);
@@ -4505,6 +4568,51 @@ INSERT INTO "public"."business_account" VALUES (201, 45, 32, 0, 1, '2023-12-10',
 INSERT INTO "public"."business_account" VALUES (201, 46, 32, 1, 1, '2023-12-10', '2', NULL, 2, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 1, '箱', 12, 1, '$24.96', '$30.00', '$30.00', 0.0000, '$32.40', 1, '2023-12-10 11:26:04.23536+08', NULL);
 INSERT INTO "public"."business_account" VALUES (303, 27, 36, 0, 1, '2023-12-23', '4', NULL, 1, 0, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 2, '袋', 1, 1, '$5.00', '$0.00', '$0.00', 0.0000, '$6.00', 1, '2023-12-23 14:31:54.949592+08', NULL);
 INSERT INTO "public"."business_account" VALUES (102, 67, 43, 0, 1, '2023-12-28', '4', NULL, 1, 1, 1, 2, -1, '箱', 12, -1, '-$30.00', '-$30.00', 0.1700, '-$36.00', 0, NULL, 1, 0, '$30.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2023-12-28 05:05:31.2176+08', NULL);
+
+-- ----------------------------
+-- Table structure for business_carry_over
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."business_carry_over";
+CREATE TABLE "public"."business_carry_over" (
+  "bill_date" date NOT NULL DEFAULT CURRENT_DATE,
+  "material_id" int8 NOT NULL,
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "in_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "in_piece" int8 NOT NULL DEFAULT 0,
+  "in_amount" money NOT NULL DEFAULT 0,
+  "real_in_amount" money NOT NULL DEFAULT 0,
+  "in_retail_amount" money NOT NULL DEFAULT 0,
+  "out_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "out_piece" int8 NOT NULL DEFAULT 0,
+  "out_cost_amount" money NOT NULL DEFAULT 0,
+  "out_amount" money NOT NULL DEFAULT 0,
+  "real_out_amount" money NOT NULL DEFAULT 0,
+  "out_retail_amount" money NOT NULL DEFAULT 0,
+  "creator_user_id" int8 NOT NULL DEFAULT 0,
+  "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+;
+COMMENT ON COLUMN "public"."business_carry_over"."bill_date" IS '单据日期';
+COMMENT ON COLUMN "public"."business_carry_over"."material_id" IS '商品内码';
+COMMENT ON COLUMN "public"."business_carry_over"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."business_carry_over"."in_quantity" IS '入库数量';
+COMMENT ON COLUMN "public"."business_carry_over"."in_piece" IS '入库件数';
+COMMENT ON COLUMN "public"."business_carry_over"."in_amount" IS '入库金额';
+COMMENT ON COLUMN "public"."business_carry_over"."real_in_amount" IS '实际入库金额';
+COMMENT ON COLUMN "public"."business_carry_over"."in_retail_amount" IS '入库零售金额';
+COMMENT ON COLUMN "public"."business_carry_over"."out_quantity" IS '出库数量';
+COMMENT ON COLUMN "public"."business_carry_over"."out_piece" IS '出库件数';
+COMMENT ON COLUMN "public"."business_carry_over"."out_cost_amount" IS '出库成本';
+COMMENT ON COLUMN "public"."business_carry_over"."out_amount" IS '出库金额';
+COMMENT ON COLUMN "public"."business_carry_over"."real_out_amount" IS '实际出库金额';
+COMMENT ON COLUMN "public"."business_carry_over"."out_retail_amount" IS '出库零售金额';
+COMMENT ON COLUMN "public"."business_carry_over"."creator_user_id" IS '创建人内码';
+COMMENT ON COLUMN "public"."business_carry_over"."creation_date_time" IS '创建日期时间';
+COMMENT ON TABLE "public"."business_carry_over" IS '业务结转';
+
+-- ----------------------------
+-- Records of business_carry_over
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for costmethod
@@ -4923,6 +5031,7 @@ INSERT INTO "public"."inbound_bill" VALUES (16, 1, '1', NULL, '2024-01-06', 2, 1
 INSERT INTO "public"."inbound_bill" VALUES (17, 1, '2', NULL, '2024-01-06', 2, 1, 0, 1, '2024-01-06 14:55:33.620049+08', 0, '2024-01-06 14:55:33.620049+08', 0, NULL);
 INSERT INTO "public"."inbound_bill" VALUES (24, 1, '3', NULL, '2024-01-06', 2, 1, 0, 1, '2024-01-06 15:25:09.543742+08', 0, '2024-01-06 15:25:09.543742+08', 0, NULL);
 INSERT INTO "public"."inbound_bill" VALUES (25, 1, '1', NULL, '2024-01-06', 1, 1, 0, 1, '2024-01-06 15:40:32.865546+08', 0, '2024-01-06 15:40:32.865546+08', 0, NULL);
+INSERT INTO "public"."inbound_bill" VALUES (26, 1, '2', NULL, '2024-01-06', 1, 1, 0, 1, '2024-01-06 16:07:05.546284+08', 0, '2024-01-06 16:07:05.546284+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for inbound_bill_detail
@@ -4972,6 +5081,7 @@ INSERT INTO "public"."inbound_bill_detail" VALUES (13, 16, 0, 305, 7, 1, 2, 1, 1
 INSERT INTO "public"."inbound_bill_detail" VALUES (14, 17, 0, 305, 7, 1, 2, 1, 1, 1, '袋', 1, 0, 0, '$0.00', '');
 INSERT INTO "public"."inbound_bill_detail" VALUES (21, 24, 0, 305, 7, 1, 2, 1, 1, 1, '袋', 1, 0, 0, '$0.00', '');
 INSERT INTO "public"."inbound_bill_detail" VALUES (22, 25, 0, 305, 7, 1, 2, 1, 2, 2, '袋', 1, 0, 0, '$0.00', '');
+INSERT INTO "public"."inbound_bill_detail" VALUES (23, 26, 0, 305, 7, 1, 2, 1, 1, 1, '袋', 1, 0, 0, '$0.00', '');
 
 -- ----------------------------
 -- Table structure for inventory_verification_bill
@@ -5278,7 +5388,7 @@ INSERT INTO "public"."material_inventory" VALUES (3, 1, 24, 0, '$69.04', 1464, 0
 INSERT INTO "public"."material_inventory" VALUES (5, 1, 360, 0, '$675.00', 360, 0, 0.00);
 INSERT INTO "public"."material_inventory" VALUES (6, 1, 480, 0, '$800.00', 480, 0, 0.00);
 INSERT INTO "public"."material_inventory" VALUES (4, 1, 96, 0, '$160.00', 1056, 0, 0.00);
-INSERT INTO "public"."material_inventory" VALUES (1, 1, 187, 0, '$302.50', 12751, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (1, 1, 427, 0, '$902.50', 12991, 0, 0.00);
 
 -- ----------------------------
 -- Table structure for material_inventory_detail
@@ -5331,6 +5441,7 @@ INSERT INTO "public"."material_inventory_detail" VALUES (191, 1, 4, 192, '$320.2
 INSERT INTO "public"."material_inventory_detail" VALUES (205, 1, 1, 12, '$30.00', '2023-12-10 00:56:52.193934+08');
 INSERT INTO "public"."material_inventory_detail" VALUES (45, 1, 1, 151, '$377.50', '2023-12-05 09:53:45.315234+08');
 INSERT INTO "public"."material_inventory_detail" VALUES (234, 1, 1, 24, '$60.00', '2023-12-28 05:02:29.2216+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (235, 1, 1, 240, '$600.00', '2024-01-08 23:07:16.358525+08');
 
 -- ----------------------------
 -- Table structure for material_wareroom_inventory
@@ -5358,7 +5469,7 @@ INSERT INTO "public"."material_wareroom_inventory" VALUES (3, 1, 1, 96, 0);
 INSERT INTO "public"."material_wareroom_inventory" VALUES (4, 1, 1, 120, 0);
 INSERT INTO "public"."material_wareroom_inventory" VALUES (2, 1, 1, 45, 0);
 INSERT INTO "public"."material_wareroom_inventory" VALUES (1, 2, 1, 1, 0);
-INSERT INTO "public"."material_wareroom_inventory" VALUES (1, 1, 1, 73, 0);
+INSERT INTO "public"."material_wareroom_inventory" VALUES (1, 1, 1, 66, 0);
 
 -- ----------------------------
 -- Table structure for menu
@@ -5408,6 +5519,14 @@ INSERT INTO "public"."menu" VALUES (3051, '移库', NULL, 3051);
 INSERT INTO "public"."menu" VALUES (3061, '移库出库', NULL, 3061);
 INSERT INTO "public"."menu" VALUES (3071, '移库入库', NULL, 3071);
 INSERT INTO "public"."menu" VALUES (3081, '移库返库', NULL, 3081);
+INSERT INTO "public"."menu" VALUES (90, '业务账目', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (4901, '应付业务账', NULL, 4901);
+INSERT INTO "public"."menu" VALUES (4902, '应收业务账', NULL, 4902);
+INSERT INTO "public"."menu" VALUES (90003, '仓库流水账', NULL, 90003);
+INSERT INTO "public"."menu" VALUES (90004, '仓库进销存台账', NULL, 90004);
+INSERT INTO "public"."menu" VALUES (90002, '业务进销存台账', NULL, 90002);
+INSERT INTO "public"."menu" VALUES (90001, '业务流水账', NULL, 90001);
+INSERT INTO "public"."menu" VALUES (9901, '期末结转', NULL, 9901);
 
 -- ----------------------------
 -- Table structure for menu_template
@@ -5459,6 +5578,14 @@ INSERT INTO "public"."menu_template" VALUES (0, 0, 3051, 3, 5);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 3061, 3, 6);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 3071, 3, 7);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 3081, 3, 8);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 4901, 4, 3);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 4902, 4, 4);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 90, 0, 90);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 90001, 90, 1);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 90002, 90, 2);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 90003, 90, 3);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 90004, 90, 4);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 9901, 9, 901);
 
 -- ----------------------------
 -- Table structure for movement_bill
@@ -5508,6 +5635,7 @@ INSERT INTO "public"."movement_bill" VALUES (4, 1, '2', NULL, '2023-12-23', 1, 2
 INSERT INTO "public"."movement_bill" VALUES (5, 1, '21', NULL, '2023-12-28', 1, 2, 1, 1, 0, 1, '2023-12-28 08:03:03.044766+08', 0, '2023-12-28 08:03:03.044766+08', 0, NULL);
 INSERT INTO "public"."movement_bill" VALUES (6, 1, '22', NULL, '2024-01-06', 1, 2, 1, 2, 0, 1, '2024-01-06 13:45:22.672299+08', 0, '2024-01-06 13:45:22.672299+08', 0, NULL);
 INSERT INTO "public"."movement_bill" VALUES (7, 1, '23', NULL, '2024-01-06', 1, 2, 1, 2, 0, 1, '2024-01-06 14:33:00.547784+08', 0, '2024-01-06 14:33:00.547784+08', 0, NULL);
+INSERT INTO "public"."movement_bill" VALUES (8, 1, '24', NULL, '2024-01-08', 1, 2, 1, 2, 0, 1, '2024-01-08 15:58:01.031613+08', 0, '2024-01-08 15:58:01.031613+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for movement_bill_detail
@@ -5548,6 +5676,7 @@ INSERT INTO "public"."movement_bill_detail" VALUES (4, 5, 1, 2, 2, '袋', 1, 0, 
 INSERT INTO "public"."movement_bill_detail" VALUES (5, 6, 0, 1, 5, '袋', 1, 0, '$15.00', NULL);
 INSERT INTO "public"."movement_bill_detail" VALUES (6, 6, 1, 2, 3, '袋', 1, 0, '$8.10', NULL);
 INSERT INTO "public"."movement_bill_detail" VALUES (7, 7, 0, 1, 15, '袋', 1, 0, '$45.00', NULL);
+INSERT INTO "public"."movement_bill_detail" VALUES (8, 8, 0, 1, 10, '袋', 1, 0, '$30.00', NULL);
 
 -- ----------------------------
 -- Table structure for no_inbound
@@ -5619,7 +5748,8 @@ COMMENT ON TABLE "public"."no_inbound" IS '未入库';
 -- ----------------------------
 INSERT INTO "public"."no_inbound" VALUES (305, 5, 50, 0, 1, '3', NULL, '2024-01-06', 1, 2, 1, 2, 1, 2, '袋', 1, 0, '$6.00', 0, 0, 0, 0, 1, '2024-01-06 13:50:41.209139+08', 1, '2024-01-06 13:50:41.209139+08', 0, '');
 INSERT INTO "public"."no_inbound" VALUES (305, 6, 50, 1, 1, '3', NULL, '2024-01-06', 1, 2, 1, 2, 2, 1, '袋', 1, 0, '$2.70', 0, 0, 0, 0, 1, '2024-01-06 13:50:41.209139+08', 1, '2024-01-06 13:50:41.209139+08', 0, '');
-INSERT INTO "public"."no_inbound" VALUES (305, 7, 51, 0, 1, '4', NULL, '2024-01-06', 1, 2, 1, 2, 1, 10, '袋', 1, 0, '$30.00', 5, 0, 5, 0, 1, '2024-01-06 14:33:33.513932+08', 1, '2024-01-06 15:40:32.865546+08', 4, '');
+INSERT INTO "public"."no_inbound" VALUES (305, 8, 52, 0, 1, '5', NULL, '2024-01-08', 1, 2, 1, 2, 1, 10, '袋', 1, 0, '$30.00', 0, 0, 0, 0, 1, '2024-01-08 15:58:28.029478+08', 1, '2024-01-08 15:58:28.029478+08', 0, '');
+INSERT INTO "public"."no_inbound" VALUES (305, 7, 51, 0, 1, '4', NULL, '2024-01-06', 1, 2, 1, 2, 1, 10, '袋', 1, 0, '$30.00', 8, 0, 8, 0, 1, '2024-01-06 14:33:33.513932+08', 1, '2024-01-08 15:04:18.898583+08', 7, '');
 
 -- ----------------------------
 -- Table structure for no_outbound
@@ -5739,6 +5869,7 @@ INSERT INTO "public"."outbound_bill" VALUES (45, 1, '1', NULL, '2023-12-28', 1, 
 INSERT INTO "public"."outbound_bill" VALUES (46, 1, '2', NULL, '2023-12-28', 1, 2, 0, 1, '2023-12-28 20:55:32.555383+08', 0, '2023-12-28 20:55:32.555383+08', 0, NULL);
 INSERT INTO "public"."outbound_bill" VALUES (50, 1, '3', NULL, '2024-01-06', 1, 2, 0, 1, '2024-01-06 13:50:41.209139+08', 0, '2024-01-06 13:50:41.209139+08', 0, NULL);
 INSERT INTO "public"."outbound_bill" VALUES (51, 1, '4', NULL, '2024-01-06', 1, 2, 0, 1, '2024-01-06 14:33:33.513932+08', 0, '2024-01-06 14:33:33.513932+08', 0, NULL);
+INSERT INTO "public"."outbound_bill" VALUES (52, 1, '5', NULL, '2024-01-08', 1, 2, 0, 1, '2024-01-08 15:58:28.029478+08', 0, '2024-01-08 15:58:28.029478+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for outbound_bill_detail
@@ -5792,6 +5923,7 @@ INSERT INTO "public"."outbound_bill_detail" VALUES (35, 46, 0, 305, 4, 1, 2, 2, 
 INSERT INTO "public"."outbound_bill_detail" VALUES (42, 50, 0, 305, 5, 1, 2, 1, 2, 2, '袋', 1, 0, 0, '$6.00', '');
 INSERT INTO "public"."outbound_bill_detail" VALUES (43, 50, 1, 305, 6, 1, 2, 2, 1, 1, '袋', 1, 0, 0, '$2.70', '');
 INSERT INTO "public"."outbound_bill_detail" VALUES (44, 51, 0, 305, 7, 1, 2, 1, 10, 10, '袋', 1, 0, 0, '$30.00', '');
+INSERT INTO "public"."outbound_bill_detail" VALUES (45, 52, 0, 305, 8, 1, 2, 1, 10, 10, '袋', 1, 0, 0, '$30.00', '');
 
 -- ----------------------------
 -- Table structure for person
@@ -5899,6 +6031,8 @@ INSERT INTO "public"."plugin" VALUES (3051, 'inventory/movement', NULL, -1, NULL
 INSERT INTO "public"."plugin" VALUES (3061, 'inventory/movementOutbound', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (3071, 'inventory/movementInbound', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (3081, 'inventory/movementReturn', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (90001, 'accounts/business', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (9901, 'system/forward', NULL, -1, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill
@@ -5968,6 +6102,7 @@ INSERT INTO "public"."procurement_billing_bill" VALUES (110, 1, '43', NULL, '202
 INSERT INTO "public"."procurement_billing_bill" VALUES (111, 1, '44', NULL, '2023-12-14', 2, 3, 2, 0, 1, '2023-12-14 19:55:39.26594+08', 0, '2023-12-14 19:55:39.26594+08', 0, NULL);
 INSERT INTO "public"."procurement_billing_bill" VALUES (112, 1, '45', NULL, '2023-12-14', 1, 2, 1, 0, 1, '2023-12-14 20:38:31.638086+08', 0, '2023-12-14 20:38:31.638086+08', 0, NULL);
 INSERT INTO "public"."procurement_billing_bill" VALUES (113, 1, '46', NULL, '2023-12-28', 1, 2, 1, 0, 1, '2023-12-28 05:02:29.2216+08', 0, '2023-12-28 05:02:29.2216+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (114, 1, '47', NULL, '2024-01-08', 1, 2, 1, 0, 1, '2024-01-08 23:07:16.358525+08', 0, '2024-01-08 23:07:16.358525+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill_detail
@@ -6024,6 +6159,7 @@ INSERT INTO "public"."procurement_billing_bill_detail" VALUES (229, 110, 0, 1, 1
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (232, 112, 0, 1, 3, '箱', 12, 1, '$90.00', '$90.00', 0.1700, '$108.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (233, 112, 1, 2, 2, '箱', 12, 1, '$50.00', '$50.00', 0.1700, '$64.80', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (234, 113, 0, 1, 1, '箱', 12, 1, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (235, 114, 0, 1, 20, '箱', 12, 0, '$600.00', '$600.00', 0.1700, '$720.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (43, 31, 0, 1, 10, '箱', 12, 1, '$300.00', '$300.00', 0.1700, '$0.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (44, 31, 1, 2, 10, '箱', 12, 1, '$250.00', '$250.00', 0.1700, '$0.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (45, 32, 0, 1, 15, '箱', 12, 1, '$450.00', '$450.00', 0.1700, '$0.00', NULL);
@@ -6217,6 +6353,7 @@ COMMENT ON TABLE "public"."procurement_no_inbound" IS '采购未入库';
 -- Records of procurement_no_inbound
 -- ----------------------------
 INSERT INTO "public"."procurement_no_inbound" VALUES (102, 67, 43, 0, 1, '4', NULL, '2023-12-28', 1, 2, 1, 0, 1, -1, '箱', 12, -1, '-$30.00', '-$30.00', 0.1700, '-$36.00', 0, 0, 0, 0, 1, '2023-12-28 05:05:31.2176+08', 0, '2023-12-28 05:05:31.2176+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 235, 114, 0, 1, '47', NULL, '2024-01-08', 1, 2, 1, 0, 1, 20, '箱', 12, 0, '$600.00', '$600.00', 0.1700, '$720.00', 0, 0, 0, 0, 1, '2024-01-08 23:07:16.358525+08', 0, '2024-01-08 23:07:16.358525+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_order_bill
@@ -6547,6 +6684,8 @@ COMMENT ON TABLE "public"."return_bill" IS '返库单';
 -- ----------------------------
 -- Records of return_bill
 -- ----------------------------
+INSERT INTO "public"."return_bill" VALUES (1, 1, '3', NULL, '2024-01-06', 1, 1, 0, 1, '2024-01-06 16:07:41.72933+08', 0, '2024-01-06 16:07:41.72933+08', 0, NULL);
+INSERT INTO "public"."return_bill" VALUES (2, 1, '4', NULL, '2024-01-08', 1, 1, 0, 1, '2024-01-08 15:04:18.898583+08', 0, '2024-01-08 15:04:18.898583+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for return_bill_detail
@@ -6592,6 +6731,8 @@ COMMENT ON TABLE "public"."return_bill_detail" IS '返库单明细';
 -- ----------------------------
 -- Records of return_bill_detail
 -- ----------------------------
+INSERT INTO "public"."return_bill_detail" VALUES (1, 1, 0, 305, 7, 1, 2, 1, 1, 1, '袋', 1, 0, 0, '$0.00', '');
+INSERT INTO "public"."return_bill_detail" VALUES (2, 2, 0, 305, 7, 1, 2, 1, 1, 1, '袋', 1, 0, 0, '$0.00', '');
 
 -- ----------------------------
 -- Table structure for role
@@ -6691,6 +6832,14 @@ INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 3051, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 3061, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 3071, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 3081, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4901, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4902, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90001, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90002, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90003, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90004, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 9901, -1);
 
 -- ----------------------------
 -- Table structure for selling_billing_bill
@@ -7167,16 +7316,16 @@ COMMENT ON TABLE "public"."serial_no_info" IS '序列号信息';
 -- Records of serial_no_info
 -- ----------------------------
 INSERT INTO "public"."serial_no_info" VALUES (1, 401, 0, 5);
-INSERT INTO "public"."serial_no_info" VALUES (1, 305, 0, 23);
-INSERT INTO "public"."serial_no_info" VALUES (1, 306, 0, 4);
 INSERT INTO "public"."serial_no_info" VALUES (1, 402, 0, 1);
 INSERT INTO "public"."serial_no_info" VALUES (1, 303, 0, 5);
 INSERT INTO "public"."serial_no_info" VALUES (1, 307, 0, 3);
-INSERT INTO "public"."serial_no_info" VALUES (1, 308, 0, 1);
 INSERT INTO "public"."serial_no_info" VALUES (1, 304, 0, 1);
+INSERT INTO "public"."serial_no_info" VALUES (1, 308, 0, 4);
+INSERT INTO "public"."serial_no_info" VALUES (1, 305, 0, 24);
+INSERT INTO "public"."serial_no_info" VALUES (1, 306, 0, 5);
+INSERT INTO "public"."serial_no_info" VALUES (1, 101, 0, 47);
 INSERT INTO "public"."serial_no_info" VALUES (1, 302, 0, 4);
 INSERT INTO "public"."serial_no_info" VALUES (1, 203, 0, 7);
-INSERT INTO "public"."serial_no_info" VALUES (1, 101, 0, 46);
 INSERT INTO "public"."serial_no_info" VALUES (1, 102, 0, 4);
 INSERT INTO "public"."serial_no_info" VALUES (1, 201, 0, 7);
 INSERT INTO "public"."serial_no_info" VALUES (1, 202, 0, 3);
@@ -7318,9 +7467,11 @@ CREATE TABLE "public"."wareroom_account" (
   "department_id" int8 NOT NULL DEFAULT 0,
   "owner_id" int8 NOT NULL DEFAULT 0,
   "in_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "in_unit" varchar(8) COLLATE "pg_catalog"."default",
   "in_packing_size" int8 NOT NULL DEFAULT 1,
   "in_piece" int8 NOT NULL DEFAULT 0,
   "out_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "out_unit" varchar(8) COLLATE "pg_catalog"."default",
   "out_packing_size" int8 NOT NULL DEFAULT 1,
   "out_piece" int8 NOT NULL DEFAULT 0,
   "creator_user_id" int8 NOT NULL DEFAULT 0,
@@ -7342,9 +7493,11 @@ COMMENT ON COLUMN "public"."wareroom_account"."other_id" IS '对方单位内码'
 COMMENT ON COLUMN "public"."wareroom_account"."department_id" IS '部门内码';
 COMMENT ON COLUMN "public"."wareroom_account"."owner_id" IS '业务员内码';
 COMMENT ON COLUMN "public"."wareroom_account"."in_quantity" IS '入库数量';
+COMMENT ON COLUMN "public"."wareroom_account"."in_unit" IS '入库单位';
 COMMENT ON COLUMN "public"."wareroom_account"."in_packing_size" IS '入库包装规格';
 COMMENT ON COLUMN "public"."wareroom_account"."in_piece" IS '入库件数';
 COMMENT ON COLUMN "public"."wareroom_account"."out_quantity" IS '出库数量';
+COMMENT ON COLUMN "public"."wareroom_account"."out_unit" IS '出库单位';
 COMMENT ON COLUMN "public"."wareroom_account"."out_packing_size" IS '出库包装规格';
 COMMENT ON COLUMN "public"."wareroom_account"."out_piece" IS '出库件数';
 COMMENT ON COLUMN "public"."wareroom_account"."creator_user_id" IS '创建人内码';
@@ -7355,36 +7508,47 @@ COMMENT ON TABLE "public"."wareroom_account" IS '仓库流水';
 -- ----------------------------
 -- Records of wareroom_account
 -- ----------------------------
-INSERT INTO "public"."wareroom_account" VALUES (307, 21, 24, 0, 1, '2024-01-06', '3', NULL, 1, 2, 1, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2024-01-06 15:25:09.543742+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 23, 148, 0, 1, '2023-12-05', '2', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-05 08:23:37.522081+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 1, 149, 0, 1, '2023-12-05', '3', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-05 08:26:24.459735+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 2, 150, 0, 1, '2023-12-05', '4', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-05 08:29:58.007294+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 21, 169, 0, 1, '2023-12-05', '5', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-05 08:46:42.620871+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 24, 171, 0, 1, '2023-12-05', '6', NULL, 1, 1, 1, 1, 2, 5, 12, 0, 0, 1, 0, 1, '2023-12-05 09:54:27.029567+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 25, 171, 1, 1, '2023-12-05', '6', NULL, 2, 1, 1, 1, 2, 2, 12, 0, 0, 1, 0, 1, '2023-12-05 09:54:27.029567+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 26, 172, 0, 1, '2023-12-05', '7', NULL, 3, 1, 1, 2, 2, 3, 24, 0, 0, 1, 0, 1, '2023-12-05 12:42:54.740432+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 27, 172, 1, 1, '2023-12-05', '7', NULL, 4, 1, 1, 2, 2, 1, 24, 0, 0, 1, 0, 1, '2023-12-05 12:42:54.740432+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 28, 173, 0, 1, '2023-12-05', '8', NULL, 4, 1, 1, 2, 2, 2, 24, 0, 0, 1, 0, 1, '2023-12-05 19:02:12.447136+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 29, 177, 0, 1, '2023-12-07', '9', NULL, 3, 1, 1, 2, 2, 1, 24, 0, 0, 1, 0, 1, '2023-12-07 02:09:10.382944+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 30, 177, 1, 1, '2023-12-07', '9', NULL, 4, 1, 1, 2, 2, 2, 24, 0, 0, 1, 0, 1, '2023-12-07 02:09:10.382944+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (302, 1, 4, 0, 1, '2023-12-14', '1', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-14 12:34:37.899151+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 31, 178, 0, 1, '2023-12-14', '10', NULL, 1, 1, 1, 1, 2, 2, 12, 0, 0, 1, 0, 1, '2023-12-14 20:40:24.988007+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (301, 32, 178, 1, 1, '2023-12-14', '10', NULL, 2, 1, 1, 1, 2, 2, 12, 0, 0, 1, 0, 1, '2023-12-14 20:40:24.988007+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (308, 22, 25, 0, 1, '2024-01-06', '1', NULL, 1, 1, 1, 1, 2, 2, 1, 0, 0, 1, 0, 1, '2024-01-06 15:40:32.865546+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (303, 27, 36, 0, 1, '2023-12-23', '4', NULL, 1, 0, 0, 1, 2, 2, 1, 1, 0, 1, 0, 1, '2023-12-23 14:31:54.949592+08', NULL);
-INSERT INTO "public"."wareroom_account" VALUES (303, 28, 37, 0, 1, '2023-12-23', '5', NULL, 1, 0, 0, 1, 2, 1, 1, 1, 0, 1, 0, 1, '2023-12-23 14:35:01.29258+08', NULL);
-INSERT INTO "public"."wareroom_account" VALUES (301, 3, 3, 0, 1, '2023-12-28', '11', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-28 06:10:53.957556+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (302, 2, 14, 0, 1, '2023-12-28', '2', NULL, 1, 1, 1, 1, 2, 1, 12, 0, 0, 1, 0, 1, '2023-12-28 06:18:58.98245+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (305, 13, 34, 0, 1, '2023-12-28', '3', NULL, 1, 1, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, '2023-12-28 18:26:11.899727+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (305, 14, 35, 0, 1, '2023-12-28', '4', NULL, 2, 1, 2, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2023-12-28 18:28:42.202247+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 34, 45, 1, 1, '2023-12-28', '1', NULL, 2, 1, 2, 1, 2, 0, 1, 0, 0, 1, 0, 1, '2023-12-28 20:55:09.392847+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 33, 45, 0, 1, '2023-12-28', '1', NULL, 1, 1, 2, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2023-12-28 20:55:09.392847+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 35, 46, 0, 1, '2023-12-28', '2', NULL, 2, 1, 2, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2023-12-28 20:55:32.555383+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 43, 50, 1, 1, '2024-01-06', '3', NULL, 2, 1, 2, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2024-01-06 13:50:41.209139+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 42, 50, 0, 1, '2024-01-06', '3', NULL, 1, 1, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, '2024-01-06 13:50:41.209139+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (306, 44, 51, 0, 1, '2024-01-06', '4', NULL, 1, 1, 2, 1, 2, 10, 1, 0, 0, 1, 0, 1, '2024-01-06 14:33:33.513932+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (307, 13, 16, 0, 1, '2024-01-06', '1', NULL, 1, 2, 1, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2024-01-06 14:51:42.014275+08', '');
-INSERT INTO "public"."wareroom_account" VALUES (307, 14, 17, 0, 1, '2024-01-06', '2', NULL, 1, 2, 1, 1, 2, 1, 1, 0, 0, 1, 0, 1, '2024-01-06 14:55:33.620049+08', '');
+
+-- ----------------------------
+-- Table structure for wareroom_carry_over
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."wareroom_carry_over";
+CREATE TABLE "public"."wareroom_carry_over" (
+  "bill_date" date NOT NULL DEFAULT CURRENT_DATE,
+  "material_id" int8 NOT NULL,
+  "wareroom_id" int8 NOT NULL,
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "in_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "in_unit" varchar(8) COLLATE "pg_catalog"."default",
+  "in_packing_size" int8 NOT NULL DEFAULT 1,
+  "in_piece" int8 NOT NULL DEFAULT 0,
+  "out_quantity" numeric(18,0) NOT NULL DEFAULT 0,
+  "out_unit" varchar(8) COLLATE "pg_catalog"."default",
+  "out_packing_size" int8 NOT NULL DEFAULT 1,
+  "out_piece" int8 NOT NULL DEFAULT 0,
+  "creator_user_id" int8 NOT NULL DEFAULT 0,
+  "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+;
+COMMENT ON COLUMN "public"."wareroom_carry_over"."bill_date" IS '单据日期';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."material_id" IS '商品内码';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."wareroom_id" IS '仓库内码';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."in_quantity" IS '入库数量';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."in_unit" IS '入库单位';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."in_packing_size" IS '入库包装规格';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."in_piece" IS '入库件数';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."out_quantity" IS '出库数量';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."out_unit" IS '出库单位';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."out_packing_size" IS '出库包装规格';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."out_piece" IS '出库件数';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."creator_user_id" IS '创建人内码';
+COMMENT ON COLUMN "public"."wareroom_carry_over"."creation_date_time" IS '创建日期时间';
+COMMENT ON TABLE "public"."wareroom_carry_over" IS '仓库结转';
+
+-- ----------------------------
+-- Records of wareroom_carry_over
+-- ----------------------------
 
 -- ----------------------------
 -- Function structure for get_cost
@@ -7620,6 +7784,51 @@ CREATE VIEW "public"."owner" AS  SELECT person_id AS owner_id,
 COMMENT ON VIEW "public"."owner" IS '业务员';
 
 -- ----------------------------
+-- View structure for supplier_customer
+-- ----------------------------
+DROP VIEW IF EXISTS "public"."supplier_customer";
+CREATE VIEW "public"."supplier_customer" AS  SELECT 1 AS supplier_customer_type,
+    supplier.supplier_id AS supplier_customer_id,
+    supplier.supplier_code AS supplier_customer_code,
+    supplier.supplier_name AS supplier_customer_name,
+    supplier.supplier_mnemonic_code AS supplier_customer_mnemonic_code,
+    supplier.supplier_barcode AS supplier_customer_barcode,
+    supplier.supplier_description AS supplier_customer_description,
+    supplier.tenant_id,
+    supplier.is_deleted,
+    supplier.is_active,
+    supplier.creator_user_id,
+    supplier.creation_date_time,
+    supplier.last_modifier_user_id,
+    supplier.last_modification_date_time,
+    supplier.deleter_user_id,
+    supplier.deletion_date_time,
+    supplier.version,
+    supplier.comment
+   FROM supplier
+UNION ALL
+ SELECT 2 AS supplier_customer_type,
+    customer.customer_id AS supplier_customer_id,
+    customer.customer_code AS supplier_customer_code,
+    customer.customer_name AS supplier_customer_name,
+    customer.customer_mnemonic_code AS supplier_customer_mnemonic_code,
+    customer.customer_barcode AS supplier_customer_barcode,
+    customer.customer_description AS supplier_customer_description,
+    customer.tenant_id,
+    customer.is_deleted,
+    customer.is_active,
+    customer.creator_user_id,
+    customer.creation_date_time,
+    customer.last_modifier_user_id,
+    customer.last_modification_date_time,
+    customer.deleter_user_id,
+    customer.deletion_date_time,
+    customer.version,
+    customer.comment
+   FROM customer;
+COMMENT ON VIEW "public"."supplier_customer" IS '供应商客户';
+
+-- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."ap_non_payment_bill_detail_id_seq"
@@ -7701,14 +7910,14 @@ SELECT setval('"public"."department_department_id_seq"', 6, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."inbound_bill_bill_id_seq"
 OWNED BY "public"."inbound_bill"."bill_id";
-SELECT setval('"public"."inbound_bill_bill_id_seq"', 25, true);
+SELECT setval('"public"."inbound_bill_bill_id_seq"', 26, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."inbound_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."inbound_bill_detail"."bill_detail_id";
-SELECT setval('"public"."inbound_bill_detail_bill_detail_id_seq"', 22, true);
+SELECT setval('"public"."inbound_bill_detail_bill_detail_id_seq"', 23, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -7750,14 +7959,14 @@ SELECT setval('"public"."material_material_id_seq"', 1, false);
 -- ----------------------------
 ALTER SEQUENCE "public"."movement_bill_bill_id_seq"
 OWNED BY "public"."movement_bill"."bill_id";
-SELECT setval('"public"."movement_bill_bill_id_seq"', 7, true);
+SELECT setval('"public"."movement_bill_bill_id_seq"', 8, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."movement_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."movement_bill_detail"."bill_detail_id";
-SELECT setval('"public"."movement_bill_detail_bill_detail_id_seq"', 7, true);
+SELECT setval('"public"."movement_bill_detail_bill_detail_id_seq"', 8, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -7778,14 +7987,14 @@ SELECT setval('"public"."no_outbound_bill_detail_id_seq"', 1, false);
 -- ----------------------------
 ALTER SEQUENCE "public"."outbound_bill_bill_id_seq"
 OWNED BY "public"."outbound_bill"."bill_id";
-SELECT setval('"public"."outbound_bill_bill_id_seq"', 51, true);
+SELECT setval('"public"."outbound_bill_bill_id_seq"', 52, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."outbound_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."outbound_bill_detail"."bill_detail_id";
-SELECT setval('"public"."outbound_bill_detail_bill_detail_id_seq"', 44, true);
+SELECT setval('"public"."outbound_bill_detail_bill_detail_id_seq"', 45, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -7799,14 +8008,14 @@ SELECT setval('"public"."person_person_id_seq"', 6, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."procurement_billing_bill_bill_id_seq"
 OWNED BY "public"."procurement_billing_bill"."bill_id";
-SELECT setval('"public"."procurement_billing_bill_bill_id_seq"', 113, true);
+SELECT setval('"public"."procurement_billing_bill_bill_id_seq"', 114, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."procurement_billing_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."procurement_billing_bill_detail"."bill_detail_id";
-SELECT setval('"public"."procurement_billing_bill_detail_bill_detail_id_seq"', 234, true);
+SELECT setval('"public"."procurement_billing_bill_detail_bill_detail_id_seq"', 235, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -7876,14 +8085,14 @@ SELECT setval('"public"."procurement_return_bill_detail_bill_detail_id_seq"', 67
 -- ----------------------------
 ALTER SEQUENCE "public"."return_bill_bill_id_seq"
 OWNED BY "public"."return_bill"."bill_id";
-SELECT setval('"public"."return_bill_bill_id_seq"', 1, false);
+SELECT setval('"public"."return_bill_bill_id_seq"', 2, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."return_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."return_bill_detail"."bill_detail_id";
-SELECT setval('"public"."return_bill_detail_bill_detail_id_seq"', 1, false);
+SELECT setval('"public"."return_bill_detail_bill_detail_id_seq"', 2, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -7989,28 +8198,28 @@ ALTER TABLE "public"."ap" ADD CONSTRAINT "pk_ap" PRIMARY KEY ("supplier_id");
 -- ----------------------------
 -- Indexes structure for table ap_account
 -- ----------------------------
-CREATE INDEX "ap_account_bill_bill_code" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_bill_code" ON "public"."ap_account" USING btree (
   "bill_code" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_bill_date" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_bill_date" ON "public"."ap_account" USING btree (
   "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_bill_id" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_bill_id" ON "public"."ap_account" USING btree (
   "bill_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_creation_date_time" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_creation_date_time" ON "public"."ap_account" USING btree (
   "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_payment_mode" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_payment_mode" ON "public"."ap_account" USING btree (
   "payment_mode" "pg_catalog"."int2_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_supplier" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_supplier" ON "public"."ap_account" USING btree (
   "supplier_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_tenant" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_tenant" ON "public"."ap_account" USING btree (
   "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ap_account_bill_type" ON "public"."ap_account" USING btree (
+CREATE INDEX "ix_ap_account_bill_type" ON "public"."ap_account" USING btree (
   "bill_type" "pg_catalog"."int2_ops" ASC NULLS LAST
 );
 
@@ -8018,6 +8227,27 @@ CREATE INDEX "ap_account_bill_type" ON "public"."ap_account" USING btree (
 -- Primary Key structure for table ap_account
 -- ----------------------------
 ALTER TABLE "public"."ap_account" ADD CONSTRAINT "pk_ap_account" PRIMARY KEY ("bill_type", "bill_id");
+
+-- ----------------------------
+-- Indexes structure for table ap_carry_over
+-- ----------------------------
+CREATE INDEX "ix_ap_carry_over_bill_bill_date" ON "public"."ap_carry_over" USING btree (
+  "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ap_carry_over_bill_creation_date_time" ON "public"."ap_carry_over" USING btree (
+  "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ap_carry_over_bill_supplier" ON "public"."ap_carry_over" USING btree (
+  "supplier_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ap_carry_over_bill_tenant" ON "public"."ap_carry_over" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table ap_carry_over
+-- ----------------------------
+ALTER TABLE "public"."ap_carry_over" ADD CONSTRAINT "pk_ap_carry_over" PRIMARY KEY ("bill_date", "supplier_id");
 
 -- ----------------------------
 -- Indexes structure for table ap_non_payment
@@ -8130,28 +8360,28 @@ ALTER TABLE "public"."ar" ADD CONSTRAINT "pk_ar" PRIMARY KEY ("customer_id");
 -- ----------------------------
 -- Indexes structure for table ar_account
 -- ----------------------------
-CREATE INDEX "ar_account_bill_bill_code" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_bill_code" ON "public"."ar_account" USING btree (
   "bill_code" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_bill_date" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_bill_date" ON "public"."ar_account" USING btree (
   "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_bill_id" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_bill_id" ON "public"."ar_account" USING btree (
   "bill_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_creation_date_time" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_creation_date_time" ON "public"."ar_account" USING btree (
   "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_customer" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_customer" ON "public"."ar_account" USING btree (
   "customer_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_payment_mode" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_payment_mode" ON "public"."ar_account" USING btree (
   "payment_mode" "pg_catalog"."int2_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_tenant" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_tenant" ON "public"."ar_account" USING btree (
   "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ar_account_bill_type" ON "public"."ar_account" USING btree (
+CREATE INDEX "ix_ar_account_type" ON "public"."ar_account" USING btree (
   "bill_type" "pg_catalog"."int2_ops" ASC NULLS LAST
 );
 
@@ -8159,6 +8389,27 @@ CREATE INDEX "ar_account_bill_type" ON "public"."ar_account" USING btree (
 -- Primary Key structure for table ar_account
 -- ----------------------------
 ALTER TABLE "public"."ar_account" ADD CONSTRAINT "pk_ar_account" PRIMARY KEY ("bill_type", "bill_id");
+
+-- ----------------------------
+-- Indexes structure for table ar_carry_over
+-- ----------------------------
+CREATE INDEX "ix_ar_carry_over_bill_date" ON "public"."ar_carry_over" USING btree (
+  "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ar_carry_over_creation_date_time" ON "public"."ar_carry_over" USING btree (
+  "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ar_carry_over_customer" ON "public"."ar_carry_over" USING btree (
+  "customer_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_ar_carry_over_tenant" ON "public"."ar_carry_over" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table ar_carry_over
+-- ----------------------------
+ALTER TABLE "public"."ar_carry_over" ADD CONSTRAINT "pk_ar_carry_over" PRIMARY KEY ("bill_date", "customer_id");
 
 -- ----------------------------
 -- Indexes structure for table ar_non_receipt
@@ -8304,8 +8555,8 @@ CREATE INDEX "ix_business_account_material" ON "public"."business_account" USING
 CREATE INDEX "ix_business_account_owner" ON "public"."business_account" USING btree (
   "owner_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
-CREATE INDEX "ix_business_account_supply_marketing" ON "public"."business_account" USING btree (
-  "supply_marketing_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+CREATE INDEX "ix_business_account_supplier_customer" ON "public"."business_account" USING btree (
+  "supplier_customer_id" "pg_catalog"."int8_ops" ASC NULLS LAST
 );
 CREATE INDEX "ix_business_account_tenant" ON "public"."business_account" USING btree (
   "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
@@ -8315,6 +8566,27 @@ CREATE INDEX "ix_business_account_tenant" ON "public"."business_account" USING b
 -- Primary Key structure for table business_account
 -- ----------------------------
 ALTER TABLE "public"."business_account" ADD CONSTRAINT "pk_business_account" PRIMARY KEY ("bill_type", "bill_detail_id");
+
+-- ----------------------------
+-- Indexes structure for table business_carry_over
+-- ----------------------------
+CREATE INDEX "ix_business_carry_over_bill_date" ON "public"."business_carry_over" USING btree (
+  "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_business_carry_over_creation_date_time" ON "public"."business_carry_over" USING btree (
+  "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_business_carry_over_material" ON "public"."business_carry_over" USING btree (
+  "material_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_business_carry_over_tenant" ON "public"."business_carry_over" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table business_carry_over
+-- ----------------------------
+ALTER TABLE "public"."business_carry_over" ADD CONSTRAINT "pk_business_carry_over" PRIMARY KEY ("bill_date", "material_id");
 
 -- ----------------------------
 -- Indexes structure for table customer
@@ -9617,3 +9889,27 @@ CREATE INDEX "ix_wareroom_account_wareroom" ON "public"."wareroom_account" USING
 -- Primary Key structure for table wareroom_account
 -- ----------------------------
 ALTER TABLE "public"."wareroom_account" ADD CONSTRAINT "pk_wareroom_account" PRIMARY KEY ("bill_type", "bill_detail_id");
+
+-- ----------------------------
+-- Indexes structure for table wareroom_carry_over
+-- ----------------------------
+CREATE INDEX "ix_wareroom_carry_over_bill_date" ON "public"."wareroom_carry_over" USING btree (
+  "bill_date" "pg_catalog"."date_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_wareroom_carry_over_creation_date_time" ON "public"."wareroom_carry_over" USING btree (
+  "creation_date_time" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_wareroom_carry_over_material" ON "public"."wareroom_carry_over" USING btree (
+  "material_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_wareroom_carry_over_tenant" ON "public"."wareroom_carry_over" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_wareroom_carry_over_wareroom" ON "public"."wareroom_carry_over" USING btree (
+  "wareroom_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table wareroom_carry_over
+-- ----------------------------
+ALTER TABLE "public"."wareroom_carry_over" ADD CONSTRAINT "pk_wareroom_carry_over" PRIMARY KEY ("bill_date", "material_id", "wareroom_id");

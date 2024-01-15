@@ -288,8 +288,8 @@
 	},
 	{
 		"ColumnName": "Person_Name",
-		"Caption": "人员名称",
-		"Comment": "人员名称",
+		"Caption": "人员姓名",
+		"Comment": "人员姓名",
 		"MaxLength": 50,
 		"DbDataType": 16,
 		"DbPhysicalType": "VARCHAR(50)"
@@ -1369,9 +1369,9 @@
 		"DbPhysicalType": "INT2"
 	},
 	{
-		"ColumnName": "Supply_Marketing_Id",
-		"Caption": "供销单位",
-		"Comment": "供销单位",
+		"ColumnName": "Supplier_Customer_Id",
+		"Caption": "供应商客户",
+		"Comment": "供应商客户",
 		"MaxLength": 8,
 		"AllowDBNull": false,
 		"IsRequired": true,
@@ -2330,5 +2330,74 @@
 		"MaxLength": 50,
 		"DbDataType": 16,
 		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Carry_Over_Year_Month",
+		"Caption": "结转年月",
+		"Comment": "结转年月",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 26
+	},
+	{
+		"ColumnName": "Bill_Year_Month",
+		"Caption": "单据年月",
+		"Comment": "单据年月",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 26
+	},
+	{
+		"ColumnName": "Supplier_Customer_Name",
+		"Caption": "供销单位名称",
+		"Comment": "供销单位名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Creator_User_Name",
+		"Caption": "创建人姓名",
+		"Comment": "创建人姓名",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Real_In_Amount",
+		"Caption": "实际入库金额",
+		"Comment": "实际入库金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Out_Cost_Amount",
+		"Caption": "出库成本金额",
+		"Comment": "出库成本金额",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount",
+		"Caption": "成本金额",
+		"Comment": "成本金额",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
 	}
 ]
