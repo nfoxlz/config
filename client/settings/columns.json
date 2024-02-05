@@ -551,7 +551,8 @@
 		"Caption": "终止单据日期",
 		"Comment": "终止单据日期",
 		"DbDataType": 5,
-		"DbPhysicalType": "DATE"
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 3
 	},
 	{
 		"ColumnName": "Owner_Id",
@@ -2345,7 +2346,7 @@
 		"Comment": "单据年月",
 		"DbDataType": 5,
 		"DbPhysicalType": "DATE",
-		"DefaultSystemValue": 26
+		"DefaultSystemValue": 23
 	},
 	{
 		"ColumnName": "Supplier_Customer_Name",
@@ -2393,6 +2394,68 @@
 		"Caption": "成本金额",
 		"Comment": "成本金额",
 		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Is_Checked",
+		"Caption": "选择",
+		"Comment": "选择",
+		"DefaultValue": "false",
+		"IsVisible": false,
+		"DbDataType": 3,
+		"DbPhysicalType": "BOOL"
+	},
+	{
+		"ColumnName": "Payable_Amount",
+		"Caption": "应付金额",
+		"Comment": "应付金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Payable_Balance_Amount",
+		"Caption": "应付余额",
+		"Comment": "应付余额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Receivable_Amount",
+		"Caption": "应收金额",
+		"Comment": "应收金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Receivable_Balance_Amount",
+		"Caption": "应收余额",
+		"Comment": "应收余额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsReadOnly": true,
 		"Precision": 2,

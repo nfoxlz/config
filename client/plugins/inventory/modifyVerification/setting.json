@@ -25,14 +25,15 @@
 		]
 	},
 	"SaveColumns": {
-		"Master": [
+		"master": [
 			"Bill_Id",
 			"Manual_Code",
 			"Department_Id",
 			"Owner_Id",
-			"Comment"
+			"Comment",
+			"Version"
 		],
-		"Detail": [
+		"master_1": [
 			"Bill_Detail_Id",
 			"Quantity",
 			"Unit",

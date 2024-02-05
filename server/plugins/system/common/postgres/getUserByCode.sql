@@ -1,0 +1,1 @@
+SELECT Operator_Id, Operator_Code, Operator_Name, Role_Id, User_Password FROM Operator WHERE Tenant_Id = :tenant_Id AND Operator_Code = :code

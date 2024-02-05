@@ -1,2 +1,0 @@
-INSERT INTO Procurement_Billing_Bill_Detail (Bill_Id, Sn, Material_Id, Purchasing_Quantity, Purchasing_Unit, Purchasing_Packing_Size, Purchasing_Piece, Purchasing_Amount, Real_Purchasing_Amount, Input_Tax_Rate, Retail_Amount, Comment)
-	VALUES (CURRVAL('procurement_billing_bill_bill_id_seq'::regclass), :Sn, :Material_Id, :Purchasing_Quantity, :Purchasing_Unit, :Purchasing_Packing_Size, :Purchasing_Piece, :Purchasing_Amount::NUMERIC::MONEY, :Real_Purchasing_Amount::NUMERIC::MONEY, :Input_Tax_Rate, :Retail_Amount::NUMERIC::MONEY, :Comment)

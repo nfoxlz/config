@@ -1,0 +1,2 @@
+INSERT INTO Selling_Pending_Adjustment_Bill_Detail (Bill_Id, Sn, Material_Id, Selling_Amount, Output_Tax_Rate, Comment)
+	VALUES (CURRVAL(CAST('selling_pending_adjustment_bill_bill_id_seq' AS regclass)), :Sn, :Material_Id, CAST(CAST(:Amount AS NUMERIC) AS MONEY), :Output_Tax_Rate, :Comment)

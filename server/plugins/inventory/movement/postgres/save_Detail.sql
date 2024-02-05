@@ -1,0 +1,2 @@
+INSERT INTO Movement_Bill_Detail (Bill_Id, Sn, Material_Id, Quantity, Unit, Packing_Size, Piece, Retail_Amount, Comment)
+	VALUES (CURRVAL(CAST('movement_bill_bill_id_seq' AS regclass)), :Sn, :Material_Id, :Quantity, :Unit, :Packing_Size, :Piece, CAST(CAST(:Retail_Amount AS NUMERIC) AS MONEY), :Comment)

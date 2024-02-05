@@ -1,0 +1,1 @@
+DELETE FROM Role_Menu WHERE Application = :Application AND Client_Side = :Client_Side AND Role_Id = :Role_Id;

@@ -16,6 +16,7 @@
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">
             <Button Content="{DynamicResource SaveButton}" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding SaveCommand}" Visibility="{Binding HasSaveAuthorition,Mode=OneTime}"/>
+            <Button Content="{DynamicResource KeepButton}" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ExtendedSaveCommand}" Visibility="{Binding HasExtendedSaveAuthorition,Mode=OneTime}"/>
             <Button Content="{DynamicResource PrintButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintCommand}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
             <Button Content="{DynamicResource PrintPreviewButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintPreviewCommand}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 		</StackPanel>

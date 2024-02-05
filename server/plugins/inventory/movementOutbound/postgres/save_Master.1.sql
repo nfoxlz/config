@@ -1,0 +1,4 @@
+INSERT INTO Outbound_Bill_Detail (Bill_Id, Sn, Related_Bill_Type, Related_Bill_Detail_Id, Department_Id, Owner_Id, Material_Id,
+		Outbound_Quantity, Real_Outbound_Quantity, Outbound_Unit, Outbound_Packing_Size, Outbound_Piece, Real_Outbound_Piece, Retail_Amount, Comment)
+	VALUES (CURRVAL(CAST('outbound_bill_bill_id_seq' AS regclass)), :Sn, :Bill_Type, :Bill_Detail_Id, :Department_Id, :Owner_Id, :Material_Id,
+		:Real_Outbound_Quantity + :Discount_Outbound_Quantity, :Real_Outbound_Quantity, :Outbound_Unit, :Outbound_Packing_Size, :Real_Outbound_Piece + :Discount_Outbound_Piece, :Real_Outbound_Piece, CAST(CAST(:Retail_Price * :Real_Outbound_Quantity * :Outbound_Packing_Size / :Retail_Packing_Size AS NUMERIC) AS MONEY), :Comment)

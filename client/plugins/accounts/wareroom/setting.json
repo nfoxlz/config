@@ -1,0 +1,40 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Bill_Year_Month",
+		"Wareroom_Id",
+		"Material_Code"
+	],
+	"ConditionRequiredColumns": [
+		"Bill_Year_Month",
+		"Wareroom_Id"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"C0",
+			"Bill_Type",
+			"In_Piece",
+			"Out_Piece",
+			"Piece"
+		]
+	},
+	"CalculatedColumns": {
+		"master": [
+			{
+				"PlusColumn": "In_Quantity",
+				"MinusColumn": "Out_Quantity",
+				"BalanceColumn": "Quantity"
+			},
+			{
+				"PlusColumn": "In_Piece",
+				"MinusColumn": "Out_Piece",
+				"BalanceColumn": "Piece"
+			}
+		]
+	}
+}

@@ -1,2 +1,0 @@
-INSERT INTO Selling_Pending_Adjustment_Bill_Detail (Bill_Id, Sn, Material_Id, Selling_Amount, Output_Tax_Rate, Comment)
-	VALUES (CURRVAL('selling_pending_adjustment_bill_bill_id_seq'::regclass), :Sn, :Material_Id, :Amount::NUMERIC::MONEY, :Output_Tax_Rate, :Comment)

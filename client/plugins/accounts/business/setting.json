@@ -3,12 +3,6 @@
 		"Bill_Year_Month",
 		"Material_Code"
 	],
-	"ConditionDataColumnSettings": [
-		{
-			"ColumnName": "Bill_Year_Month",
-			"DefaultSystemValue": 23
-		}
-	],
 	"ConditionRequiredColumns": [
 		"Bill_Year_Month"
 	],

@@ -1,0 +1,31 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Bill_Year_Month",
+		"Customer_Id"
+	],
+	"ConditionRequiredColumns": [
+		"Bill_Year_Month",
+		"Customer_Id"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"C0",
+			"Bill_Type"
+		]
+	},
+	"CalculatedColumns": {
+		"master": [
+			{
+				"PlusColumn": "Receivable_Amount",
+				"MinusColumn": "Receipt_Amount",
+				"BalanceColumn": "Receivable_Balance_Amount"
+			}
+		]
+	}
+}

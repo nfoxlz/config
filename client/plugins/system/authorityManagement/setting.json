@@ -1,0 +1,31 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Application",
+		"Client_Side",
+		"Role_Id"
+	],
+	"ConditionRequiredColumns": [
+		"Application",
+		"Client_Side",
+		"Role_Id"
+	],
+	"DataLoadName": "master",
+	"IsAddMaster": false,
+	"IsMergeConditionData": true,
+	"SaveConditionColumns": [
+		"Application",
+		"Client_Side",
+		"Role_Id"
+	],
+	"SaveRowStateFilters": {
+		"master": 22
+	},
+	"SaveFilters": {
+		"master": "Is_Checked"
+	},
+	"SaveColumns": {
+		"master": [
+			"Menu_No"
+		]
+	}
+}

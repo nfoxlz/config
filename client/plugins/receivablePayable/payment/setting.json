@@ -8,12 +8,6 @@
 		"Material_Code",
 		"Payment_Mode"
 	],
-	"ConditionDataColumnSettings": [
-		{
-			"ColumnName": "End_Bill_Date",
-			"DefaultSystemValue": 3
-		}
-	],
 	"ConditionRequiredColumns": [
 		"Supplier_Id"
 	],

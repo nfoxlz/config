@@ -1,0 +1,31 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Bill_Year_Month",
+		"Supplier_Id"
+	],
+	"ConditionRequiredColumns": [
+		"Bill_Year_Month",
+		"Supplier_Id"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"C0",
+			"Bill_Type"
+		]
+	},
+	"CalculatedColumns": {
+		"master": [
+			{
+				"PlusColumn": "Payable_Amount",
+				"MinusColumn": "Payment_Amount",
+				"BalanceColumn": "Payable_Balance_Amount"
+			}
+		]
+	}
+}
