@@ -1,2 +1,5 @@
-# config
-Configuration of Compete management information system.
+# CompeteMIS平台 配置
+CompeteMIS平台是一个开源的低代码的MIS基础平台，通过本系统，可快速搭建ERP、MES、财务等MIS软件系统。仅需要使用SQL及少量的C#代码就可快速的搭建起应用。一般一个简单画面功能可以在几分钟内完成，复杂画面功能可以在几小时内完成。
+示例应用目前使用PostgreSQL数据库。示例用应已经实现基本的进销存功能。
+
+**作者邮箱：** 4043171@qq.com
