@@ -12,7 +12,7 @@
  Target Server Version : 160001 (160001)
  File Encoding         : 65001
 
- Date: 08/02/2024 11:12:14
+ Date: 28/04/2024 10:45:04
 */
 
 
@@ -545,10 +545,43 @@ START 1
 CACHE 1;
 
 -- ----------------------------
+-- Sequence structure for subject_subject_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."subject_subject_id_seq";
+CREATE SEQUENCE "public"."subject_subject_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
 -- Sequence structure for supplier_supplier_id_seq
 -- ----------------------------
 DROP SEQUENCE IF EXISTS "public"."supplier_supplier_id_seq";
 CREATE SEQUENCE "public"."supplier_supplier_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for voucher_detail_voucher_detail_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."voucher_detail_voucher_detail_id_seq";
+CREATE SEQUENCE "public"."voucher_detail_voucher_detail_id_seq" 
+INCREMENT 1
+MINVALUE  1
+MAXVALUE 9223372036854775807
+START 1
+CACHE 1;
+
+-- ----------------------------
+-- Sequence structure for voucher_voucher_id_seq
+-- ----------------------------
+DROP SEQUENCE IF EXISTS "public"."voucher_voucher_id_seq";
+CREATE SEQUENCE "public"."voucher_voucher_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -565,6 +598,153 @@ MINVALUE  1
 MAXVALUE 9223372036854775807
 START 1
 CACHE 1;
+
+-- ----------------------------
+-- Table structure for account
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."account";
+CREATE TABLE "public"."account" (
+  "account_id" int8 NOT NULL DEFAULT nextval('subject_subject_id_seq'::regclass),
+  "account_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
+  "account_name" varchar(50) COLLATE "pg_catalog"."default",
+  "account_mnemonic_code" varchar(50) COLLATE "pg_catalog"."default",
+  "account_barcode" varchar(13) COLLATE "pg_catalog"."default",
+  "account_description" varchar(50) COLLATE "pg_catalog"."default",
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "is_deleted" bool NOT NULL DEFAULT false,
+  "is_active" bool NOT NULL DEFAULT true,
+  "creator_user_id" int8 DEFAULT 0,
+  "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "last_modifier_user_id" int8 DEFAULT 0,
+  "last_modification_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "deleter_user_id" int8,
+  "deletion_date_time" timestamptz(6),
+  "version" int8 NOT NULL DEFAULT 0,
+  "comment" text COLLATE "pg_catalog"."default"
+)
+;
+COMMENT ON COLUMN "public"."account"."account_id" IS '科目内码';
+COMMENT ON COLUMN "public"."account"."account_code" IS '科目编码';
+COMMENT ON COLUMN "public"."account"."account_name" IS '科目名称';
+COMMENT ON COLUMN "public"."account"."account_mnemonic_code" IS '科目助记码';
+COMMENT ON COLUMN "public"."account"."account_barcode" IS '科目条码';
+COMMENT ON COLUMN "public"."account"."account_description" IS '科目描述';
+COMMENT ON COLUMN "public"."account"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."account"."is_deleted" IS '删除标记';
+COMMENT ON COLUMN "public"."account"."is_active" IS '活动标记';
+COMMENT ON COLUMN "public"."account"."creator_user_id" IS '创建人内码';
+COMMENT ON COLUMN "public"."account"."creation_date_time" IS '创建日期时间';
+COMMENT ON COLUMN "public"."account"."last_modifier_user_id" IS '最后修改人';
+COMMENT ON COLUMN "public"."account"."last_modification_date_time" IS '最后修改日期时间';
+COMMENT ON COLUMN "public"."account"."deleter_user_id" IS '删除人';
+COMMENT ON COLUMN "public"."account"."deletion_date_time" IS '删除日期时间';
+COMMENT ON COLUMN "public"."account"."version" IS '版本';
+COMMENT ON COLUMN "public"."account"."comment" IS '备注';
+COMMENT ON TABLE "public"."account" IS '科目';
+
+-- ----------------------------
+-- Records of account
+-- ----------------------------
+INSERT INTO "public"."account" VALUES (29, '1521', '持有至到期投资', 'CYZDQTZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.790338+08', 0, '2024-04-21 16:08:20.790338+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (30, '1522', '持有至到期投资减值准备', 'CYZDQTZJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.804736+08', 0, '2024-04-21 16:08:20.804736+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (31, '1523', '可供出售金融资产', 'KGCSJRZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.821237+08', 0, '2024-04-21 16:08:20.821237+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (32, '1524', '长期股权投资', 'ZQGQTZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.835701+08', 0, '2024-04-21 16:08:20.835701+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (33, '1525', '长期股权投资减值准备', 'ZQGQTZJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.850313+08', 0, '2024-04-21 16:08:20.850313+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (34, '1526', '投资性房地产', 'TZXFDC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.865988+08', 0, '2024-04-21 16:08:20.865988+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (35, '1531', '长期应收款', 'ZQYSK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.882032+08', 0, '2024-04-21 16:08:20.882032+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (36, '1541', '未实现融资收益', 'WSXRZSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.897943+08', 0, '2024-04-21 16:08:20.897943+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (38, '1602', '累计折旧', 'LJZJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.930861+08', 0, '2024-04-21 16:08:20.930861+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (39, '1603', '固定资产减值准备', 'GDZCJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.946793+08', 0, '2024-04-21 16:08:20.946793+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (40, '1604', '在建工程', 'ZJGC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.961762+08', 0, '2024-04-21 16:08:20.961762+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (41, '1605', '工程物资', 'GCWZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.978911+08', 0, '2024-04-21 16:08:20.978911+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (42, '1606', '固定资产清理', 'GDZCQL', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.99392+08', 0, '2024-04-21 16:08:20.99392+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (43, '1701', '无形资产', 'WXZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.010469+08', 0, '2024-04-21 16:08:21.010469+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (44, '1702', '累计摊销', 'LJTX', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.025232+08', 0, '2024-04-21 16:08:21.025232+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (45, '1703', '无形资产减值准备', 'WXZCJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.041514+08', 0, '2024-04-21 16:08:21.041514+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (46, '1711', '商誉', 'SY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.057202+08', 0, '2024-04-21 16:08:21.057202+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (47, '1801', '长期待摊费用', 'ZQDTFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.072987+08', 0, '2024-04-21 16:08:21.072987+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (48, '1811', '递延所得资产', 'DYSDZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.089819+08', 0, '2024-04-21 16:08:21.089819+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (49, '1901', '待处理财产损益', 'DCLCCSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.104429+08', 0, '2024-04-21 16:08:21.104429+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (50, '2001', '短期借款', 'DQJK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.11945+08', 0, '2024-04-21 16:08:21.11945+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (51, '2101', '交易性金融负债', 'JYXJRFZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.135378+08', 0, '2024-04-21 16:08:21.135378+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (52, '2201', '应付票据', 'YFPJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.150981+08', 0, '2024-04-21 16:08:21.150981+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (53, '2202', '应付账款', 'YFZK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.168302+08', 0, '2024-04-21 16:08:21.168302+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (54, '2205', '预收账款', 'YSZK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.182752+08', 0, '2024-04-21 16:08:21.182752+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (55, '2211', '应付职工薪酬', 'YFZGXC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.198548+08', 0, '2024-04-21 16:08:21.198548+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (56, '2221', '应交税费', 'YJSF', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.21442+08', 0, '2024-04-21 16:08:21.21442+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (57, '2231', '应付股利', 'YFGL', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.230468+08', 0, '2024-04-21 16:08:21.230468+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (58, '2232', '应付利息', 'YFLX', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.246328+08', 0, '2024-04-21 16:08:21.246328+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (59, '2241', '其他应付款', 'QTYFK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.262277+08', 0, '2024-04-21 16:08:21.262277+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (60, '2314', '代理业务负债', 'DLYWFZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.278041+08', 0, '2024-04-21 16:08:21.278041+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (61, '2401', '预提费用', 'YTFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.294344+08', 0, '2024-04-21 16:08:21.294344+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (62, '2411', '预计负债', 'YJFZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.310857+08', 0, '2024-04-21 16:08:21.310857+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (63, '2501', '递延收益', 'DYSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.32634+08', 0, '2024-04-21 16:08:21.32634+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (64, '2601', '长期借款', 'ZQJK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.342255+08', 0, '2024-04-21 16:08:21.342255+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (65, '2602', '长期债券', 'ZQZQ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.358311+08', 0, '2024-04-21 16:08:21.358311+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (66, '2801', '长期应付款', 'ZQYFK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.374424+08', 0, '2024-04-21 16:08:21.374424+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (67, '2802', '未确认融资费用', 'WQRRZFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.392625+08', 0, '2024-04-21 16:08:21.392625+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (68, '2811', '专项应付款', 'ZXYFK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.407184+08', 0, '2024-04-21 16:08:21.407184+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (69, '2901', '递延所得税负债', 'DYSDSFZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.424107+08', 0, '2024-04-21 16:08:21.424107+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (70, '3101', '衍生工具', 'YSGJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.440607+08', 0, '2024-04-21 16:08:21.440607+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (71, '3201', '套期工具', 'TQGJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.45752+08', 0, '2024-04-21 16:08:21.45752+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (72, '3202', '被套期项目', 'BTQXM', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.470705+08', 0, '2024-04-21 16:08:21.470705+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (73, '4001', '实收资本', 'SSZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.485327+08', 0, '2024-04-21 16:08:21.485327+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (74, '4002', '资本公积', 'ZBGJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.499298+08', 0, '2024-04-21 16:08:21.499298+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (75, '4101', '盈余公积', 'YYGJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.515021+08', 0, '2024-04-21 16:08:21.515021+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (76, '4103', '本年利润', 'BNLR', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.53086+08', 0, '2024-04-21 16:08:21.53086+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (77, '4104', '利润分配', 'LRFP', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.545055+08', 0, '2024-04-21 16:08:21.545055+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (78, '4201', '库存股', 'KCG', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.559847+08', 0, '2024-04-21 16:08:21.559847+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (79, '5001', '生产成本', 'SCCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.574776+08', 0, '2024-04-21 16:08:21.574776+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (80, '5101', '制造费用', 'ZZFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.590797+08', 0, '2024-04-21 16:08:21.590797+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (81, '5201', '劳务成本', 'LWCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.607135+08', 0, '2024-04-21 16:08:21.607135+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (82, '5301', '研发支出', 'YFZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.622506+08', 0, '2024-04-21 16:08:21.622506+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (83, '6001', '主营业务收入', 'ZYYWSR', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.638744+08', 0, '2024-04-21 16:08:21.638744+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (84, '6051', '其他业务收入', 'QTYWSR', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.654047+08', 0, '2024-04-21 16:08:21.654047+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (85, '6101', '公允价值变动损益', 'GYJZBDSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.672684+08', 0, '2024-04-21 16:08:21.672684+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (86, '6111', '投资收益', 'TZSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.688356+08', 0, '2024-04-21 16:08:21.688356+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (87, '6115', '固定资产处置损益', 'GDZCCZSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.810489+08', 0, '2024-04-21 16:08:21.810489+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (88, '6117', '其他收益', 'QTSY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.825722+08', 0, '2024-04-21 16:08:21.825722+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (89, '6301', '营业外收入', 'YYWSR', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.840979+08', 0, '2024-04-21 16:08:21.840979+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (90, '6401', '主营业务成本', 'ZYYWCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.856005+08', 0, '2024-04-21 16:08:21.856005+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (1, '1001', '库存现金', 'KCXJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.388741+08', 0, '2024-04-21 16:08:20.388741+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (2, '1002', '银行存款', 'YHCK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.417331+08', 0, '2024-04-21 16:08:20.417331+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (3, '1015', '其它货币基金', 'QTHBJJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.43217+08', 0, '2024-04-21 16:08:20.43217+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (4, '1101', '交易性金融资产', 'JYXJRZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.446774+08', 0, '2024-04-21 16:08:20.446774+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (5, '1121', '应收票据', 'YSPJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.461711+08', 0, '2024-04-21 16:08:20.461711+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (6, '1122', '应收账款', 'YSZK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.462683+08', 0, '2024-04-21 16:08:20.462683+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (7, '1123', '预付账款', 'YFZK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.477704+08', 0, '2024-04-21 16:08:20.477704+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (8, '1131', '应收股利', 'YSGL', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.493238+08', 0, '2024-04-21 16:08:20.493238+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (9, '1132', '应收利息', 'YSLX', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.508845+08', 0, '2024-04-21 16:08:20.508845+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (10, '1231', '其它应收款', 'QTYSK', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.524864+08', 0, '2024-04-21 16:08:20.524864+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (11, '1241', '坏账准备', 'HZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.541479+08', 0, '2024-04-21 16:08:20.541479+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (12, '1321', '代理业务资产', 'DLYWZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.555679+08', 0, '2024-04-21 16:08:20.555679+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (13, '1401', '材料采购', 'CLCG', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.571308+08', 0, '2024-04-21 16:08:20.571308+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (14, '1402', '在途物资', 'ZTWZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.586691+08', 0, '2024-04-21 16:08:20.586691+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (15, '1403', '原材料', 'YCL', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.602805+08', 0, '2024-04-21 16:08:20.602805+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (16, '1404', '材料成本差异', 'CLCBCY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.617266+08', 0, '2024-04-21 16:08:20.617266+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (17, '1406', '库存商品', 'KCSP', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.631753+08', 0, '2024-04-21 16:08:20.631753+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (18, '1407', '发出商品', 'FCSP', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.647488+08', 0, '2024-04-21 16:08:20.647488+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (19, '1410', '商品进销差价', 'SPJXCJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.664407+08', 0, '2024-04-21 16:08:20.664407+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (20, '1411', '委托加工物资', 'WTJGWZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.665891+08', 0, '2024-04-21 16:08:20.665891+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (21, '1412', '包装物及低值易耗品', 'BZWJDZYHP', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.680161+08', 0, '2024-04-21 16:08:20.680161+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (22, '1461', '存货跌价准备', 'CHDJZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.695781+08', 0, '2024-04-21 16:08:20.695781+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (23, '1473', '合同资产', 'HTZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.697613+08', 0, '2024-04-21 16:08:20.697613+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (24, '1474', '合同资产减值准备', 'HTZCJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.711913+08', 0, '2024-04-21 16:08:20.711913+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (25, '1475', '合同履约成本', 'HTLYCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.727721+08', 0, '2024-04-21 16:08:20.727721+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (26, '1476', '合同履约成本减值准备', 'HTLYCBJZZB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.742272+08', 0, '2024-04-21 16:08:20.742272+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (27, '1477', '合同取得成本', 'HTQDCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.757907+08', 0, '2024-04-21 16:08:20.757907+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (28, '1501', '待摊费用', 'DTFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.773439+08', 0, '2024-04-21 16:08:20.773439+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (37, '1601', '固定资产', 'GDZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:20.91468+08', 0, '2024-04-21 16:08:20.91468+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (91, '6402', '其它业务成本', 'QTYWCB', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.872353+08', 0, '2024-04-21 16:08:21.872353+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (92, '6405', '营业税金及附加', 'YYSJJFJ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.888887+08', 0, '2024-04-21 16:08:21.888887+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (93, '6601', '销售费用', 'XSFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.904205+08', 0, '2024-04-21 16:08:21.904205+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (94, '6602', '管理费用', 'GLFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.918642+08', 0, '2024-04-21 16:08:21.918642+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (95, '6603', '财务费用', 'CWFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.930224+08', 0, '2024-04-21 16:08:21.930224+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (96, '6604', '勘探费用', 'KTFY', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.932786+08', 0, '2024-04-21 16:08:21.932786+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (97, '6701', '资产减值损失', 'ZCJZSS', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.934848+08', 0, '2024-04-21 16:08:21.934848+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (98, '6711', '营业外支出', 'YYWZC', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.936256+08', 0, '2024-04-21 16:08:21.936256+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (99, '6801', '所得税', 'SDS', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.938232+08', 0, '2024-04-21 16:08:21.938232+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."account" VALUES (100, '6901', '以前年度损益调整', 'YQNDSYTZ', NULL, NULL, 1, 'f', 't', 0, '2024-04-21 16:08:21.950442+08', 0, '2024-04-21 16:08:21.950442+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
 -- Table structure for action
@@ -4628,6 +4808,33 @@ COMMENT ON TABLE "public"."business_carry_over" IS '业务结转';
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for config_template
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."config_template";
+CREATE TABLE "public"."config_template" (
+  "config_name" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
+  "config_default_value" varchar(50) COLLATE "pg_catalog"."default",
+  "last_modifier_user_id" int8 NOT NULL DEFAULT 0,
+  "last_modification_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "version" int8 NOT NULL DEFAULT 0,
+  "comment" text COLLATE "pg_catalog"."default"
+)
+;
+COMMENT ON COLUMN "public"."config_template"."config_name" IS '配置名';
+COMMENT ON COLUMN "public"."config_template"."config_default_value" IS '配置默认值';
+COMMENT ON COLUMN "public"."config_template"."last_modifier_user_id" IS '最后修改人';
+COMMENT ON COLUMN "public"."config_template"."last_modification_date_time" IS '最后修改日期时间';
+COMMENT ON COLUMN "public"."config_template"."version" IS '版本';
+COMMENT ON COLUMN "public"."config_template"."comment" IS '备注';
+COMMENT ON TABLE "public"."config_template" IS '配置模板';
+
+-- ----------------------------
+-- Records of config_template
+-- ----------------------------
+INSERT INTO "public"."config_template" VALUES ('CostMethod', '0', 0, '2024-04-24 07:52:17.702763+08', 0, NULL);
+INSERT INTO "public"."config_template" VALUES ('SubjectStructure', '4-3', 0, '2024-04-24 08:08:35.825858+08', 0, NULL);
+
+-- ----------------------------
 -- Table structure for costmethod
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."costmethod";
@@ -5560,6 +5767,10 @@ INSERT INTO "public"."menu" VALUES (90001, '业务流水账', NULL, 90001);
 INSERT INTO "public"."menu" VALUES (90002, '仓库流水账', NULL, 90002);
 INSERT INTO "public"."menu" VALUES (4901, '应付流水账', NULL, 4901);
 INSERT INTO "public"."menu" VALUES (4902, '应收流水账', NULL, 4902);
+INSERT INTO "public"."menu" VALUES (10, '财务管理', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (10002, '签证管理', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (10003, '账簿管理', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (10001, '科目管理', NULL, 10001);
 
 -- ----------------------------
 -- Table structure for menu_template
@@ -5620,6 +5831,10 @@ INSERT INTO "public"."menu_template" VALUES (0, 0, 4902, 4, 902);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 90001, 90, 1);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 90002, 90, 2);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 90, 0, 90);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 10, 0, 10);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 10001, 10, 1);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 10002, 10, 2);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 10003, 10, 3);
 
 -- ----------------------------
 -- Table structure for movement_bill
@@ -6066,6 +6281,7 @@ INSERT INTO "public"."plugin" VALUES (9901, 'system/authorityManagement', NULL, 
 INSERT INTO "public"."plugin" VALUES (9902, 'system/forward', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90002, 'accounts/wareroom', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90001, 'accounts/business', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (10001, 'finance\accountManagement', NULL, -1, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill
@@ -6947,6 +7163,10 @@ INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4902, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90001, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90002, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 10, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 10001, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 10002, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 10003, -1);
 
 -- ----------------------------
 -- Table structure for selling_billing_bill
@@ -7506,6 +7726,113 @@ INSERT INTO "public"."supplier" VALUES (4, '1004', '红星食品公司', 'HXSPGS
 INSERT INTO "public"."supplier" VALUES (5, '1005', '便民百货公司', 'BMBHGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-10-18 16:22:47.084015+08', 0, '2023-10-18 16:22:47.084015+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
+-- Table structure for tenant_config
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."tenant_config";
+CREATE TABLE "public"."tenant_config" (
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "config_name" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
+  "config_value" varchar(50) COLLATE "pg_catalog"."default",
+  "last_modifier_user_id" int8 NOT NULL DEFAULT 0,
+  "last_modification_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "version" int8 NOT NULL DEFAULT 0,
+  "comment" text COLLATE "pg_catalog"."default"
+)
+;
+COMMENT ON COLUMN "public"."tenant_config"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."tenant_config"."config_name" IS '配置名';
+COMMENT ON COLUMN "public"."tenant_config"."config_value" IS '配置值';
+COMMENT ON COLUMN "public"."tenant_config"."last_modifier_user_id" IS '最后修改人';
+COMMENT ON COLUMN "public"."tenant_config"."last_modification_date_time" IS '最后修改日期时间';
+COMMENT ON COLUMN "public"."tenant_config"."version" IS '版本';
+COMMENT ON COLUMN "public"."tenant_config"."comment" IS '备注';
+COMMENT ON TABLE "public"."tenant_config" IS '租户配置';
+
+-- ----------------------------
+-- Records of tenant_config
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for voucher
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."voucher";
+CREATE TABLE "public"."voucher" (
+  "voucher_id" int8 NOT NULL DEFAULT nextval('voucher_voucher_id_seq'::regclass),
+  "tenant_id" int8 NOT NULL DEFAULT 0,
+  "voucher_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
+  "accounting_date" date NOT NULL DEFAULT CURRENT_DATE,
+  "accessories_num" int2 DEFAULT 0,
+  "bill_state" int8 NOT NULL DEFAULT 0,
+  "creatoruserid" int8 DEFAULT 0,
+  "creationdatetime" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "lastmodifieruserid" int8 DEFAULT 0,
+  "lastmodificationdatetime" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "deleter_user_id" int8,
+  "deletion_date_time" timestamptz(6),
+  "auditor_user_id" int8,
+  "audit_date_time" timestamptz(6),
+  "bookkeeper_user_id" int8,
+  "booked_date_time3" timestamptz(6),
+  "general_bookkeeper_user_id" int8,
+  "general_booked_date_time" timestamptz(6),
+  "version" int8 NOT NULL DEFAULT 0,
+  "comment" text COLLATE "pg_catalog"."default"
+)
+;
+COMMENT ON COLUMN "public"."voucher"."voucher_id" IS '凭证内码';
+COMMENT ON COLUMN "public"."voucher"."tenant_id" IS '租户内码';
+COMMENT ON COLUMN "public"."voucher"."voucher_code" IS '凭证编号';
+COMMENT ON COLUMN "public"."voucher"."accounting_date" IS '记账日期';
+COMMENT ON COLUMN "public"."voucher"."accessories_num" IS '附件数';
+COMMENT ON COLUMN "public"."voucher"."bill_state" IS '凭证状态';
+COMMENT ON COLUMN "public"."voucher"."creatoruserid" IS '创建人内码';
+COMMENT ON COLUMN "public"."voucher"."creationdatetime" IS '创建日期时间';
+COMMENT ON COLUMN "public"."voucher"."lastmodifieruserid" IS '最后修改人';
+COMMENT ON COLUMN "public"."voucher"."lastmodificationdatetime" IS '最后修改日期时间';
+COMMENT ON COLUMN "public"."voucher"."deleter_user_id" IS '删除人';
+COMMENT ON COLUMN "public"."voucher"."deletion_date_time" IS '删除日期时间';
+COMMENT ON COLUMN "public"."voucher"."auditor_user_id" IS '审核人';
+COMMENT ON COLUMN "public"."voucher"."audit_date_time" IS '审核日期时间';
+COMMENT ON COLUMN "public"."voucher"."bookkeeper_user_id" IS '记账人';
+COMMENT ON COLUMN "public"."voucher"."booked_date_time3" IS '记账日期时间';
+COMMENT ON COLUMN "public"."voucher"."general_bookkeeper_user_id" IS '总账记账人';
+COMMENT ON COLUMN "public"."voucher"."general_booked_date_time" IS '总账记账日期时间';
+COMMENT ON COLUMN "public"."voucher"."version" IS '版本';
+COMMENT ON COLUMN "public"."voucher"."comment" IS '备注';
+COMMENT ON TABLE "public"."voucher" IS '凭证';
+
+-- ----------------------------
+-- Records of voucher
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for voucher_detail
+-- ----------------------------
+DROP TABLE IF EXISTS "public"."voucher_detail";
+CREATE TABLE "public"."voucher_detail" (
+  "voucher_detail_id" int8 NOT NULL DEFAULT nextval('voucher_detail_voucher_detail_id_seq'::regclass),
+  "voucher_id" int8 NOT NULL,
+  "sn" int8 NOT NULL,
+  "account_id" int8 NOT NULL,
+  "debit_amount" money NOT NULL DEFAULT 0,
+  "credit_amount" money NOT NULL DEFAULT 0,
+  "comment" text COLLATE "pg_catalog"."default"
+)
+;
+COMMENT ON COLUMN "public"."voucher_detail"."voucher_detail_id" IS '凭证明细内码';
+COMMENT ON COLUMN "public"."voucher_detail"."voucher_id" IS '凭证内码';
+COMMENT ON COLUMN "public"."voucher_detail"."sn" IS '序号';
+COMMENT ON COLUMN "public"."voucher_detail"."account_id" IS '科目内码';
+COMMENT ON COLUMN "public"."voucher_detail"."debit_amount" IS '借方金额';
+COMMENT ON COLUMN "public"."voucher_detail"."credit_amount" IS '贷方金额';
+COMMENT ON COLUMN "public"."voucher_detail"."comment" IS '备注';
+COMMENT ON TABLE "public"."voucher_detail" IS '凭证明细';
+
+-- ----------------------------
+-- Records of voucher_detail
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for wareroom
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."wareroom";
@@ -7687,6 +8014,12 @@ DECLARE
 BEGIN
 	
 	SELECT Cost_Accounting_Method INTO costMethod FROM Material WHERE Material_Id = p_Material_Id AND Tenant_Id = p_Tenant_Id;
+	IF costMethod = -1 THEN
+		SELECT COALESCE(Tenant_Config.Config_Value, Config_Template.Config_Default_Value) INTO costMethod
+			FROM Config_Template
+			LEFT JOIN Tenant_Config ON Config_Template.Config_Name = Tenant_Config.Config_Name
+			WHERE Config_Template.Config_Name = 'CostMethod';
+	END IF;
 	
 	CASE costMethod
 	WHEN -1 THEN	--未定义
@@ -7772,6 +8105,12 @@ BEGIN
 	SELECT Cost_Accounting_Method INTO costMethod
 		FROM Material
 		WHERE Material_Id = p_Material_Id AND Tenant_Id = p_Tenant_Id;
+	IF costMethod = -1 THEN
+		SELECT COALESCE(Tenant_Config.Config_Value, Config_Template.Config_Default_Value) INTO costMethod
+			FROM Config_Template
+			LEFT JOIN Tenant_Config ON Config_Template.Config_Name = Tenant_Config.Config_Name
+			WHERE Config_Template.Config_Name = 'CostMethod';
+	END IF;
 	
 	CASE costMethod
 	WHEN -1 THEN
@@ -8243,6 +8582,13 @@ SELECT setval('"public"."selling_return_bill_detail_bill_detail_id_seq"', 7, tru
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
+ALTER SEQUENCE "public"."subject_subject_id_seq"
+OWNED BY "public"."account"."account_id";
+SELECT setval('"public"."subject_subject_id_seq"', 100, true);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
 ALTER SEQUENCE "public"."supplier_supplier_id_seq"
 OWNED BY "public"."supplier"."supplier_id";
 SELECT setval('"public"."supplier_supplier_id_seq"', 5, true);
@@ -8250,9 +8596,47 @@ SELECT setval('"public"."supplier_supplier_id_seq"', 5, true);
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
+ALTER SEQUENCE "public"."voucher_detail_voucher_detail_id_seq"
+OWNED BY "public"."voucher_detail"."voucher_detail_id";
+SELECT setval('"public"."voucher_detail_voucher_detail_id_seq"', 1, false);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
+ALTER SEQUENCE "public"."voucher_voucher_id_seq"
+OWNED BY "public"."voucher"."voucher_id";
+SELECT setval('"public"."voucher_voucher_id_seq"', 1, false);
+
+-- ----------------------------
+-- Alter sequences owned by
+-- ----------------------------
 ALTER SEQUENCE "public"."wareroom_wareroom_id_seq"
 OWNED BY "public"."wareroom"."wareroom_id";
 SELECT setval('"public"."wareroom_wareroom_id_seq"', 3, true);
+
+-- ----------------------------
+-- Indexes structure for table account
+-- ----------------------------
+CREATE INDEX "ix_account_barcode" ON "public"."account" USING btree (
+  "account_barcode" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_account_code" ON "public"."account" USING btree (
+  "account_code" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_account_mnemonic_code" ON "public"."account" USING btree (
+  "account_mnemonic_code" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_account_name" ON "public"."account" USING btree (
+  "account_name" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_account_tenant" ON "public"."account" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table account
+-- ----------------------------
+ALTER TABLE "public"."account" ADD CONSTRAINT "pk_subject" PRIMARY KEY ("account_id");
 
 -- ----------------------------
 -- Primary Key structure for table action
@@ -8663,6 +9047,11 @@ CREATE INDEX "ix_business_carry_over_tenant" ON "public"."business_carry_over" U
 -- Primary Key structure for table business_carry_over
 -- ----------------------------
 ALTER TABLE "public"."business_carry_over" ADD CONSTRAINT "pk_business_carry_over" PRIMARY KEY ("bill_date", "material_id");
+
+-- ----------------------------
+-- Primary Key structure for table config_template
+-- ----------------------------
+ALTER TABLE "public"."config_template" ADD CONSTRAINT "pk_config_template" PRIMARY KEY ("config_name");
 
 -- ----------------------------
 -- Primary Key structure for table customer
@@ -9880,6 +10269,58 @@ CREATE INDEX "ix_supplier_tenant" ON "public"."supplier" USING btree (
 -- Primary Key structure for table supplier
 -- ----------------------------
 ALTER TABLE "public"."supplier" ADD CONSTRAINT "pk_supplier" PRIMARY KEY ("supplier_id");
+
+-- ----------------------------
+-- Indexes structure for table tenant_config
+-- ----------------------------
+CREATE INDEX "ix_tenant_config_name" ON "public"."tenant_config" USING btree (
+  "config_name" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_tenant_config_tenant" ON "public"."tenant_config" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table tenant_config
+-- ----------------------------
+ALTER TABLE "public"."tenant_config" ADD CONSTRAINT "pk_tenant_config" PRIMARY KEY ("tenant_id", "config_name");
+
+-- ----------------------------
+-- Indexes structure for table voucher
+-- ----------------------------
+CREATE INDEX "ix_voucher_code" ON "public"."voucher" USING btree (
+  "voucher_code" COLLATE "pg_catalog"."default" "pg_catalog"."text_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_voucher_datetime" ON "public"."voucher" USING btree (
+  "accounting_date" "pg_catalog"."date_ops" ASC NULLS LAST,
+  "creationdatetime" "pg_catalog"."timestamptz_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_voucher_state" ON "public"."voucher" USING btree (
+  "bill_state" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_voucher_tenant" ON "public"."voucher" USING btree (
+  "tenant_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table voucher
+-- ----------------------------
+ALTER TABLE "public"."voucher" ADD CONSTRAINT "pk_voucher" PRIMARY KEY ("voucher_id");
+
+-- ----------------------------
+-- Indexes structure for table voucher_detail
+-- ----------------------------
+CREATE INDEX "ix_voucher_account" ON "public"."voucher_detail" USING btree (
+  "account_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+CREATE INDEX "ix_voucher_id" ON "public"."voucher_detail" USING btree (
+  "voucher_id" "pg_catalog"."int8_ops" ASC NULLS LAST
+);
+
+-- ----------------------------
+-- Primary Key structure for table voucher_detail
+-- ----------------------------
+ALTER TABLE "public"."voucher_detail" ADD CONSTRAINT "pk_voucher_detail" PRIMARY KEY ("voucher_detail_id");
 
 -- ----------------------------
 -- Indexes structure for table wareroom

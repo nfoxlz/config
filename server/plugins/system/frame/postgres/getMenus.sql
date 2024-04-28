@@ -9,3 +9,4 @@ SELECT Role_Menu.Menu_No, Menu_Template.Parent_Menu_No, Menu_Template.Sn,
  WHERE Role_Menu.Application = :application
    AND Role_Menu.Client_Side = :client_Side
    AND Operator.Operator_Id = :user_Id
+ORDER BY Menu_Template.Parent_Menu_No, Menu_Template.Sn, Role_Menu.Menu_No

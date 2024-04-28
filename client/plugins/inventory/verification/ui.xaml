@@ -15,7 +15,7 @@
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">
-			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding Query}" PageSizeChangedCommand="{Binding Query}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
+			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding QueryCommand}" PageSizeChangedCommand="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource QueryButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource AddButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding DirectAddCommand}" Visibility="{Binding HasDirectAddAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource ModifyButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">

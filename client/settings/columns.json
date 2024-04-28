@@ -2462,5 +2462,56 @@
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Account_Id",
+		"Caption": "科目",
+		"Comment": "科目内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Account_Code",
+		"Caption": "科目编码",
+		"Comment": "科目编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Account_Name",
+		"Caption": "科目名称",
+		"Comment": "科目名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Account_Mnemonic_Code",
+		"Caption": "科目助记码",
+		"Comment": "科目助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Account_Barcode",
+		"Caption": "科目条码",
+		"Comment": "科目条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Account_Description",
+		"Caption": "科目描述",
+		"Comment": "科目描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
 	}
 ]
