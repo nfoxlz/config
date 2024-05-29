@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM Account WHERE Tenant_Id = :tenant AND NOT Is_Deleted AND Is_Active AND Account_Code LIKE :code || '%' AND LENGTH(Account_Code) = :code_Length{filter}

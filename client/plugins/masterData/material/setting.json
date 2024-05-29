@@ -7,17 +7,16 @@
 	],
 	"DataLoadName": "master",
 	"IsPagingQuery": true,
+	"IsAddMaster": false,
 	"InvisibleColumns": {
 		"master": [
-			"Material_Id",
-			"Tenant_Id",
-			"Is_Deleted"
+			"Material_Id"
 		]
 	},
-	"RequiredColumns": {
-		"master": [
-			"Material_Code"
-		]
+	"ColumnCalculateScriptFileNames": {
+		"Master": {
+			"Material_Name": "Master_Material_Name.cs"
+		}
 	},
 	"IsDifferentiated": true,
 	"DifferentiatedSaveColumns": {

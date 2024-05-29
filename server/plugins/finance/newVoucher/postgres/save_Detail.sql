@@ -1,0 +1,2 @@
+INSERT INTO Voucher_Detail (Voucher_Id, Sn, Account_Id, Summary, Debit_Amount, Credit_Amount)
+	VALUES (CURRVAL(CAST('voucher_voucher_id_seq' AS regclass)), :Sn, :Account_Id, :Summary, CAST(CAST(:Debit_Amount AS NUMERIC) AS MONEY), CAST(CAST(:Credit_Amount AS NUMERIC) AS MONEY))

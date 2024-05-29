@@ -8,5 +8,5 @@ SELECT Role_Menu.Menu_No, Menu_Template.Parent_Menu_No, Menu_Template.Sn,
   LEFT JOIN Plugin ON Menu.Plugin_No = Plugin.Plugin_No
  WHERE Role_Menu.Application = :application
    AND Role_Menu.Client_Side = :client_Side
-   AND Operator.Operator_Id = :user_Id
+   AND Operator.Operator_Id = :user
 ORDER BY Menu_Template.Parent_Menu_No, Menu_Template.Sn, Role_Menu.Menu_No

@@ -1,0 +1,2 @@
+INSERT INTO Voucher (Tenant_Id, Voucher_Code, Accounting_Date, Accessories_Num, Creator_User_Id, Last_Modifier_User_Id)
+	VALUES (:tenant, :new_Voucher_Code, :accountingDate, :Accessories_Num, :user, :user)

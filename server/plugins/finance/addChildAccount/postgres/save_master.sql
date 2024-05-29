@@ -1,0 +1,2 @@
+INSERT INTO Account (Account_Code, Account_Name, Account_Mnemonic_Code, Account_Barcode, Account_Description, Tenant_Id, Creator_User_Id, Last_Modifier_User_Id, Comment)
+	VALUES (:Condition_Account_Code || :Account_Code, :Account_Name, :Account_Mnemonic_Code, :Account_Barcode, :Account_Description, :tenant, :user, :user, :Comment)

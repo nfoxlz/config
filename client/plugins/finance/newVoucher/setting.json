@@ -1,0 +1,61 @@
+{
+	"Title": "新增记账凭证",
+	"MemoryDataSettings": {
+		"Master": [
+			"Voucher_Code",
+			"Accounting_Date",
+			"Accessories_Num"
+		],
+		"Detail": [
+			"Summary",
+			"Account_Id",
+			"Debit_Amount",
+			"Credit_Amount"
+		]
+	},
+	"RequiredTables": {
+		"Detail": "明细项不能无数据。"
+	},
+	"UniqueColumns": {
+		"Detail": [
+			"Account_Id"
+		]
+	},
+	"ReadOnlyColumns": {
+		"Master": [
+			"Voucher_Code"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Debit_Amount",
+			"Caption": "借方金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		},
+		{
+			"Name": "Credit_Amount",
+			"Caption": "贷方金额合计",
+			"TableName": "Detail",
+			"Format": "C2"
+		}
+	],
+	"ColumnCalculateScriptFileNames": {
+		"Detail": {
+			"Debit_Amount": "Detail_Debit_Amount.cs",
+			"Credit_Amount": "Detail_Credit_Amount.cs"
+		}
+	},
+	"UnmodifiedSaveTables": ["Master"],
+	"SaveColumns": {
+		"Master": [
+			"Accessories_Num"
+		],
+		"Detail": [
+			"Account_Id",
+			"Summary",
+			"Debit_Amount",
+			"Credit_Amount"
+		]
+	}
+}

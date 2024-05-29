@@ -1,0 +1,2 @@
+UPDATE Account SET Account_Name = :Account_Name, Account_Mnemonic_Code = :Account_Mnemonic_Code, Account_Barcode = :Account_Barcode, Account_Description = :Account_Description, Last_Modifier_User_Id = :user, Last_Modification_Date_Time = CURRENT_TIMESTAMP, Version = Version + 1, Comment = :Comment
+	WHERE Account_Id = :Account_Id AND Tenant_Id = :tenant AND Version = :Version

@@ -1,0 +1,15 @@
+{
+	"Title": "修改科目",
+	"IsMergePluginParameter": true,
+	"InvisibleColumns": {
+		"Master": [ "Account_Id", "Tenant_Id" ]
+	},
+	"ReadOnlyColumns": {
+		"Master": [ "Account_Code" ]
+	},
+	"ColumnCalculateScriptFileNames": {
+		"Master": {
+			"Account_Name": "Master_Account_Name.cs"
+		}
+	}
+}

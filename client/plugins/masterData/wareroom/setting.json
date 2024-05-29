@@ -7,12 +7,16 @@
 	],
 	"DataLoadName": "master",
 	"IsPagingQuery": true,
+	"IsAddMaster": false,
 	"InvisibleColumns": {
 		"master": [
-			"Wareroom_Id",
-			"Tenant_Id",
-			"Is_Deleted"
+			"Wareroom_Id"
 		]
+	},
+	"ColumnCalculateScriptFileNames": {
+		"Master": {
+			"Wareroom_Name": "Master_Wareroom_Name.cs"
+		}
 	},
 	"IsDifferentiated": true,
 	"DifferentiatedSaveColumns": {

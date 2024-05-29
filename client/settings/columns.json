@@ -566,7 +566,7 @@
 	{
 		"ColumnName": "Bill_State",
 		"Caption": "单据状态",
-		"Comment": "删除标记",
+		"Comment": "单据状态",
 		"MaxLength": 8,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
@@ -2469,6 +2469,7 @@
 		"Comment": "科目内码",
 		"MaxLength": 8,
 		"AllowDBNull": false,
+		"IsRequired": true,
 		"DbDataType": 12,
 		"DbPhysicalType": "SERIAL8"
 	},
@@ -2513,5 +2514,230 @@
 		"MaxLength": 50,
 		"DbDataType": 16,
 		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Voucher_Id",
+		"Caption": "凭证",
+		"Comment": "凭证内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Voucher_Code",
+		"Caption": "凭证编号",
+		"Comment": "凭证编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Begin_Voucher_Code",
+		"Caption": "起始凭证编号",
+		"Comment": "起始凭证编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "End_Voucher_Code",
+		"Caption": "终止凭证编号",
+		"Comment": "终止凭证编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Accounting_Date",
+		"Caption": "记账日期",
+		"Comment": "记账日期",
+		"IsReadOnly": true,
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 29
+	},
+	{
+		"ColumnName": "Begin_Accounting_Date",
+		"Caption": "起始记账日期",
+		"Comment": "起始记账日期",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE"
+	},
+	{
+		"ColumnName": "End_Accounting_Date",
+		"Caption": "终止记账日期",
+		"Comment": "终止记账日期",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 4
+	},
+	{
+		"ColumnName": "Accessories_Num",
+		"Caption": "附件数",
+		"Comment": "附件数",
+		"MaxLength": 3,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 18,
+		"DbPhysicalType": "INT2"
+	},
+	{
+		"ColumnName": "Voucher_State",
+		"Caption": "凭证状态",
+		"Comment": "凭证状态",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Auditor_User_Id",
+		"Caption": "审核人",
+		"Comment": "审核人",
+		"MaxLength": 8,
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Audit_Date_Time",
+		"Caption": "审核日期时间",
+		"Comment": "审核日期时间",
+		"IsReadOnly": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "Begin_Audit_Date_Time",
+		"Caption": "起始审核日期时间",
+		"Comment": "起始审核日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "End_Audit_Date_Time",
+		"Caption": "终止审核日期时间",
+		"Comment": "终止审核日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Bookkeeper_User_Id",
+		"Caption": "记账人",
+		"Comment": "记账人",
+		"MaxLength": 8,
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Booked_Date_Time",
+		"Caption": "记账日期时间",
+		"Comment": "记账日期时间",
+		"IsReadOnly": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "Begin_Booked_Date_Time",
+		"Caption": "起始记账日期时间",
+		"Comment": "起始记账日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "End_Booked_Date_Time",
+		"Caption": "终止记账日期时间",
+		"Comment": "终止记账日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "General_Bookkeeper_User_Id",
+		"Caption": "总账记账人",
+		"Comment": "总账记账人",
+		"MaxLength": 8,
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "General_Booked_Date_Time",
+		"Caption": "总账记账日期时间",
+		"Comment": "总账记账日期时间",
+		"IsReadOnly": true,
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "Begin_General_Booked_Date_Time",
+		"Caption": "起始总账记账日期时间",
+		"Comment": "起始总账记账日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE"
+	},
+	{
+		"ColumnName": "End_General_Booked_Date_Time",
+		"Caption": "终止总账记账日期时间",
+		"Comment": "终止总账记账日期时间",
+		"DbDataType": 6,
+		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
+		"DefaultSystemValue": 3
+	},
+	{
+		"ColumnName": "Summary",
+		"Caption": "摘要",
+		"Comment": "摘要",
+		"DbDataType": 16,
+		"DbPhysicalType": "TEXT"
+	},
+	{
+		"ColumnName": "Debit_Amount",
+		"Caption": "借方金额",
+		"Comment": "借方金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Credit_Amount",
+		"Caption": "贷方金额",
+		"Comment": "贷方金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Period_Year_Month",
+		"Caption": "期间年月",
+		"Comment": "期间年月",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 23
+	},
+	{
+		"ColumnName": "Is_Leaf",
+		"Caption": "是否是叶子",
+		"Comment": "是否是叶子",
+		"DefaultValue": "false",
+		"IsVisible": false,
+		"DbDataType": 3,
+		"DbPhysicalType": "BOOL"
 	}
 ]

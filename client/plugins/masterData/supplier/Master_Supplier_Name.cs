@@ -1,0 +1,1 @@
+row["Supplier_Mnemonic_Code"] = Utils.Chinese.GetSpell(row["Supplier_Name"].ToString());

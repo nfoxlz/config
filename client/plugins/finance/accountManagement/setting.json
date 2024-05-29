@@ -1,0 +1,16 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Code",
+		"Name",
+		"Mnemonic_Code",
+		"Barcode"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleColumns": {
+		"master": [
+			"Account_Id"
+		]
+	}
+}

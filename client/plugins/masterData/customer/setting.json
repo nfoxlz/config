@@ -7,12 +7,16 @@
 	],
 	"DataLoadName": "master",
 	"IsPagingQuery": true,
+	"IsAddMaster": false,
 	"InvisibleColumns": {
 		"master": [
-			"Client_Id",
-			"Tenant_Id",
-			"Is_Deleted"
+			"Client_Id"
 		]
+	},
+	"ColumnCalculateScriptFileNames": {
+		"Master": {
+			"Customer_Name": "Master_Customer_Name.cs"
+		}
 	},
 	"IsDifferentiated": true,
 	"DifferentiatedSaveColumns": {

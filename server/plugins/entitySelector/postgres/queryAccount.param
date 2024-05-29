@@ -1,0 +1,1 @@
+filter= AND Account_Barcode = :filter OR Account_Code LIKE :filter OR Account_Name LIKE '%' || :filter || '%' OR Account_Mnemonic_Code LIKE '%' || :filter || '%'

@@ -20,7 +20,7 @@
 			<Button Content="{DynamicResource AddButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding DirectAddCommand}" Visibility="{Binding HasDirectAddAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource ModifyButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
 				<Button.CommandParameter>
-					<basePlugins:PluginCommandParameter Path="inventory/modifyVerification"/>
+					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="inventory/modifyVerification"/>
 				</Button.CommandParameter>
 			</Button>
 		</StackPanel>
@@ -34,9 +34,9 @@
 				</controls:DataPanel.ColumnDefinitions>
 			</controls:DataPanel>
 		</ScrollViewer>
-		<GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="true" ResizeDirection="Rows" Height="5" Background="Transparent"/>
+		<GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="True" ResizeDirection="Rows" Height="5" Background="Transparent"/>
 		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" ColumnWidth="Auto" CanUserAddRows="False" CanUserDeleteRows="False"/>
-        <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
+        <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="True" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
 		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="4">
 			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
 		</StackPanel>

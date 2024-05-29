@@ -1,0 +1,1 @@
+SELECT Person_Id AS Last_Modifier_User_Id, Person_Code AS Last_Modifier_User_Code, Person_Name AS Last_Modifier_User_Name, Person_Description AS Last_Modifier_User_Description FROM Person WHERE Person_Id = :id AND Tenant_Id = :tenant

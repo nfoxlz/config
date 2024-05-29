@@ -1,0 +1,33 @@
+{
+	"Title": "新增子科目",
+	"ConditionMemoryDataSettings": [
+		"Account_Code",
+		"Account_Name",
+		"Comment"
+	],
+	"MemoryDataSettings": {
+		"Master": [
+			"Account_Code",
+			"Account_Name",
+			"Account_Mnemonic_Code",
+			"Account_Barcode",
+			"Account_Description",
+			"Comment"
+		]
+	},
+	"ColumnCalculateScriptFileNames": {
+		"Master": {
+			"Account_Name": "Master_Account_Name.cs"
+		}
+	},
+	"ColumnVerifyScriptFileNames": {
+		"Master": {
+			"Account_Code": "Master_Account_Code.Verifier.cs"
+		}
+	},
+	"IsMergeConditionData": true,
+	"IsMergeConditionTable": true,
+	"SaveConditionColumns": [
+		"Account_Code"
+	]
+}
