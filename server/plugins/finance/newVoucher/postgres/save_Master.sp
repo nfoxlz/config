@@ -1,4 +1,4 @@
 tenant
-new_Voucher_Code=serialNo:1001
+new_Voucher_Code=accountingSerialNo:1001
 accountingDate
 user

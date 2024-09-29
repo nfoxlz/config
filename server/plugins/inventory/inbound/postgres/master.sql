@@ -47,4 +47,4 @@ SELECT T.Bill_Type,
 		{End_Bill_Date}
 		{Material_Code}
 		AND ABS(T.Quantity * T.Packing_Size) > ABS(T.Inbound_Quantity)
-	ORDER BY T.Bill_Date, T.Creation_Date_Time, T.Sn
+	ORDER BY T.Bill_Date DESC, T.Creation_Date_Time DESC, T.Sn

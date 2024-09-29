@@ -571,8 +571,8 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
 	},
 	{
 		"ColumnName": "CreatorUserId",
@@ -2562,7 +2562,8 @@
 		"Caption": "起始记账日期",
 		"Comment": "起始记账日期",
 		"DbDataType": 5,
-		"DbPhysicalType": "DATE"
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 23
 	},
 	{
 		"ColumnName": "End_Accounting_Date",
@@ -2591,8 +2592,8 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbDataType": 14,
+		"DbPhysicalType": "INT2"
 	},
 	{
 		"ColumnName": "Auditor_User_Id",
@@ -2695,6 +2696,7 @@
 		"Caption": "摘要",
 		"Comment": "摘要",
 		"DbDataType": 16,
+		"MaxLength": 50,
 		"DbPhysicalType": "TEXT"
 	},
 	{

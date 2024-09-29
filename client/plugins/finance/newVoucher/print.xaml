@@ -18,7 +18,7 @@
 		</Style>
 	</FlowDocument.Resources>
 	<Paragraph TextAlignment="Center" FontSize="16" FontWeight="Bold">
-		<Run Text="采 购 开 票 单"/>
+		<Run Text="记  账  凭  证"/>
 	</Paragraph>
 	<Table>
 		<Table.Columns>
@@ -30,40 +30,20 @@
 			<TableRow>
 				<TableCell>
 					<Paragraph>
+						<Run FontWeight="Bold" Text="凭证编号："/>
+						<Run Text="{Binding MasterData/Voucher_Code}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
 						<Run FontWeight="Bold" Text="单据日期："/>
-						<Run Text="{Binding MasterData/Bill_Date,StringFormat='{}{0:yyyy年MM月dd日ddd}',ConverterCulture=zh-CN}"/>
+						<Run Text="{Binding MasterData/Accounting_Date,StringFormat='{}{0:yyyy年MM月dd日ddd}',ConverterCulture=zh-CN}"/>
 					</Paragraph>
 				</TableCell>
 				<TableCell>
 					<Paragraph>
-						<Run FontWeight="Bold" Text="手工编号："/>
-						<Run Text="{Binding MasterData/Manual_Code}"/>
-					</Paragraph>
-				</TableCell>
-				<TableCell>
-					<Paragraph>
-						<Run FontWeight="Bold" Text="部门："/>
-						<Run Text="{Binding MasterData/Department_Name}"/>
-					</Paragraph>
-				</TableCell>
-			</TableRow>
-			<TableRow>
-				<TableCell>
-					<Paragraph>
-						<Run FontWeight="Bold" Text="业 务 员："/>
-						<Run Text="{Binding MasterData/Owner_Name}"/>
-					</Paragraph>
-				</TableCell>
-				<TableCell>
-					<Paragraph>
-						<Run FontWeight="Bold" Text="供 应 商："/>
-						<Run Text="{Binding MasterData/Supplier_Name}"/>
-					</Paragraph>
-				</TableCell>
-				<TableCell>
-					<Paragraph>
-						<Run FontWeight="Bold" Text="备注："/>
-						<Run Text="{Binding MasterData/Comment}"/>
+						<Run FontWeight="Bold" Text="附件数："/>
+						<Run Text="{Binding MasterData/Accessories_Num}"/>
 					</Paragraph>
 				</TableCell>
 			</TableRow>
@@ -80,30 +60,26 @@
 		<TableRowGroup>
 			<TableRow FontWeight="Bold">
 				<TableCell Style="{StaticResource BorderedCell}">
-					<Paragraph TextAlignment="Center">商品</Paragraph>
+					<Paragraph TextAlignment="Center">摘要</Paragraph>
 				</TableCell>
 				<TableCell Style="{StaticResource BorderedCell}">
-					<Paragraph TextAlignment="Center">单价</Paragraph>
+					<Paragraph TextAlignment="Center">科目</Paragraph>
 				</TableCell>
 				<TableCell Style="{StaticResource BorderedCell}">
-					<Paragraph TextAlignment="Center">数量</Paragraph>
+					<Paragraph TextAlignment="Center">借方金额</Paragraph>
 				</TableCell>
 				<TableCell Style="{StaticResource BorderedCell}">
-					<Paragraph TextAlignment="Center">单位</Paragraph>
-				</TableCell>
-				<TableCell Style="{StaticResource BorderedCell}">
-					<Paragraph TextAlignment="Center">金额</Paragraph>
+					<Paragraph TextAlignment="Center">贷方金额</Paragraph>
 				</TableCell>
 			</TableRow>
 		</TableRowGroup>
 		<controls:DataTableRowGroup ItemsSource="{Binding Data/Detail}">
 			<controls:DataTableRowGroup.ShowColumns>
 				<x:Array Type="sys:String">
-					<s:String>Material_Name</s:String>
-					<s:String>Purchasing_Price</s:String>
-					<s:String>Purchasing_Quantity</s:String>
-					<s:String>Purchasing_Unit</s:String>
-					<s:String>Real_Purchasing_Amount</s:String>
+					<s:String>Summary</s:String>
+					<s:String>Account_Id</s:String>
+					<s:String>Debit_Amount</s:String>
+					<s:String>Credit_Amount</s:String>
 				</x:Array>
 			</controls:DataTableRowGroup.ShowColumns>
 		</controls:DataTableRowGroup>
@@ -117,14 +93,14 @@
 			<TableRow>
 				<TableCell>
 					<Paragraph>
-						<Run FontWeight="Bold" Text="金额合计："/>
-						<Run Text="{Binding TotalTable/Detail_Purchasing_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
+						<Run FontWeight="Bold" Text="借方金额合计："/>
+						<Run Text="{Binding TotalTable/Detail_Debit_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
 					</Paragraph>
 				</TableCell>
 				<TableCell>
 					<Paragraph>
-						<Run FontWeight="Bold" Text="零售金额合计："/>
-						<Run Text="{Binding TotalTable/Detail_Retail_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
+						<Run FontWeight="Bold" Text="贷方金额合计："/>
+						<Run Text="{Binding TotalTable/Detail_Credit_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
 					</Paragraph>
 				</TableCell>
 			</TableRow>

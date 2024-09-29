@@ -1,5 +1,8 @@
 {
 	"Title": "盘点",
+	"ConditionMemoryDataSettings": [
+		"Bill_Id"
+	],
 	"DataLoadName": "master",
 	"InvisibleIdTables": [
 		"master_1"

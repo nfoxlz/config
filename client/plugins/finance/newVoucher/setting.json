@@ -26,6 +26,11 @@
 			"Voucher_Code"
 		]
 	},
+	"NewCopyColumns": {
+		"Detail": [
+			"Summary"
+		]
+	},
 	"TotalSettings": [
 		{
 			"Name": "Debit_Amount",

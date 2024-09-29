@@ -9,24 +9,33 @@
 	</UserControl.DataContext>
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="170"/>
+			<RowDefinition Height="114"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<StackPanel Height="34" VerticalAlignment="Top" Orientation="Horizontal">
 			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding QueryCommand}" PageSizeChangedCommand="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource QueryButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
-			<Button Content="{DynamicResource AddButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
+			<Button Content="{DynamicResource AddButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasAddAuthorition,Mode=OneTime}">
 				<Button.CommandParameter>
-					<basePlugins:PluginCommandParameter Path="finance/newVoucher"/>
+					<basePlugins:PluginCommandParameter CommandAuthorition="Add" Path="finance/newVoucher"/>
 				</Button.CommandParameter>
 			</Button>
-			<Button Content="{DynamicResource ModifyButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
+			<Button Content="{DynamicResource ModifyButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasModifyAuthorition,Mode=OneTime}">
 				<Button.CommandParameter>
-					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="finance/modifyAccount"/>
+					<basePlugins:PluginCommandParameter CommandAuthorition="Modify" RequiredCurrentItem="True" Path="finance/modifyVoucher"/>
 				</Button.CommandParameter>
 			</Button>
-			<Button Content="{DynamicResource DeleteButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding DirectDeleteCommand}" Visibility="{Binding HasDirectDeleteAuthorition,Mode=OneTime}"/>
+			<Button Content="{DynamicResource DeleteButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasDeleteAuthorition,Mode=OneTime}">
+				<Button.CommandParameter>
+					<basePlugins:PluginCommandParameter CommandAuthorition="Delete" RequiredCurrentItem="True" Path="finance/deleteVoucher"/>
+				</Button.CommandParameter>
+			</Button>
+			<Button Content="{DynamicResource AuditButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
+				<Button.CommandParameter>
+					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="finance/auditVoucher"/>
+				</Button.CommandParameter>
+			</Button>
 			<Button Content="{DynamicResource PrintButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Print}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource PrintPreviewButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintPreview}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 		</StackPanel>
