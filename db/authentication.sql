@@ -3,16 +3,16 @@
 
  Source Server         : FreeBSD
  Source Server Type    : PostgreSQL
- Source Server Version : 160000 (160000)
- Source Host           : 192.168.172.131:5432
+ Source Server Version : 160001 (160001)
+ Source Host           : 192.168.172.130:5432
  Source Catalog        : authentication
  Source Schema         : public
 
  Target Server Type    : PostgreSQL
- Target Server Version : 160000 (160000)
+ Target Server Version : 160001 (160001)
  File Encoding         : 65001
 
- Date: 06/01/2024 18:19:35
+ Date: 08/11/2024 23:26:17
 */
 
 
@@ -45,7 +45,7 @@ CREATE TABLE "public"."tenant" (
   "creator_user_id" int8 DEFAULT 0,
   "creation_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "last_modifier_user_id" int8 DEFAULT 0,
-  "last_modification_datetime" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  "last_modification_date_time" timestamptz(6) NOT NULL DEFAULT CURRENT_TIMESTAMP,
   "deleter_user_id" int8,
   "deletion_date_time" timestamptz(6),
   "version" int8 NOT NULL DEFAULT 0,
@@ -65,7 +65,7 @@ COMMENT ON COLUMN "public"."tenant"."is_active" IS '活动标记';
 COMMENT ON COLUMN "public"."tenant"."creator_user_id" IS '创建人内码';
 COMMENT ON COLUMN "public"."tenant"."creation_date_time" IS '创建日期时间';
 COMMENT ON COLUMN "public"."tenant"."last_modifier_user_id" IS '最后修改人';
-COMMENT ON COLUMN "public"."tenant"."last_modification_datetime" IS '最后修改日期时间';
+COMMENT ON COLUMN "public"."tenant"."last_modification_date_time" IS '最后修改日期时间';
 COMMENT ON COLUMN "public"."tenant"."deleter_user_id" IS '删除人';
 COMMENT ON COLUMN "public"."tenant"."deletion_date_time" IS '删除日期时间';
 COMMENT ON COLUMN "public"."tenant"."version" IS '版本';

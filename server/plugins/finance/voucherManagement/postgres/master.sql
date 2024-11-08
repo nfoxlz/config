@@ -16,4 +16,4 @@ SELECT * FROM Voucher
 		{Begin_General_Booked_Date_Time}
 		{End_General_Booked_Date_Time}
 		{General_Bookkeeper_User_Id}
-	ORDER BY Accounting_Date DESC, Creation_Date_Time DESC, Voucher_Code DESC
+	ORDER BY Accounting_Date DESC, Creation_Date_Time DESC, CAST(Voucher_Code AS INT8) DESC

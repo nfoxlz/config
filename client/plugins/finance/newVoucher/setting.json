@@ -16,6 +16,11 @@
 	"RequiredTables": {
 		"Detail": "明细项不能无数据。"
 	},
+	"RequiredColumns": {
+		"Master": [
+			"Accounting_Date"
+		]
+	},
 	"UniqueColumns": {
 		"Detail": [
 			"Account_Id"

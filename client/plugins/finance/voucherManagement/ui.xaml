@@ -36,6 +36,11 @@
 					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="finance/auditVoucher"/>
 				</Button.CommandParameter>
 			</Button>
+			<Button Content="{DynamicResource KeepButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
+				<Button.CommandParameter>
+					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="finance/keepAccount"/>
+				</Button.CommandParameter>
+			</Button>
 			<Button Content="{DynamicResource PrintButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Print}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource PrintPreviewButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintPreview}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 		</StackPanel>
@@ -49,7 +54,7 @@
 			</controls:DataPanel>
 		</ScrollViewer>
 		<GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="True" ResizeDirection="Rows" Height="5" Background="Transparent"/>
-		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" IsReadOnly="True" Grid.Row="1" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}"/>
+		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="1" IsReadOnly="True" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}"/>
 		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="2">
 			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
 		</StackPanel>

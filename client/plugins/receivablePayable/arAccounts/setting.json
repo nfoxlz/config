@@ -24,8 +24,22 @@
 			{
 				"PlusColumn": "Receivable_Amount",
 				"MinusColumn": "Receipt_Amount",
-				"BalanceColumn": "Receivable_Balance_Amount"
+				"BalanceColumn": "Balance_Amount"
 			}
 		]
-	}
+	},
+	"TotalSettings": [
+		{
+			"Name": "Receivable_Amount",
+			"Caption": "应收金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Receipt_Amount",
+			"Caption": "收款金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
 }

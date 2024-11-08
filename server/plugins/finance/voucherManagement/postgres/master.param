@@ -1,5 +1,5 @@
-Begin_Voucher_Code= AND Voucher_Code >= :Begin_Voucher_Code
-End_Voucher_Code= AND Voucher_Code <= :End_Voucher_Code
+Begin_Voucher_Code= AND CAST(Voucher_Code AS INT8) >= CAST(:Begin_Voucher_Code AS INT8)
+End_Voucher_Code= AND CAST(Voucher_Code AS INT8) <= CAST(:End_Voucher_Code AS INT8)
 Begin_Accounting_Date= AND Accounting_Date >= :Begin_Accounting_Date
 End_Accounting_Date= AND Accounting_Date <= :End_Accounting_Date
 Creator_User_Id= AND Creator_User_Id = :Creator_User_Id

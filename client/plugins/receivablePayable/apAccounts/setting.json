@@ -24,8 +24,22 @@
 			{
 				"PlusColumn": "Payable_Amount",
 				"MinusColumn": "Payment_Amount",
-				"BalanceColumn": "Payable_Balance_Amount"
+				"BalanceColumn": "Balance_Amount"
 			}
 		]
-	}
+	},
+	"TotalSettings": [
+		{
+			"Name": "Payable_Amount",
+			"Caption": "应付金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Payment_Amount",
+			"Caption": "付款金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
 }

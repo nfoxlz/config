@@ -1,18 +1,15 @@
 {
-	"ConditionMemoryDataSettings": [
-		"Carry_Over_Year_Month"
-	],
-	"ConditionDataColumnSettings": [
-		{
-			"ColumnName": "Carry_Over_Year_Month"
-		}
-	],
-	"ConditionRequiredColumns": [
-		"Carry_Over_Year_Month"
-	],
-	"IsAddMaster": false,
-	"IsMergeConditionData": true,
-	"SaveConditionColumns": [
-		"Carry_Over_Year_Month"
+	"MemoryDataSettings": {
+		"Master": [
+			"Carry_Over_Year_Month"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Accounting_Year_Month"
+		]
+	},
+	"UnmodifiedSaveTables": [
+		"Master"
 	]
 }

@@ -21,7 +21,7 @@
 			<Button Content="{DynamicResource PrintButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding Print}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource PrintPreviewButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintPreview}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
 		</StackPanel>
-        <TextBlock TextWrapping="Wrap" Text="入   库   单" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
+        <TextBlock TextWrapping="Wrap" Text="采 购 入 库 单" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
 		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
 			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
 				<controls:DataPanel.ColumnDefinitions>

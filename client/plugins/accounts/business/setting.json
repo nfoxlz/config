@@ -39,5 +39,19 @@
 				"BalanceColumn": "Cost_Amount"
 			}
 		]
-	}
+	},
+	"TotalSettings": [
+		{
+			"Name": "Real_In_Amount",
+			"Caption": "增加金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Out_Cost_Amount",
+			"Caption": "减少金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
 }

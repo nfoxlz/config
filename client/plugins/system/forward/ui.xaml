@@ -17,13 +17,11 @@
 		</StackPanel>
         <TextBlock TextWrapping="Wrap" Text="结        转" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
 		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
-			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
+			<controls:DataPanel ItemsSource="{Binding MasterData}">
 				<controls:DataPanel.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
 				</controls:DataPanel.ColumnDefinitions>
 			</controls:DataPanel>
 		</ScrollViewer>

@@ -1,12 +1,18 @@
-SELECT 0 C0, B.Bill_Date, NULL Bill_Type, NULL Bill_Code, NULL Manual_Code, CAST(0 AS NUMERIC) Receivable_Amount, CAST(0 AS NUMERIC) Receipt_Amount, CAST(B.Receivable_Amount AS NUMERIC) Receivable_Balance_Amount, P.Person_Name Creator_User_Name, B.Creation_Date_Time
-FROM AR_Carry_Over B
-	LEFT JOIN Person P ON B.Creator_User_Id = P.Person_Id
-WHERE B.Customer_Id = :Customer_Id
-	AND TO_CHAR(B.Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Bill_Year_Month AS DATE), 'YYYYMM')
+SELECT 0 AS C0, A.Bill_Date, NULL AS Bill_Type, NULL AS Bill_Code, NULL AS Manual_Code,
+		CAST(0 AS MONEY) AS Receivable_Amount, CAST(0 AS MONEY) AS Receipt_Amount, NULL AS Payment_Mode, A.Balance_Amount,
+		P.Person_Name, A.Creation_Date_Time, NULL Comment
+	FROM AR_Carry_Over A
+		LEFT JOIN Person AS P ON A.Creator_User_Id = P.Person_Id
+	WHERE A.Tenant_Id = :tenant
+		AND TO_CHAR(A.Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Bill_Year_Month AS DATE), 'YYYYMM')
+		AND Customer_Id = :Customer_Id
 UNION ALL
-SELECT 1, B.Bill_Date, B.Bill_Type, B.Bill_Code, B.Manual_Code, CAST(B.Receivable_Amount AS NUMERIC), CAST(B.Receipt_Amount AS NUMERIC), CAST(0 AS NUMERIC), P.Person_Name Creator_User_Name, B.Creation_Date_Time
-FROM AR_Account B
-	LEFT JOIN Person P ON B.Creator_User_Id = P.Person_Id
-WHERE B.Customer_Id = :Customer_Id
-	AND TO_CHAR(B.Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Bill_Year_Month AS DATE), 'YYYYMM')
+SELECT 1, A.Bill_Date, A.Bill_Type, A.Bill_Code, A.Manual_Code,
+		A.Receivable_Amount, A.Receipt_Amount, A.Payment_Mode, CAST(0 AS MONEY),
+		P.Person_Name, A.Creation_Date_Time, A.Comment
+	FROM AR_Account AS A
+		LEFT JOIN Person AS P ON A.Creator_User_Id = P.Person_Id
+	WHERE A.Tenant_Id = :tenant
+		AND TO_CHAR(A.Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Bill_Year_Month AS DATE), 'YYYYMM')
+		AND Customer_Id = :Customer_Id
 ORDER BY C0, Bill_Date, Creation_Date_Time

@@ -163,11 +163,10 @@
 		"DbPhysicalType": "INT8"
 	},
 	{
-		"ColumnName": "Last_Modification_DateTime",
+		"ColumnName": "Last_Modification_Date_Time",
 		"Caption": "最后修改日期时间",
 		"Comment": "最后修改日期时间",
-		"AllowDBNull": false,
-		"IsRequired": true,
+		"IsReadOnly": true,
 		"DbDataType": 6,
 		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
 		"DefaultSystemValue": 3
@@ -257,15 +256,6 @@
 		"MaxLength": 50,
 		"DbDataType": 16,
 		"DbPhysicalType": "VARCHAR(50)"
-	},
-	{
-		"ColumnName": "Last_Modification_Date_Time",
-		"Caption": "最后修改日期时间",
-		"Comment": "最后修改日期时间",
-		"IsReadOnly": true,
-		"DbDataType": 6,
-		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
-		"DefaultSystemValue": 3
 	},
 	{
 		"ColumnName": "Person_Id",
@@ -2533,6 +2523,23 @@
 		"DbPhysicalType": "VARCHAR(30)"
 	},
 	{
+		"ColumnName": "Voucher_Summary_Id",
+		"Caption": "凭证汇总表",
+		"Comment": "凭证汇总表内码",
+		"MaxLength": 8,
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Voucher_Summary_Code",
+		"Caption": "凭证编号",
+		"Comment": "凭证编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
 		"ColumnName": "Begin_Voucher_Code",
 		"Caption": "起始凭证编号",
 		"Comment": "起始凭证编号",
@@ -2555,7 +2562,7 @@
 		"IsReadOnly": true,
 		"DbDataType": 5,
 		"DbPhysicalType": "DATE",
-		"DefaultSystemValue": 29
+		"DefaultSystemValue": 32
 	},
 	{
 		"ColumnName": "Begin_Accounting_Date",
@@ -2726,12 +2733,22 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
+		"ColumnName": "Balance_Amount",
+		"Caption": "余额",
+		"Comment": "余额",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
 		"ColumnName": "Period_Year_Month",
 		"Caption": "期间年月",
 		"Comment": "期间年月",
-		"DbDataType": 5,
-		"DbPhysicalType": "DATE",
-		"DefaultSystemValue": 23
+		"DbDataType": 11,
+		"DbPhysicalType": "INT4"
 	},
 	{
 		"ColumnName": "Is_Leaf",
@@ -2741,5 +2758,202 @@
 		"IsVisible": false,
 		"DbDataType": 3,
 		"DbPhysicalType": "BOOL"
+	},
+	{
+		"ColumnName": "Voucher_Count",
+		"Caption": "凭证数",
+		"Comment": "凭证数",
+		"IsReadOnly": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Accounting_Year_Month",
+		"Caption": "记账年月",
+		"Comment": "记账年月",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 33
+	},
+	{
+		"ColumnName": "Accounting_Day",
+		"Caption": "记账日",
+		"Comment": "记账日",
+		"DbDataType": 2,
+		"DbPhysicalType": "INT2",
+		"DefaultSystemValue": 36
+	},
+	{
+		"ColumnName": "Previous_Accounting_Year_Month",
+		"Caption": "记账年月",
+		"Comment": "记账年月",
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 37
+	},
+	{
+		"ColumnName": "Direction",
+		"Caption": "借或贷",
+		"Comment": "方向",
+		"MaxLength": 1,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(1)",
+		"Expression": "IIF(Balance_Amount > 0, '借', IIF(Balance_Amount < 0, '贷', '平'))"
+	},
+	{
+		"ColumnName": "Abs_Balance_Amount",
+		"Caption": "余额",
+		"Comment": "余额",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY",
+		"Expression": "IIF(Balance_Amount < 0, -Balance_Amount, Balance_Amount)"
+	},
+	{
+		"ColumnName": "Ledger_Account_Id",
+		"Caption": "总账科目",
+		"Comment": "总账科目内码",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "SERIAL8"
+	},
+	{
+		"ColumnName": "Ledger_Account_Code",
+		"Caption": "总账科目编码",
+		"Comment": "总账科目编码",
+		"MaxLength": 30,
+		"AllowDBNull": false,
+		"IsRequired": true,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Ledger_Account_Name",
+		"Caption": "总账科目名称",
+		"Comment": "总账科目名称",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Ledger_Account_Mnemonic_Code",
+		"Caption": "总账科目助记码",
+		"Comment": "总账科目助记码",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Ledger_Account_Barcode",
+		"Caption": "总账科目条码",
+		"Comment": "总账科目条码",
+		"MaxLength": 13,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(13)"
+	},
+	{
+		"ColumnName": "Ledger_Account_Description",
+		"Caption": "总账科目描述",
+		"Comment": "总账科目描述",
+		"MaxLength": 50,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(50)"
+	},
+	{
+		"ColumnName": "Current_Date",
+		"Caption": "当前日期",
+		"Comment": "当前日期",
+		"IsReadOnly": true,
+		"DbDataType": 5,
+		"DbPhysicalType": "DATE",
+		"DefaultSystemValue": 4
+	},
+	{
+		"ColumnName": "Initial_Quantity",
+		"Caption": "期初数量",
+		"Comment": "期初数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Initial_Piece",
+		"Caption": "期初件数",
+		"Comment": "期初件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Initial_Cost_Amount",
+		"Caption": "期初金额",
+		"Comment": "期初金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Initial_Retail_Amount",
+		"Caption": "期初零售金额",
+		"Comment": "期初零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Balance_Quantity",
+		"Caption": "结存数量",
+		"Comment": "结存数量",
+		"MaxLength": 18,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Balance_Piece",
+		"Caption": "结存件数",
+		"Comment": "结存件数",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8"
+	},
+	{
+		"ColumnName": "Balance_Retail_Amount",
+		"Caption": "结存零售金额",
+		"Comment": "结存零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
 	}
 ]

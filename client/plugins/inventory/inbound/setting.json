@@ -16,7 +16,6 @@
 	"AdditionalDataColumns": {
 		"master": [
 			"Wareroom_Id",
-			"Wareroom_Name",
 			"Real_Inbound_Quantity",
 			"Discount_Inbound_Quantity",
 			"Residual_Inbound_Quantity",

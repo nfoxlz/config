@@ -36,5 +36,17 @@
 				"BalanceColumn": "Piece"
 			}
 		]
-	}
+	},
+	"TotalSettings": [
+		{
+			"Name": "In_Quantity",
+			"Caption": "增加数量合计",
+			"TableName": "master"
+		},
+		{
+			"Name": "Out_Quantity",
+			"Caption": "减少数量合计",
+			"TableName": "master"
+		}
+	]
 }
