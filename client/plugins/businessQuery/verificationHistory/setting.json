@@ -1,0 +1,16 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Wareroom_Id",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Department_Id",
+		"Owner_Id"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"IsInitialQuery": false,
+	"RunColumns": [
+		"Bill_Id"
+	]
+}

@@ -35,12 +35,13 @@ SELECT T1.Bill_Type,
 		LEFT JOIN Material T2 ON T1.Material_Id = T2.Material_Id
 		LEFT JOIN Department T3 ON T1.Department_Id = T3.Department_Id
 		LEFT JOIN Person T4 ON T1.Owner_Id = T4.Person_Id
-		LEFT JOIN Client T5 ON T1.Client_Id = T5.Client_Id
-	WHERE T1.Client_Id = :Client_Id
+		LEFT JOIN Customer T5 ON T1.Customer_Id = T5.Customer_Id
+	WHERE T1.Customer_Id = :Customer_Id
 		{Department_Id}
 		{Owner_Id}
 		{Begin_Bill_Date}
 		{End_Bill_Date}
 		{Material_Code}
 		AND ABS(CAST(T1.Real_Selling_Amount AS NUMERIC)) > ABS(CAST(T1.Receipt_Amount AS NUMERIC))
-	ORDER BY T1.Bill_Date DESC, T1.Creation_Date_Time DESC, T1.Sn
+	{order_By}
+	OFFSET :begin_No LIMIT :page_Size

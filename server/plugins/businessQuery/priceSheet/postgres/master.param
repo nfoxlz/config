@@ -1,0 +1,1 @@
+Material_Code= AND Material_Code LIKE :Material_Code || '%'

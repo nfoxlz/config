@@ -1,0 +1,1 @@
+SELECT * FROM fi_keep_account(CAST(:tenant AS INT8), CAST(EXTRACT(YEAR FROM CAST(:accountingDate AS DATE)) * 100 + EXTRACT(MONTH FROM CAST(:accountingDate AS DATE)) AS INT4), CAST(:user AS INT8))

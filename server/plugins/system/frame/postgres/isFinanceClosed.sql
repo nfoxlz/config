@@ -1,0 +1,4 @@
+SELECT COALESCE(A.Is_Closed, FALSE)
+	FROM Person AS P
+		LEFT JOIN Accounting_Period AS A ON P.Tenant_Id = A.Tenant_Id AND COALESCE(P.Period_Year_Month, EXTRACT(YEAR FROM CURRENT_TIMESTAMP) * 100 + EXTRACT(MONTH FROM CURRENT_TIMESTAMP)) = A.Period_Year_Month
+	WHERE P.Person_Id = :user

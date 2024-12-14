@@ -1,0 +1,9 @@
+{
+	"DataLoadName": "master",
+	"RequiredColumns": {
+		"Master": [
+			"Accounting_Day"
+		]
+	},
+	"QueriedScriptFileName": "Queried.cs"
+}

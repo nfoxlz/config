@@ -1,5 +1,5 @@
 {
-	"Title": "盘点",
+	"Title": "修改盘点单",
 	"ConditionMemoryDataSettings": [
 		"Bill_Id"
 	],
@@ -7,11 +7,6 @@
 	"InvisibleIdTables": [
 		"master_1"
 	],
-	"InvisibleColumns": {
-		"master_1": [
-			"Piece"
-		]
-	},
 	"EditableColumns": {
 		"master_1": [
 			"Quantity",
@@ -36,7 +31,7 @@
 			"Comment",
 			"Version"
 		],
-		"master_1": [
+		"master.1": [
 			"Bill_Detail_Id",
 			"Quantity",
 			"Unit",

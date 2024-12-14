@@ -29,11 +29,6 @@
 			"Department_Name",
 			"Owner_Name",
 			"Supplier_Name"
-		],
-		"Detail": [
-			"Untaxed_Amount",
-			"Input_Tax_Rate",
-			"Tax_Amount"
 		]
 	},
 	"ReadOnlyColumns": {

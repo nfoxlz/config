@@ -1,0 +1,141 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			  xmlns:s="clr-namespace:System;assembly=mscorlib"
+			  xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+			  xmlns:controls="clr-namespace:Compete.Mis.MisControls;assembly=CompeteBase"
+			  ColumnWidth="{x:Static sys:Double.PositiveInfinity}" FontSize="14" FontFamily="宋体"
+			  TextOptions.TextFormattingMode="Display">
+	<FlowDocument.Resources>
+		<Style TargetType="Table" x:Key="BorderedTable">
+			<Setter Property="CellSpacing" Value="0"/>
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush" Value="#000"/>
+		</Style>
+		<Style TargetType="TableCell" x:Key="BorderedCell">
+			<Setter Property="BorderThickness" Value="0.5"/>
+			<Setter Property="BorderBrush" Value="#000"/>
+			<Setter Property="Padding" Value="3"/>
+		</Style>
+	</FlowDocument.Resources>
+	<Paragraph TextAlignment="Center" FontSize="16" FontWeight="Bold">
+		<Run Text="采 购 退 货 单"/>
+	</Paragraph>
+	<Table>
+		<Table.Columns>
+			<TableColumn Width="*"/>
+			<TableColumn Width="*"/>
+			<TableColumn Width="*"/>
+		</Table.Columns>
+		<TableRowGroup>
+			<TableRow>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="单据日期："/>
+						<Run Text="{Binding MasterData/Bill_Date,StringFormat='{}{0:yyyy年MM月dd日ddd}',ConverterCulture=zh-CN}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="单据编号："/>
+						<Run Text="{Binding MasterData/Bill_Code}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="手工编号："/>
+						<Run Text="{Binding MasterData/Manual_Code}"/>
+					</Paragraph>
+				</TableCell>
+			</TableRow>
+			<TableRow>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="部    门："/>
+						<Run Text="{Binding MasterData/Department_Name}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="业 务 员："/>
+						<Run Text="{Binding MasterData/Owner_Name}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="供 应 商："/>
+						<Run Text="{Binding MasterData/Supplier_Name}"/>
+					</Paragraph>
+				</TableCell>
+			</TableRow>
+			<TableRow>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="备    注："/>
+						<Run Text="{Binding MasterData/Comment}"/>
+					</Paragraph>
+				</TableCell>
+			</TableRow>
+		</TableRowGroup>
+	</Table>
+	<Table Style="{StaticResource BorderedTable}">
+		<Table.Columns>
+			<TableColumn Width="5*"/>
+			<TableColumn Width="3*"/>
+			<TableColumn Width="2*"/>
+			<TableColumn Width="*"/>
+			<TableColumn Width="3*"/>
+		</Table.Columns>
+		<TableRowGroup>
+			<TableRow FontWeight="Bold">
+				<TableCell Style="{StaticResource BorderedCell}">
+					<Paragraph TextAlignment="Center">商品</Paragraph>
+				</TableCell>
+				<TableCell Style="{StaticResource BorderedCell}">
+					<Paragraph TextAlignment="Center">单价</Paragraph>
+				</TableCell>
+				<TableCell Style="{StaticResource BorderedCell}">
+					<Paragraph TextAlignment="Center">数量</Paragraph>
+				</TableCell>
+				<TableCell Style="{StaticResource BorderedCell}">
+					<Paragraph TextAlignment="Center">单位</Paragraph>
+				</TableCell>
+				<TableCell Style="{StaticResource BorderedCell}">
+					<Paragraph TextAlignment="Center">金额</Paragraph>
+				</TableCell>
+			</TableRow>
+		</TableRowGroup>
+		<controls:DataTableRowGroup ItemsSource="{Binding Data/master_1}">
+			<controls:DataTableRowGroup.ShowColumns>
+				<x:Array Type="sys:String">
+					<s:String>Material_Name</s:String>
+					<s:String>Purchasing_Price</s:String>
+					<s:String>Purchasing_Quantity</s:String>
+					<s:String>Purchasing_Unit</s:String>
+					<s:String>Real_Purchasing_Amount</s:String>
+				</x:Array>
+			</controls:DataTableRowGroup.ShowColumns>
+		</controls:DataTableRowGroup>
+	</Table>
+	<Table>
+		<Table.Columns>
+			<TableColumn/>
+			<TableColumn/>
+		</Table.Columns>
+		<TableRowGroup>
+			<TableRow>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="金额合计："/>
+						<Run Text="{Binding TotalTable/master_1_Purchasing_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
+					</Paragraph>
+				</TableCell>
+				<TableCell>
+					<Paragraph>
+						<Run FontWeight="Bold" Text="零售金额合计："/>
+						<Run Text="{Binding TotalTable/master_1_Retail_Amount,StringFormat='{}{0:C2}',ConverterCulture=zh-CN}"/>
+					</Paragraph>
+				</TableCell>
+			</TableRow>
+		</TableRowGroup>
+	</Table>
+</FlowDocument>

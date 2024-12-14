@@ -1,0 +1,29 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:behaviour="http://schemas.microsoft.com/xaml/behaviors"
+	xmlns:controls="clr-namespace:Compete.Mis.MisControls;assembly=CompeteBase"
+    xmlns:plugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteMis"
+	xmlns:basePlugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteBase"
+	WindowStartupLocation="CenterScreen" Title="记账">
+    <Window.DataContext>
+        <plugins:SettingDataViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+			<Button Content="{DynamicResource CloseButton}" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" IsCancel="True" Command="{Binding CancelCommand}"/>
+        </StackPanel>
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <controls:DataPanel IsReadOnly="True" ItemsSource="{Binding MasterData}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </controls:DataPanel>
+        </ScrollViewer>
+	</Grid>
+</Window>

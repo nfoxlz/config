@@ -30,7 +30,7 @@
             </controls:DataPanel>
         </ScrollViewer>
         <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="2" VerticalAlignment="Top"/>
-        <controls:EnhancedDataGrid Margin="0,5,0,0" Grid.Row="2" ItemsSource="{Binding Data/Detail}"/>
+        <controls:EnhancedDataGrid Margin="0,5,0,0" Grid.Row="2" ItemsSource="{Binding Data/Detail}" EditIndexesString="0,2"/>
         <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
         <ScrollViewer Margin="0,5,0,0" Grid.Row="3" VerticalScrollBarVisibility="Auto">
             <controls:DataPanel Margin="10,5,10,0" ItemsSource="{Binding TotalTable}" IsReadOnly="True">

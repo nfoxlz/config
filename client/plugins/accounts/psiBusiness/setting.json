@@ -1,0 +1,30 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Bill_Year_Month",
+		"Material_Code"
+	],
+	"ConditionRequiredColumns": [
+		"Bill_Year_Month"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Real_In_Amount",
+			"Caption": "入库金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Out_Cost_Amount",
+			"Caption": "出库金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
+}

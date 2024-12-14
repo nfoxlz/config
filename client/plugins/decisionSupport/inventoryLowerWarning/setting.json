@@ -1,0 +1,20 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Material_Code"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Inventory_Cost",
+			"Caption": "库存成本小计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
+}

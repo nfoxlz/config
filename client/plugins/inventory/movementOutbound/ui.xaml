@@ -9,7 +9,7 @@
 	<Grid>
 		<Grid.RowDefinitions>
             <RowDefinition Height="38"/>
-			<RowDefinition Height="120"/>
+			<RowDefinition Height="118"/>
 			<RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
 			<RowDefinition Height="Auto"/>
@@ -25,14 +25,14 @@
 		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
 			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
 				<controls:DataPanel.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
 				</controls:DataPanel.ColumnDefinitions>
 			</controls:DataPanel>
 		</ScrollViewer>
 		<GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="true" ResizeDirection="Rows" Height="5" Background="Transparent"/>
-		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" ColumnWidth="Auto" CanUserAddRows="False" CanUserDeleteRows="False"/>
+		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" ColumnWidth="Auto" CanUserAddRows="False" CanUserDeleteRows="False" RefreshCommand="{Binding QueryCommand}" SortDescription="{Binding SortDescription,Mode=OneWayToSource}" IsPaging="{Binding Setting.IsPagingQuery,Mode=OneWay}"/>
         <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
         <ScrollViewer Margin="0,5,0,0" Grid.Row="3" VerticalScrollBarVisibility="Auto">
             <controls:DataPanel Margin="10,5,10,0" ItemsSource="{Binding TotalTable}" IsReadOnly="True">

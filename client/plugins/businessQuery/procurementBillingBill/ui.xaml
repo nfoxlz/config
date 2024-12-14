@@ -1,0 +1,47 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:behaviour="http://schemas.microsoft.com/xaml/behaviors"
+	xmlns:controls="clr-namespace:Compete.Mis.MisControls;assembly=CompeteBase"
+    xmlns:plugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteMis"
+	xmlns:basePlugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteBase">
+    <UserControl.DataContext>
+        <plugins:SettingDataViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="118"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="{DynamicResource PrintButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintCommand}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
+            <Button Content="{DynamicResource PrintPreviewButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrintPreviewCommand}" Visibility="{Binding HasPrintAuthorition,Mode=OneTime}"/>
+        </StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="采 购 开 票 单" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
+        <ScrollViewer Margin="10,35,10,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <controls:DataPanel IsReadOnly="True" ItemsSource="{Binding MasterData}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </controls:DataPanel>
+        </ScrollViewer>
+        <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="2" VerticalAlignment="Top"/>
+        <controls:EnhancedDataGrid Margin="0,5,0,0" Grid.Row="2" IsReadOnly="True" ItemsSource="{Binding Data/master_1}"/>
+        <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="true" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
+        <ScrollViewer Margin="0,5,0,0" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <controls:DataPanel Margin="10,5,10,0" ItemsSource="{Binding TotalTable}" IsReadOnly="True">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </controls:DataPanel>
+        </ScrollViewer>
+		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="4">
+			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

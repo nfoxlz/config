@@ -1,0 +1,8 @@
+Department_Id= AND B.Department_Id = :Department_Id
+Owner_Id= AND B.Owner_Id = :Owner_Id
+Customer_Id= AND B.Supplier_Customer_Id = :Customer_Id
+Material_Code= AND M.Material_Code LIKE :Material_Code || '%'
+Begin_Bill_Date= AND B.Bill_Date >= :Begin_Bill_Date
+End_Bill_Date= AND B.Bill_Date <= :End_Bill_Date
+Begin_Bill_Code= AND CAST(B.Bill_Code AS INT8) >= CAST(:Begin_Bill_Code AS INT8)
+End_Bill_Code= AND CAST(B.Bill_Code AS INT8) <= CAST(:End_Bill_Code AS INT8)

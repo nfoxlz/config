@@ -157,6 +157,7 @@
 		"Caption": "最后修改人",
 		"Comment": "最后修改人",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"DefaultValue": "0",
 		"IsReadOnly": true,
 		"DbDataType": 12,
@@ -166,6 +167,7 @@
 		"ColumnName": "Last_Modification_Date_Time",
 		"Caption": "最后修改日期时间",
 		"Comment": "最后修改日期时间",
+		"IsVisible": false,
 		"IsReadOnly": true,
 		"DbDataType": 6,
 		"DbPhysicalType": "TIMESTAMP WITH TIME ZONE",
@@ -436,6 +438,7 @@
 		"Caption": "序号",
 		"Comment": "序号",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"DefaultValue": "0",
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8"
@@ -513,6 +516,30 @@
 		"DbPhysicalType": "VARCHAR(30)"
 	},
 	{
+		"ColumnName": "Begin_Bill_Code",
+		"Caption": "开始单据编号",
+		"Comment": "开始单据编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "End_Bill_Code",
+		"Caption": "结束单据编号",
+		"Comment": "结束单据编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(30)"
+	},
+	{
+		"ColumnName": "Bill_Code_Num",
+		"Caption": "单据编号",
+		"Comment": "单据编号",
+		"MaxLength": 30,
+		"DbDataType": 16,
+		"DbPhysicalType": "INT8"
+	},
+	{
 		"ColumnName": "Manual_Code",
 		"Caption": "手工编号",
 		"Comment": "手工编号",
@@ -558,6 +585,7 @@
 		"Caption": "单据状态",
 		"Comment": "单据状态",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -658,9 +686,9 @@
 		"Caption": "供应商",
 		"Comment": "供应商内码",
 		"MaxLength": 8,
-		"AllowDBNull": false,
+		"DefaultValue": "0",
 		"DbDataType": 12,
-		"DbPhysicalType": "SERIAL8"
+		"DbPhysicalType": "INT8"
 	},
 	{
 		"ColumnName": "Material_Id",
@@ -680,8 +708,10 @@
 		"AllowDBNull": false,
 		"DefaultValue": "1",
 		"IsRequired": true,
+		"MinValue": 1,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于1。"
 	},
 	{
 		"ColumnName": "Purchasing_Packing_Size",
@@ -701,11 +731,14 @@
 		"Caption": "采购件数",
 		"Comment": "采购件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 1,
 		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
 	},
 	{
 		"ColumnName": "Purchasing_Amount",
@@ -725,6 +758,7 @@
 		"Caption": "采购实际金额",
 		"Comment": "采购实际金额",
 		"MaxLength": 20,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -738,6 +772,7 @@
 		"Caption": "无税金额",
 		"Comment": "无税金额",
 		"MaxLength": 20,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -751,6 +786,7 @@
 		"Caption": "税额",
 		"Comment": "税额",
 		"MaxLength": 20,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -764,6 +800,7 @@
 		"Caption": "扣率",
 		"Comment": "扣率",
 		"MaxLength": 5,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "1",
 		"IsRequired": true,
@@ -781,6 +818,7 @@
 		"Caption": "进项税率",
 		"Comment": "进项税率",
 		"MaxLength": 5,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -916,8 +954,6 @@
 		"Caption": "仓库",
 		"Comment": "仓库",
 		"MaxLength": 8,
-		"AllowDBNull": false,
-		"IsRequired": true,
 		"DbDataType": 12,
 		"DbPhysicalType": "SERIAL8"
 	},
@@ -1115,6 +1151,7 @@
 		"Caption": "无税价",
 		"Comment": "无税价",
 		"MaxLength": 17,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1210,6 +1247,7 @@
 		"Caption": "销项税率",
 		"Comment": "销项税率",
 		"MaxLength": 5,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1247,6 +1285,7 @@
 		"Caption": "库存件数",
 		"Comment": "库存件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"DefaultValue": "0",
 		"IsReadOnly": true,
 		"DbDataType": 12,
@@ -1292,6 +1331,7 @@
 		"Caption": "可用库存件数",
 		"Comment": "可用库存件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"DefaultValue": "0",
 		"IsReadOnly": true,
 		"DbDataType": 12,
@@ -1381,6 +1421,14 @@
 		"DbPhysicalType": "DECIMAL(18)"
 	},
 	{
+		"ColumnName": "In_Unit",
+		"Caption": "入库单位",
+		"Comment": "入库单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
 		"ColumnName": "In_Packing_Size",
 		"Caption": "入库包装规格",
 		"Comment": "入库包装规格",
@@ -1398,6 +1446,7 @@
 		"Caption": "入库件数",
 		"Comment": "入库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1431,6 +1480,19 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
+		"ColumnName": "In_Retail_Amount_Sum",
+		"Caption": "零售金额总计",
+		"Comment": "零售金额总计",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
 		"ColumnName": "Out_Quantity",
 		"Caption": "出库数量",
 		"Comment": "出库数量",
@@ -1440,6 +1502,14 @@
 		"IsRequired": true,
 		"DbDataType": 7,
 		"DbPhysicalType": "DECIMAL(18)"
+	},
+	{
+		"ColumnName": "Out_Unit",
+		"Caption": "出库单位",
+		"Comment": "出库单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
 	},
 	{
 		"ColumnName": "Out_Packing_Size",
@@ -1459,6 +1529,7 @@
 		"Caption": "出库件数",
 		"Comment": "出库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1482,6 +1553,19 @@
 		"ColumnName": "Out_Retail_Amount",
 		"Caption": "出库零售金额",
 		"Comment": "出库零售金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Out_Retail_Amount_Sum",
+		"Caption": "零售金额总计",
+		"Comment": "零售金额总计",
 		"MaxLength": 20,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
@@ -1633,6 +1717,7 @@
 		"Caption": "件数",
 		"Comment": "件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1670,6 +1755,7 @@
 		"Caption": "税率",
 		"Comment": "税率",
 		"MaxLength": 5,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1697,6 +1783,7 @@
 		"Caption": "未入库件数",
 		"Comment": "未入库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1743,8 +1830,10 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Discount_Inbound_Quantity",
@@ -1754,8 +1843,10 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Residual_Inbound_Quantity",
@@ -1770,6 +1861,7 @@
 		"Caption": "入库件数",
 		"Comment": "入库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1781,27 +1873,34 @@
 		"Caption": "实际入库件数",
 		"Comment": "实际入库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Discount_Inbound_Piece",
 		"Caption": "折扣入库件数",
 		"Comment": "折扣入库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Residual_Inbound_Piece",
 		"Caption": "剩余入库件数",
 		"Comment": "剩余入库件数",
+		"IsVisible": false,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"Expression": "No_Inbound_Piece - Real_Inbound_Piece - Discount_Inbound_Piece"
@@ -1892,9 +1991,7 @@
 		"Caption": "支付方式",
 		"Comment": "支付方式",
 		"MaxLength": 3,
-		"AllowDBNull": false,
 		"DefaultValue": "1",
-		"IsRequired": true,
 		"DbDataType": 14,
 		"DbPhysicalType": "INT2"
 	},
@@ -1903,7 +2000,6 @@
 		"Caption": "客户",
 		"Comment": "客户内码",
 		"MaxLength": 8,
-		"AllowDBNull": false,
 		"DbDataType": 12,
 		"DbPhysicalType": "SERIAL8"
 	},
@@ -1957,14 +2053,17 @@
 		"AllowDBNull": false,
 		"DefaultValue": "1",
 		"IsRequired": true,
+		"MinValue": 1,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于1。"
 	},
 	{
 		"ColumnName": "Selling_Piece",
 		"Caption": "销售件数",
 		"Comment": "销售件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -1989,6 +2088,7 @@
 		"Caption": "销售实际金额",
 		"Comment": "销售实际金额",
 		"MaxLength": 20,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -2028,6 +2128,7 @@
 		"Caption": "未出库件数",
 		"Comment": "未出库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -2074,8 +2175,10 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Discount_Outbound_Quantity",
@@ -2085,8 +2188,10 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)"
+		"DbPhysicalType": "DECIMAL(18)",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Residual_Outbound_Quantity",
@@ -2101,6 +2206,7 @@
 		"Caption": "出库件数",
 		"Comment": "出库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -2112,27 +2218,34 @@
 		"Caption": "实际出库件数",
 		"Comment": "实际出库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Discount_Outbound_Piece",
 		"Caption": "折扣出库件数",
 		"Comment": "折扣出库件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
+		"MinValue": 0,
 		"DbDataType": 12,
-		"DbPhysicalType": "INT8"
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于0。"
 	},
 	{
 		"ColumnName": "Residual_Outbound_Piece",
 		"Caption": "剩余出库件数",
 		"Comment": "剩余出库件数",
+		"IsVisible": false,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"Expression": "No_Outbound_Piece - Real_Outbound_Piece - Discount_Outbound_Piece"
@@ -2223,8 +2336,6 @@
 		"Caption": "出库仓库",
 		"Comment": "出库仓库",
 		"MaxLength": 8,
-		"AllowDBNull": false,
-		"IsRequired": true,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8"
 	},
@@ -2275,8 +2386,6 @@
 		"Caption": "入库仓库",
 		"Comment": "入库仓库",
 		"MaxLength": 8,
-		"AllowDBNull": false,
-		"IsRequired": true,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8"
 	},
@@ -2368,6 +2477,43 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
+		"ColumnName": "Real_In_Amount_Sum",
+		"Caption": "金额总计",
+		"Comment": "金额总计",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Out_Amount",
+		"Caption": "实际出库金额",
+		"Comment": "实际出库金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Real_Out_Amount_Sum",
+		"Caption": "金额总计",
+		"Comment": "金额总计",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
 		"ColumnName": "Out_Cost_Amount",
 		"Caption": "出库成本金额",
 		"Comment": "出库成本金额",
@@ -2380,9 +2526,86 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
+		"ColumnName": "Out_Cost_Amount_Sum",
+		"Caption": "成本金额总计",
+		"Comment": "成本金额总计",
+		"MaxLength": 20,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
 		"ColumnName": "Cost_Amount",
 		"Caption": "成本金额",
 		"Comment": "成本金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount_0",
+		"Caption": "成本金额(0~30天)",
+		"Comment": "成本金额(0~30天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount_30",
+		"Caption": "成本金额(30~90天)",
+		"Comment": "成本金额(30~90天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount_90",
+		"Caption": "成本金额(90~180天)",
+		"Comment": "成本金额(90~180天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount_180",
+		"Caption": "成本金额(180~360天)",
+		"Comment": "成本金额(180~360天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsReadOnly": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Cost_Amount_360",
+		"Caption": "成本金额(360天以上)",
+		"Comment": "成本金额(360天以上)",
 		"MaxLength": 20,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
@@ -2889,6 +3112,7 @@
 		"Caption": "期初件数",
 		"Comment": "期初件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -2937,6 +3161,7 @@
 		"Caption": "结存件数",
 		"Comment": "结存件数",
 		"MaxLength": 8,
+		"IsVisible": false,
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
@@ -2955,5 +3180,110 @@
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount",
+		"Caption": "应收金额",
+		"Comment": "应收金额",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount_0",
+		"Caption": "应收金额(0~30天)",
+		"Comment": "应收金额(0~30天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount_30",
+		"Caption": "应收金额(30~90天)",
+		"Comment": "应收金额(30~90天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount_90",
+		"Caption": "应收金额(90~180天)",
+		"Comment": "应收金额(90~180天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount_180",
+		"Caption": "应收金额(180~360天)",
+		"Comment": "应收金额(180~360天)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "AR_Amount_360",
+		"Caption": "应收金额(360天以上)",
+		"Comment": "应收金额(360天以上)",
+		"MaxLength": 20,
+		"AllowDBNull": false,
+		"DefaultValue": "0",
+		"IsRequired": true,
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY"
+	},
+	{
+		"ColumnName": "Damage_Overflow_Quantity",
+		"Caption": "损溢数量",
+		"Comment": "损溢数量",
+		"DbDataType": 7,
+		"DbPhysicalType": "DECIMAL(18)",
+		"Expression": "Quantity * Packing_Size - Inventory_Quantity"
+	},
+	{
+		"ColumnName": "Damage_Overflow_Piece",
+		"Caption": "损溢件数",
+		"Comment": "损溢件数",
+		"IsVisible": false,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"Expression": "Piece - Inventory_Piece"
+	},
+	{
+		"ColumnName": "Damage_Overflow_Cost",
+		"Caption": "损溢成本",
+		"Comment": "损溢成本",
+		"Precision": 2,
+		"Format": "C2",
+		"DbDataType": 4,
+		"DbPhysicalType": "MONEY",
+		"Expression": "IIF(Inventory_Quantity = 0, 0, Inventory_Cost / Inventory_Quantity * (Quantity * Packing_Size - Inventory_Quantity))"
 	}
 ]

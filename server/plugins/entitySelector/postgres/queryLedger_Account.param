@@ -1,0 +1,1 @@
+filter= AND Ledger_Account_Barcode = :filter OR Ledger_Account_Code LIKE :filter OR Ledger_Account_Name LIKE '%' || :filter || '%' OR Ledger_Account_Mnemonic_Code LIKE '%' || :filter || '%'

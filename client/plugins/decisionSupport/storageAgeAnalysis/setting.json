@@ -1,0 +1,57 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Begin_Bill_Code",
+		"End_Bill_Code",
+		"Department_Id",
+		"Owner_Id",
+		"Supplier_Id",
+		"Material_Code"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Cost_Amount",
+			"Caption": "应收金额小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Cost_Amount_0",
+			"Caption": "应收金额(0~30天)小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Cost_Amount_30",
+			"Caption": "应收金额(30~90天)小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Cost_Amount_90",
+			"Caption": "应收金额(90~180天)小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Cost_Amount_180",
+			"Caption": "应收金额(180~360天)小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Cost_Amount_360",
+			"Caption": "应收金额(360天以上)小计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
+}

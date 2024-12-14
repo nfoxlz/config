@@ -1,6 +1,6 @@
 {
 	"ConditionMemoryDataSettings": [
-		"Client_Id",
+		"Customer_Id",
 		"Begin_Bill_Date",
 		"End_Bill_Date",
 		"Department_Id",
@@ -9,7 +9,8 @@
 		"Payment_Mode"
 	],
 	"ConditionRequiredColumns": [
-		"Client_Id"
+		"Customer_Id",
+		"Payment_Mode"
 	],
 	"QueryConditionExcludedColumns": [
 		"Payment_Mode"
@@ -34,13 +35,6 @@
 	"InvisibleIdTables": [
 		"master"
 	],
-	"InvisibleColumns": {
-		"master": [
-			"Bill_Type",
-			"Sn",
-			"Input_Tax_Rate",
-			"Tax_Amount"		]
-	},
 	"EditableColumns": {
 		"master": [
 			"Proreceipt_Amount",
@@ -55,7 +49,7 @@
 	},
 	"IsMergeConditionData": true,
 	"SaveConditionColumns": [
-		"Client_Id",
+		"Customer_Id",
 		"Payment_Mode"
 	],
 	"SaveColumns": {

@@ -14,7 +14,7 @@
 		]
 	},
 	"ColumnCalculateScriptFileNames": {
-		"Master": {
+		"master": {
 			"Department_Name": "Master_Department_Name.cs"
 		}
 	},

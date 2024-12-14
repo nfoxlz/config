@@ -1,0 +1,6 @@
+Begin_Bill_Code= AND CAST(Bill_Code AS INT8) >= CAST(:Begin_Bill_Code AS INT8)
+End_Bill_Code= AND CAST(Bill_Code AS INT8) <= CAST(:End_Bill_Code AS INT8)
+Begin_Bill_Date= AND Bill_Date >= :Begin_Bill_Date
+End_Bill_Date= AND Bill_Date <= :End_Bill_Date
+Outbound_Wareroom_Id= AND Outbound_Wareroom_Id = :Outbound_Wareroom_Id
+Inbound_Wareroom_Id= AND Inbound_Wareroom_Id = :Inbound_Wareroom_Id

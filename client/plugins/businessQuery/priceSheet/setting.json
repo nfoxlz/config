@@ -1,0 +1,12 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Material_Code"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	]
+}

@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM Ledger_Account WHERE Tenant_Id = :tenant{filter}

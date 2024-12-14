@@ -1,0 +1,1 @@
+DELETE FROM Voucher_Detail WHERE Voucher_Id = :Voucher_Id

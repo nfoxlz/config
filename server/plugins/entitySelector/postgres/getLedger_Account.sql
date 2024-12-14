@@ -1,0 +1,1 @@
+SELECT * FROM Ledger_Account WHERE Ledger_Account_Id = :id AND Tenant_Id = :tenant

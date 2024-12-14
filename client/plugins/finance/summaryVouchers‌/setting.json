@@ -1,0 +1,30 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Begin_Voucher_Code",
+		"End_Voucher_Code",
+		"Begin_Accounting_Date",
+		"End_Accounting_Date",
+		"Creator_User_Id",
+		"Last_Modifier_User_Id",
+		"Auditor_User_Id",
+		"Bookkeeper_User_Id",
+		"General_Bookkeeper_User_Id"
+	],
+	"ConditionEditableColumns": [
+		"Last_Modifier_User_Id",
+		"Auditor_User_Id",
+		"Bookkeeper_User_Id",
+		"General_Bookkeeper_User_Id"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleColumns": {
+		"master": [
+			"Voucher_Summary_Id"
+		]
+	},
+	"RunColumns": [
+		"Voucher_Summary_Id"
+	]
+}

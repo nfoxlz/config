@@ -47,13 +47,7 @@
 	"InvisibleColumns": {
 		"master": [
 			"Bill_Type",
-			"Sn",
-			"Piece",
-			"No_Inbound_Piece",
-			"Inbound_Piece",
-			"Real_Inbound_Piece",
-			"Residual_Inbound_Piece",
-			"Discount_Inbound_Piece"
+			"Sn"
 		]
 	},
 	"EditableColumns": {

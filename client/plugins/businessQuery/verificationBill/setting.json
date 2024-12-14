@@ -1,0 +1,24 @@
+{
+	"Title": "盘点单查询",
+	"ConditionMemoryDataSettings": [
+		"Bill_Id"
+	],
+	"DataLoadName": "master",
+	"AdditionalDataColumns": {
+		"master_1": [
+			"Damage_Overflow_Quantity",
+			"Damage_Overflow_Piece",
+			"Damage_Overflow_Cost"
+		]
+	},
+	"ColumnDisplayIndexes": {
+		"master_1": {
+			"Damage_Overflow_Piece": 7,
+			"Damage_Overflow_Quantity": 7,
+			"Damage_Overflow_Cost": 8		
+		}
+	},
+	"InvisibleIdTables": [
+		"master_1"
+	]
+}

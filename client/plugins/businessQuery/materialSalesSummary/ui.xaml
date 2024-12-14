@@ -1,0 +1,55 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:behaviour="http://schemas.microsoft.com/xaml/behaviors"
+	xmlns:controls="clr-namespace:Compete.Mis.MisControls;assembly=CompeteBase"
+    xmlns:plugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteMis"
+	xmlns:basePlugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteBase">
+	<UserControl.DataContext>
+		<plugins:ThreecolumnViewModel/>
+	</UserControl.DataContext>
+	<Grid>
+		<Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+			<RowDefinition Height="115"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="55"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+		<StackPanel Orientation="Horizontal">
+			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding QueryCommand}" PageSizeChangedCommand="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
+			<Button Content="{DynamicResource QueryButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
+		</StackPanel>
+        <TextBlock TextWrapping="Wrap" Text="商 品 销 售 汇 总" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
+		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
+			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
+				<controls:DataPanel.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</controls:DataPanel.ColumnDefinitions>
+			</controls:DataPanel>
+		</ScrollViewer>
+		<GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="True" ResizeDirection="Rows" Height="5" Background="Transparent"/>
+		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" RefreshCommand="{Binding QueryCommand}" SortDescription="{Binding SortDescription,Mode=OneWayToSource}" ColumnWidth="Auto" IsReadOnly="True" IsPaging="{Binding Setting.IsPagingQuery,Mode=OneWay}"/>
+        <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="True" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
+        <ScrollViewer Margin="0,5,0,0" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+			<StackPanel>
+				<controls:DataPanel ItemsSource="{Binding TotalTable}" IsReadOnly="True">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+				</controls:DataPanel>
+				<controls:DataPanel Margin="0,3,0,0" ItemsSource="{Binding Data.Tables[master_1]}" IsReadOnly="True">
+					<controls:DataPanel.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</controls:DataPanel.ColumnDefinitions>
+				</controls:DataPanel>
+			</StackPanel>
+        </ScrollViewer>
+		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="4">
+			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
+		</StackPanel>
+	</Grid>
+</UserControl>

@@ -1,0 +1,23 @@
+{
+	"Title": "入库单查询",
+	"ConditionMemoryDataSettings": [
+		"Bill_Id"
+	],
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Wareroom_Name"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Retail_Amount",
+			"Caption": "零售金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		}
+	]
+}

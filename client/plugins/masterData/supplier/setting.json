@@ -14,7 +14,7 @@
 		]
 	},
 	"ColumnCalculateScriptFileNames": {
-		"Master": {
+		"master": {
 			"Supplier_Name": "Master_Supplier_Name.cs"
 		}
 	},

@@ -1,5 +1,5 @@
 SELECT B.Bill_Id,
-		B.Bill_Code,
+		CAST(B.Bill_Code AS INT8) AS Bill_Code_Num,
 		B.Manual_Code,
 		B.Bill_Date,
 		D.Department_Name,
@@ -12,4 +12,5 @@ SELECT B.Bill_Id,
 		{Owner_Id}
 		{Begin_Bill_Date}
 		{End_Bill_Date}
-	ORDER BY B.Bill_Date, B.Creation_Date_Time
+	{order_By}
+	OFFSET :begin_No LIMIT :page_Size

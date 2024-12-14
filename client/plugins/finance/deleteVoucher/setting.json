@@ -1,0 +1,30 @@
+{
+	"Title": "记账凭证修改",
+	"ConditionMemoryDataSettings": [
+		"Voucher_Id"
+	],
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Debit_Amount",
+			"Caption": "借方金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		},
+		{
+			"Name": "Credit_Amount",
+			"Caption": "贷方金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		}
+	],
+	"IsMergeConditionData": true,
+	"SaveColumns": {
+		"master": [
+			"Version"
+		]
+	}
+}

@@ -1,0 +1,65 @@
+{
+	"Title": "记账凭证修改",
+	"ConditionMemoryDataSettings": [
+		"Voucher_Id"
+	],
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"RequiredDataTables": {
+		"master_1": "明细项不能无数据。"
+	},
+	"UniqueColumns": {
+		"master_1": [
+			"Account_Id"
+		]
+	},
+	"ReadOnlyColumns": {
+		"master": [
+			"Voucher_Code"
+		]
+	},
+	"NewCopyColumns": {
+		"master_1": [
+			"Summary"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Debit_Amount",
+			"Caption": "借方金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		},
+		{
+			"Name": "Credit_Amount",
+			"Caption": "贷方金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		}
+	],
+	"ColumnCalculateScriptFileNames": {
+		"master_1": {
+			"Debit_Amount": "Detail_Debit_Amount.cs",
+			"Credit_Amount": "Detail_Credit_Amount.cs"
+		}
+	},
+	"UnmodifiedSaveTables": [
+		"master",
+		"master_1"
+	],
+	"IsMergeConditionData": true,
+	"SaveColumns": {
+		"master": [
+			"Accessories_Num",
+			"Version"
+		],
+		"master_1": [
+			"Account_Id",
+			"Summary",
+			"Debit_Amount",
+			"Credit_Amount"
+		]
+	}
+}

@@ -1,1 +1,1 @@
-INSERT INTO AR_Receipt_Bill (Tenant_Id, Bill_Code, Client_Id, Payment_Mode, Creator_User_Id) VALUES (:tenant, :new_Bill_Code, :Client_Id, :Payment_Mode, :user)
+INSERT INTO AR_Receipt_Bill (Tenant_Id, Bill_Code, Customer_Id, Payment_Mode, Creator_User_Id) VALUES (:tenant, :new_Bill_Code, :Customer_Id, :Payment_Mode, :user)

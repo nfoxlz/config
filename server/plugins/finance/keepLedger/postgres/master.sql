@@ -1,0 +1,1 @@
+SELECT :new_Voucher_Code AS Voucher_Code, T.* FROM fi_keep_ledger(CAST(:tenant AS INT8), CAST(:new_Voucher_Code AS VARCHAR), CAST(:accountingDate AS DATE), CAST(:user AS INT8)) AS T;

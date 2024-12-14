@@ -15,10 +15,7 @@
 	"InvisibleColumns": {
 		"master": [
 			"C0",
-			"Bill_Type",
-			"In_Piece",
-			"Out_Piece",
-			"Piece"
+			"Bill_Type"
 		]
 	},
 	"CalculatedColumns": {

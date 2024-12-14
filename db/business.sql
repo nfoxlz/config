@@ -1,10 +1,10 @@
 /*
- Navicat Premium Data Transfer
+ Navicat Premium Dump SQL
 
  Source Server         : FreeBSD
  Source Server Type    : PostgreSQL
  Source Server Version : 160001 (160001)
- Source Host           : 192.168.172.130:5432
+ Source Host           : 192.168.17.128:5432
  Source Catalog        : business
  Source Schema         : public
 
@@ -12,7 +12,7 @@
  Target Server Version : 160001 (160001)
  File Encoding         : 65001
 
- Date: 08/11/2024 23:26:34
+ Date: 14/12/2024 10:15:58
 */
 
 
@@ -28,10 +28,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for ap_payment_bill_bill_id_seq1
+-- Sequence structure for ap_payment_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."ap_payment_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."ap_payment_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."ap_payment_bill_bill_id_seq";
+CREATE SEQUENCE "public"."ap_payment_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -61,10 +61,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for ar_receipt_bill_bill_id_seq1
+-- Sequence structure for ar_receipt_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."ar_receipt_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."ar_receipt_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."ar_receipt_bill_bill_id_seq";
+CREATE SEQUENCE "public"."ar_receipt_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -105,10 +105,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for damage_overflow_bill_bill_id_seq1
+-- Sequence structure for damage_overflow_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."damage_overflow_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."damage_overflow_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."damage_overflow_bill_bill_id_seq";
+CREATE SEQUENCE "public"."damage_overflow_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -138,10 +138,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for inbound_bill_bill_id_seq1
+-- Sequence structure for inbound_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."inbound_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."inbound_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."inbound_bill_bill_id_seq";
+CREATE SEQUENCE "public"."inbound_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -237,10 +237,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for outbound_bill_bill_id_seq1
+-- Sequence structure for outbound_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."outbound_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."outbound_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."outbound_bill_bill_id_seq";
+CREATE SEQUENCE "public"."outbound_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -259,10 +259,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for person_person_id_seq1
+-- Sequence structure for person_person_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."person_person_id_seq1";
-CREATE SEQUENCE "public"."person_person_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."person_person_id_seq";
+CREATE SEQUENCE "public"."person_person_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -270,10 +270,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for procurement_billing_bill_bill_id_seq1
+-- Sequence structure for procurement_billing_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."procurement_billing_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."procurement_billing_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."procurement_billing_bill_bill_id_seq";
+CREATE SEQUENCE "public"."procurement_billing_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -347,10 +347,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for procurement_pending_adjustment_bill_bill_id_seq1
+-- Sequence structure for procurement_pending_adjustment_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."procurement_pending_adjustment_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."procurement_pending_adjustment_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."procurement_pending_adjustment_bill_bill_id_seq";
+CREATE SEQUENCE "public"."procurement_pending_adjustment_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -369,10 +369,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for procurement_return_bill_bill_id_seq1
+-- Sequence structure for procurement_return_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."procurement_return_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."procurement_return_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."procurement_return_bill_bill_id_seq";
+CREATE SEQUENCE "public"."procurement_return_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -479,10 +479,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for selling_pending_adjustment_bill_bill_id_seq1
+-- Sequence structure for selling_pending_adjustment_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."selling_pending_adjustment_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."selling_pending_adjustment_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."selling_pending_adjustment_bill_bill_id_seq";
+CREATE SEQUENCE "public"."selling_pending_adjustment_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -501,10 +501,10 @@ START 1
 CACHE 1;
 
 -- ----------------------------
--- Sequence structure for selling_return_bill_bill_id_seq1
+-- Sequence structure for selling_return_bill_bill_id_seq
 -- ----------------------------
-DROP SEQUENCE IF EXISTS "public"."selling_return_bill_bill_id_seq1";
-CREATE SEQUENCE "public"."selling_return_bill_bill_id_seq1" 
+DROP SEQUENCE IF EXISTS "public"."selling_return_bill_bill_id_seq";
+CREATE SEQUENCE "public"."selling_return_bill_bill_id_seq" 
 INCREMENT 1
 MINVALUE  1
 MAXVALUE 9223372036854775807
@@ -799,8 +799,11 @@ INSERT INTO "public"."action" VALUES (E'\\262\\3742\\341e(\\271F\\267\\230\\020\
 INSERT INTO "public"."action" VALUES (E'\\360\\223]\\303\\2500\\270J\\226TA\\241\\313\\233\\012\\257');
 INSERT INTO "public"."action" VALUES (E'\\311\\306\\022.\\230\\235\\247I\\233\\277\\026D\\340o\\254M');
 INSERT INTO "public"."action" VALUES (E'\\255\\315i\\245b\\231xL\\263\\352\\266\\275\\011\\023\\032W');
+INSERT INTO "public"."action" VALUES (E'\\373\\355\\333\\025\\203\\243?K\\267\\017U\\012E\\372\\225\\261');
+INSERT INTO "public"."action" VALUES (E'&uD\\310\\006M\\302F\\256Y`\\242\\216\\350Z\\312');
 INSERT INTO "public"."action" VALUES (E'\\202\\221\\2166\\215\\376\\262I\\213;\\007\\357\\356\\273Ul');
 INSERT INTO "public"."action" VALUES (E'\\272\\320^\\024+\\244\\203O\\237\\326\\031\\002K\\314x\\177');
+INSERT INTO "public"."action" VALUES (E'I\\311\\267\\241tULF\\215\\305\\213\\326\\333\\021\\213\\264');
 INSERT INTO "public"."action" VALUES (E'N[\\257\\312\\205r\\225J\\250\\300"\\257jY\\311K');
 INSERT INTO "public"."action" VALUES (E'X\\343\\007w\\025\\336\\303C\\216#6\\363\\01018\\331');
 INSERT INTO "public"."action" VALUES (E'_\\011\\356\\027.\\373\\312B\\232|j\\227\\313\\3332\\250');
@@ -809,8 +812,10 @@ INSERT INTO "public"."action" VALUES (E'r\\016yR\\250\\177pJ\\254\\363\\007\\305
 INSERT INTO "public"."action" VALUES (E'\\302\\250\\361X\\327nmF\\226"\\323\\233\\374\\324\\010|');
 INSERT INTO "public"."action" VALUES (E'\\223\\301\\370\\010\\025\\027''M\\220\\016\\331\\016h\\351\\226A');
 INSERT INTO "public"."action" VALUES (E'\\257\\214\\2008\\340J\\223N\\276\\252WOJ\\322\\034\\334');
+INSERT INTO "public"."action" VALUES (E';i$/\\214?\\177B\\243\\337\\341\\227\\353Qi\\360');
 INSERT INTO "public"."action" VALUES (E'\\265\\332\\310\\245B\\211\\227M\\206\\022\\340@_\\364 3');
 INSERT INTO "public"."action" VALUES (E'\\030\\322\\301\\267\\021z\\343J\\202\\250\\034\\227$)D|');
+INSERT INTO "public"."action" VALUES (E'rq\\275\\235W"mG\\217\\000\\240@0\\334\\331R');
 INSERT INTO "public"."action" VALUES (E'{\\017\\306\\367\\352@\\260O\\2173\\007\\224}\\036\\261\\337');
 INSERT INTO "public"."action" VALUES (E'9\\230P\\034\\372$\\370I\\266\\373\\270\\326\\013\\322\\257\\316');
 INSERT INTO "public"."action" VALUES (E'r\\253\\222\\343\\221\\206\\345H\\265ln\\325\\274\\332Nb');
@@ -843,8 +848,13 @@ INSERT INTO "public"."action" VALUES (E'\\336\\273\\225\\2169\\177\\024L\\264\\3
 INSERT INTO "public"."action" VALUES (E't\\357\\237H,@\\306N\\241\\335\\322Vh\\225\\032q');
 INSERT INTO "public"."action" VALUES (E'\\336\\022\\312\\247\\313\\262\\246A\\235\\237FK\\334\\261z\\241');
 INSERT INTO "public"."action" VALUES (E'\\365\\320\\025O\\012\\325pG\\201o\\356\\254S_YJ');
+INSERT INTO "public"."action" VALUES (E'D\\332,\\224q\\036\\332D\\205\\337\\202;\\255\\270]\\302');
 INSERT INTO "public"."action" VALUES (E'6-\\360r"\\277\\340B\\2320\\343,\\201*ya');
+INSERT INTO "public"."action" VALUES (E'\\3752\\345\\3569 \\371@\\274,\\204\\341\\2064\\267\\334');
+INSERT INTO "public"."action" VALUES (E'J+$\\020\\355\\016\\215A\\217\\224a\\250\\316\\262r2');
+INSERT INTO "public"."action" VALUES (E'\\014\\001\\264\\011wU\\202L\\240\\261\\264\\030\\024A\\201h');
 INSERT INTO "public"."action" VALUES (E'\\245\\363zQ\\257f\\262@\\2766\\000m\\316\\025\\273U');
+INSERT INTO "public"."action" VALUES (E'PB4\\235\\335\\340\\212F\\206\\241\\357\\274''\\247.\\275');
 INSERT INTO "public"."action" VALUES (E'q!0\\006\\005\\341\\215B\\224\\035\\250h\\026UQ2');
 INSERT INTO "public"."action" VALUES (E'\\244\\035\\316\\267s"\\274C\\2154\\033\\301\\020C\\201\\022');
 INSERT INTO "public"."action" VALUES (E'-\\014\\233\\357\\242M\\222K\\233\\362\\372=\\336\\223=\\251');
@@ -921,7 +931,11 @@ INSERT INTO "public"."action" VALUES (E'\\315\\322\\177|tt\\221B\\257\\030\\311\
 INSERT INTO "public"."action" VALUES (E'4\\267_\\206\\316O4F\\244\\257S>\\374l\\365\\252');
 INSERT INTO "public"."action" VALUES (E'\\266s\\303\\023E\\332\\361C\\222\\371\\347\\343\\3317\\3462');
 INSERT INTO "public"."action" VALUES (E'\\266\\011\\010\\341\\374G\\022F\\231[\\022\\365\\203a\\214g');
+INSERT INTO "public"."action" VALUES (E'\\3247\\037%\\314\\242\\317G\\236%3\\231\\252\\025b\\225');
 INSERT INTO "public"."action" VALUES (E'\\315\\242=\\354*\\313\\377G\\230\\333&\\027\\2339\\252Y');
+INSERT INTO "public"."action" VALUES (E'i\\205m\\302\\371u~J\\270\\326\\245}t\\337\\366\\324');
+INSERT INTO "public"."action" VALUES (E'\\213!\\314\\235\\323\\014\\327O\\272\\272\\032-#\\236O\\222');
+INSERT INTO "public"."action" VALUES (E'm\\275\\306\\350t\\335)@\\231\\322\\012\\032\\270\\220\\036\\020');
 INSERT INTO "public"."action" VALUES (E'\\302\\366\\307\\342\\366\\011\\375B\\202\\337\\265\\343Un(~');
 INSERT INTO "public"."action" VALUES (E'\\220\\324H\\330\\332\\264\\240I\\253\\274\\217\\235/#\\200\\301');
 INSERT INTO "public"."action" VALUES (E'\\227\\35266\\335\\243\\216E\\253\\212k\\246\\300\\242]\\366');
@@ -947,6 +961,7 @@ INSERT INTO "public"."action" VALUES (E'\\225A\\312\\230\\215I\\311J\\262E\\230\
 INSERT INTO "public"."action" VALUES (E'C\\357!\\210\\222\\347EO\\236\\336\\316r\\251\\253\\370<');
 INSERT INTO "public"."action" VALUES (E'\\222\\257\\230\\343\\324yPK\\272\\016n\\232\\331l\\331\\275');
 INSERT INTO "public"."action" VALUES (E'\\007N7e\\331\\214\\336J\\217\\210\\202\\375{\\201\\252A');
+INSERT INTO "public"."action" VALUES (E'\\335Ps\\003\\331\\002\\324M\\261O\\203\\215\\343\\352\\025\\004');
 INSERT INTO "public"."action" VALUES (E'\\353\\255\\231Am\\026HO\\236\\371\\235\\265\\017\\250\\246\\254');
 INSERT INTO "public"."action" VALUES (E'\\016\\022\\211<p]\\204B\\273\\032\\300\\272p4\\370,');
 INSERT INTO "public"."action" VALUES (E'\\006T%*\\227zNJ\\202\\317[\\350K\\377\\266\\257');
@@ -954,11 +969,18 @@ INSERT INTO "public"."action" VALUES (E'\\244\\3612\\353\\216\\250zO\\236\\347X\
 INSERT INTO "public"."action" VALUES (E'\\270\\204\\271\\361\\355\\341#E\\272D\\224\\234SiN\\350');
 INSERT INTO "public"."action" VALUES (E'g&rS\\301\\355\\272M\\207\\337\\032\\365\\371\\350)\\321');
 INSERT INTO "public"."action" VALUES (E'\\232\\241\\343\\207J\\303FC\\230`sB\\315H\\230\\310');
+INSERT INTO "public"."action" VALUES (E'\\004\\246\\350\\321\\214.KI\\244\\273P\\035G\\333\\314\\337');
 INSERT INTO "public"."action" VALUES (E'p`\\252\\035\\002#>E\\232\\370\\367\\3013o8#');
 INSERT INTO "public"."action" VALUES (E'\\3306''\\357\\342\\343\\252A\\251\\225O~>!FT');
 INSERT INTO "public"."action" VALUES (E'\\015\\345Z\\227gt\\310L\\247sY\\317D\\354Z_');
 INSERT INTO "public"."action" VALUES (E'\\212\\271\\341\\351\\313\\233HI\\216P\\203\\207M\\361\\237\\325');
 INSERT INTO "public"."action" VALUES (E'\\275\\3539%p\\331BK\\240\\035\\201\\212/#TD');
+INSERT INTO "public"."action" VALUES (E'H\\015\\313\\020P\\212\\027F\\201)\\245\\240n\\326\\257\\271');
+INSERT INTO "public"."action" VALUES (E'\\317\\265\\350\\311\\000v\\250A\\246h6 \\222(\\361\\015');
+INSERT INTO "public"."action" VALUES (E'\\301\\374\\210O\\022w\\177K\\210-W\\206\\353\\264\\275\\244');
+INSERT INTO "public"."action" VALUES (E'rJ\\341\\217,|\\204M\\211\\201\\246\\370\\257e\\277i');
+INSERT INTO "public"."action" VALUES (E'\\201\\226\\314\\270\\236 \\351N\\224\\246\\037\\356\\207\\274\\354\\341');
+INSERT INTO "public"."action" VALUES (E'\\306D\\312z/\\314I@\\277K\\337|\\276-GC');
 INSERT INTO "public"."action" VALUES (E'\\267\\247V,\\265\\221)G\\216`w\\212>B\\207\\244');
 INSERT INTO "public"."action" VALUES (E'E\\036wR\\023\\372\\272H\\220d4\\214?:\\347\\326');
 INSERT INTO "public"."action" VALUES (E'd\\\\\\001\\255\\306\\317JI\\266\\207\\360\\346\\015@\\026\\365');
@@ -1003,7 +1025,9 @@ COMMENT ON TABLE "public"."ap" IS '应付账款';
 -- Records of ap
 -- ----------------------------
 INSERT INTO "public"."ap" VALUES (2, 1, '$1,475.00');
-INSERT INTO "public"."ap" VALUES (1, 1, '$31,710.00');
+INSERT INTO "public"."ap" VALUES (6, 1, '$357,500.00');
+INSERT INTO "public"."ap" VALUES (7, 1, '$382,500.00');
+INSERT INTO "public"."ap" VALUES (1, 1, '$31,960.00');
 
 -- ----------------------------
 -- Table structure for ap_account
@@ -1076,6 +1100,16 @@ INSERT INTO "public"."ap_account" VALUES (101, 185, 1, '72', NULL, '2024-05-26',
 INSERT INTO "public"."ap_account" VALUES (101, 186, 1, '73', NULL, '2024-05-28', 1, '$30.00', 0, '$0.00', 1, '2024-05-28 15:19:33.905496+08', NULL);
 INSERT INTO "public"."ap_account" VALUES (101, 187, 1, '74', NULL, '2024-05-29', 1, '$30.00', 0, '$0.00', 1, '2024-05-29 10:59:34.647712+08', NULL);
 INSERT INTO "public"."ap_account" VALUES (101, 188, 1, '75', NULL, '2024-06-11', 1, '$135.00', 0, '$0.00', 1, '2024-06-11 01:20:34.91331+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 189, 1, '76', NULL, '2024-11-30', 6, '$357,500.00', 0, '$0.00', 1, '2024-11-30 22:08:54.256327+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 190, 1, '77', NULL, '2024-11-30', 1, '$30.00', 0, '$0.00', 1, '2024-11-30 22:19:52.637174+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 191, 1, '78', NULL, '2024-12-01', 7, '$382,500.00', 0, '$0.00', 1, '2024-12-01 03:24:44.461295+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 192, 1, '79', NULL, '2024-12-01', 1, '$60.00', 0, '$0.00', 1, '2024-12-01 03:25:50.690257+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 193, 1, '80', NULL, '2024-12-01', 1, '$30.00', 0, '$0.00', 1, '2024-12-01 03:41:10.606302+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 194, 1, '81', NULL, '2024-12-01', 1, '$30.00', 0, '$0.00', 1, '2024-12-01 03:44:32.00852+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 195, 1, '82', NULL, '2024-12-01', 1, '$30.00', 0, '$0.00', 1, '2024-12-01 03:51:12.157794+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 196, 1, '83', NULL, '2024-12-01', 1, '$30.00', 0, '$0.00', 1, '2024-12-01 03:53:06.981329+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (101, 197, 1, '84', NULL, '2024-12-01', 1, '$30.00', 0, '$0.00', 1, '2024-12-01 03:56:47.6858+08', NULL);
+INSERT INTO "public"."ap_account" VALUES (103, 36, 1, '3', NULL, '2024-12-02', 1, '$10.00', 0, '$0.00', 1, '2024-12-02 16:12:29.004214+08', NULL);
 
 -- ----------------------------
 -- Table structure for ap_carry_over
@@ -1241,13 +1275,29 @@ INSERT INTO "public"."ap_non_payment" VALUES (101, 351, 187, 0, 1, '74', NULL, '
 INSERT INTO "public"."ap_non_payment" VALUES (101, 352, 187, 1, 1, '74', NULL, '2024-05-29', 1, 2, 1, 10, 1, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', '$0.00', '$0.00', 1, '2024-05-29 10:59:34.647712+08', 0, '2024-05-29 10:59:34.647712+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 353, 188, 0, 1, '75', NULL, '2024-06-11', 1, 2, 1, 1, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', '$0.00', '$0.00', 1, '2024-06-11 01:20:34.91331+08', 0, '2024-06-11 01:20:34.91331+08', 0, NULL);
 INSERT INTO "public"."ap_non_payment" VALUES (101, 354, 188, 1, 1, '75', NULL, '2024-06-11', 1, 2, 1, 2, 3, '箱', 12, 0, '$75.00', '$75.00', 0.1700, '$97.20', '$0.00', '$0.00', 1, '2024-06-11 01:20:34.91331+08', 0, '2024-06-11 01:20:34.91331+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 357, 189, 0, 1, '76', NULL, '2024-11-30', 2, 7, 6, 11, 5, '部', 1, 0, '$20,000.00', '$20,000.00', 0.0000, '$0.00', '$0.00', '$0.00', 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 358, 189, 1, 1, '76', NULL, '2024-11-30', 2, 7, 6, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 359, 189, 2, 1, '76', NULL, '2024-11-30', 2, 7, 6, 13, 20, '台', 1, 0, '$140,000.00', '$140,000.00', 0.1300, '$0.00', '$0.00', '$0.00', 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 360, 189, 3, 1, '76', NULL, '2024-11-30', 2, 7, 6, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', '$0.00', '$0.00', 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 361, 190, 0, 1, '77', NULL, '2024-11-30', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-11-30 22:19:52.637174+08', 0, '2024-11-30 22:19:52.637174+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 362, 191, 0, 1, '78', NULL, '2024-12-01', 2, 7, 7, 11, 20, '部', 1, 0, '$80,000.00', '$80,000.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 363, 191, 1, 1, '78', NULL, '2024-12-01', 2, 7, 7, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 364, 191, 2, 1, '78', NULL, '2024-12-01', 2, 7, 7, 13, 15, '台', 1, 0, '$105,000.00', '$105,000.00', 0.1300, '$0.00', '$0.00', '$0.00', 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 365, 191, 3, 1, '78', NULL, '2024-12-01', 2, 7, 7, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', '$0.00', '$0.00', 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 366, 192, 0, 1, '79', NULL, '2024-12-01', 1, 2, 1, 1, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', '$0.00', '$0.00', 1, '2024-12-01 03:25:50.690257+08', 0, '2024-12-01 03:25:50.690257+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 367, 193, 0, 1, '80', NULL, '2024-12-01', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-12-01 03:41:10.606302+08', 0, '2024-12-01 03:41:10.606302+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 368, 194, 0, 1, '81', NULL, '2024-12-01', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-12-01 03:44:32.00852+08', 0, '2024-12-01 03:44:32.00852+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 369, 195, 0, 1, '82', NULL, '2024-12-01', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-12-01 03:51:12.157794+08', 0, '2024-12-01 03:51:12.157794+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 370, 196, 0, 1, '83', NULL, '2024-12-01', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-12-01 03:53:06.981329+08', 0, '2024-12-01 03:53:06.981329+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (101, 371, 197, 0, 1, '84', NULL, '2024-12-01', 1, 2, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', '$0.00', '$0.00', 1, '2024-12-01 03:56:47.6858+08', 0, '2024-12-01 03:56:47.6858+08', 0, NULL);
+INSERT INTO "public"."ap_non_payment" VALUES (103, 31, 36, 0, 1, '3', NULL, '2024-12-02', 1, 2, 1, 1, 1, NULL, 1, 1, '$10.00', '$10.00', 0.1700, '$0.00', '$0.00', '$0.00', 1, '2024-12-02 16:12:29.004214+08', 0, '2024-12-02 16:12:29.004214+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for ap_payment_bill
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."ap_payment_bill";
 CREATE TABLE "public"."ap_payment_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('ap_payment_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('ap_payment_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -1535,7 +1585,7 @@ INSERT INTO "public"."ar_non_receipt" VALUES (201, 177, 7, 0, 1, '7', NULL, '202
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."ar_receipt_bill";
 CREATE TABLE "public"."ar_receipt_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('ar_receipt_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('ar_receipt_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -5017,6 +5067,22 @@ INSERT INTO "public"."business_account" VALUES (103, 30, 35, 0, 1, '2023-12-21',
 INSERT INTO "public"."business_account" VALUES (201, 46, 32, 1, 1, '2023-12-10', '2', NULL, 2, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 1, '箱', 12, 1, '$28.33', '$30.00', '$30.00', 0.0000, '$32.40', 1, '2023-12-10 11:26:04.23536+08', NULL);
 INSERT INTO "public"."business_account" VALUES (101, 341, 177, 1, 1, '2024-02-04', '64', NULL, 2, 1, 1, 2, 1, '箱', 12, 0, '$25.00', '$25.00', 0.1700, '$32.40', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-02-04 13:18:19.486339+08', NULL);
 INSERT INTO "public"."business_account" VALUES (201, 177, 7, 0, 1, '2024-11-06', '7', NULL, 1, 1, 1, 2, 0, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 3, '箱', 12, 0, '$90.00', '$105.00', '$105.00', 0.0000, '$108.00', 1, '2024-11-06 02:14:05.288594+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 357, 189, 0, 1, '2024-11-30', '76', NULL, 11, 6, 2, 7, 5, '部', 1, 0, '$20,000.00', '$20,000.00', 0.0000, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-11-30 22:08:54.256327+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 358, 189, 1, 1, '2024-11-30', '76', NULL, 12, 6, 2, 7, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-11-30 22:08:54.256327+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 359, 189, 2, 1, '2024-11-30', '76', NULL, 13, 6, 2, 7, 20, '台', 1, 0, '$140,000.00', '$140,000.00', 0.1300, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-11-30 22:08:54.256327+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 360, 189, 3, 1, '2024-11-30', '76', NULL, 14, 6, 2, 7, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-11-30 22:08:54.256327+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 361, 190, 0, 1, '2024-11-30', '77', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-11-30 22:19:52.637174+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 362, 191, 0, 1, '2024-12-01', '78', NULL, 11, 7, 2, 7, 20, '部', 1, 0, '$80,000.00', '$80,000.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:24:44.461295+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 363, 191, 1, 1, '2024-12-01', '78', NULL, 12, 7, 2, 7, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:24:44.461295+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 364, 191, 2, 1, '2024-12-01', '78', NULL, 13, 7, 2, 7, 15, '台', 1, 0, '$105,000.00', '$105,000.00', 0.1300, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:24:44.461295+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 365, 191, 3, 1, '2024-12-01', '78', NULL, 14, 7, 2, 7, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:24:44.461295+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 366, 192, 0, 1, '2024-12-01', '79', NULL, 1, 1, 1, 2, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:25:50.690257+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 367, 193, 0, 1, '2024-12-01', '80', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:41:10.606302+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 368, 194, 0, 1, '2024-12-01', '81', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:44:32.00852+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 369, 195, 0, 1, '2024-12-01', '82', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:51:12.157794+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 370, 196, 0, 1, '2024-12-01', '83', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:53:06.981329+08', NULL);
+INSERT INTO "public"."business_account" VALUES (101, 371, 197, 0, 1, '2024-12-01', '84', NULL, 1, 1, 1, 2, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-01 03:56:47.6858+08', NULL);
+INSERT INTO "public"."business_account" VALUES (103, 31, 36, 0, 1, '2024-12-02', '3', NULL, 1, 1, 1, 2, 0, NULL, 1, 0, '$10.00', '$10.00', 0.1700, '$0.00', 0, NULL, 1, 0, '$0.00', '$0.00', '$0.00', 0.0000, '$0.00', 1, '2024-12-02 16:12:29.004214+08', NULL);
 
 -- ----------------------------
 -- Table structure for business_carry_over
@@ -5122,27 +5188,6 @@ INSERT INTO "public"."business_carry_over" VALUES ('2024-11-01', 6, 1, 480, 1, '
 INSERT INTO "public"."business_carry_over" VALUES ('2024-11-01', 10, 1, 1, 0, '$0.00', '$1.00', 1, '2024-11-05 18:07:28.984107+08');
 
 -- ----------------------------
--- Table structure for costmethod
--- ----------------------------
-DROP TABLE IF EXISTS "public"."costmethod";
-CREATE TABLE "public"."costmethod" (
-  "cost_accounting_method" int2
-)
-;
-
--- ----------------------------
--- Records of costmethod
--- ----------------------------
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-INSERT INTO "public"."costmethod" VALUES (0);
-
--- ----------------------------
 -- Table structure for customer
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."customer";
@@ -5205,13 +5250,15 @@ COMMENT ON TABLE "public"."customer" IS '客户';
 INSERT INTO "public"."customer" VALUES (1, '1001', '便民便利店', 'BMBLD', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-12-10 05:12:58.865592+08', 0, '2023-12-10 05:12:58.865592+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."customer" VALUES (2, '1002', '欢乐购超市', 'HLGCS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-12-10 05:24:27.222173+08', 0, '2023-12-10 05:24:27.222173+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."customer" VALUES (3, '1003', '康康大药房', 'KKDYF', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-12-10 05:24:52.505916+08', 0, '2023-12-10 05:24:52.505916+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."customer" VALUES (4, '2001', '超百百货大楼', 'CBBHDL', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 1, '2024-11-28 06:41:55.664146+08', 1, '2024-11-28 06:41:55.664146+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."customer" VALUES (5, '2002', '美鲜食品店', 'MXSPD', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 1, '2024-11-28 06:41:55.664146+08', 1, '2024-11-28 06:41:55.664146+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
 -- Table structure for damage_overflow_bill
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."damage_overflow_bill";
 CREATE TABLE "public"."damage_overflow_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('damage_overflow_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('damage_overflow_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -5346,6 +5393,8 @@ INSERT INTO "public"."department" VALUES (3, '1003', '销售部', 'XSB', NULL, N
 INSERT INTO "public"."department" VALUES (4, '1004', '市场部', 'SCB', NULL, NULL, 1, 'f', 't', 0, '2023-10-18 16:16:22.37022+08', 0, '2023-10-18 16:16:22.37022+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."department" VALUES (5, '1005', '储运部', 'CYB', NULL, NULL, 1, 'f', 't', 0, '2023-10-18 16:16:37.728981+08', 0, '2023-10-18 16:16:37.728981+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."department" VALUES (6, '1006', '财务部', 'CWB', NULL, NULL, 1, 'f', 't', 0, '2023-10-18 16:16:50.372186+08', 0, '2023-10-18 16:16:50.372186+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."department" VALUES (7, '1007', '仓储部', 'CCB', NULL, NULL, 1, 't', 't', 1, '2024-11-28 05:23:20.611488+08', 1, '2024-11-28 05:23:20.611488+08', 1, '2024-11-28 05:27:04.35899+08', 1, NULL);
+INSERT INTO "public"."department" VALUES (8, '1007', '仓储部', 'CCB', NULL, NULL, 1, 'f', 't', 1, '2024-11-28 05:58:43.69664+08', 1, '2024-11-28 06:01:59.64255+08', NULL, NULL, 2, NULL);
 
 -- ----------------------------
 -- Table structure for enum_info
@@ -5570,7 +5619,7 @@ INSERT INTO "public"."global_setting_template" VALUES ('CostComputeMode', 17, '�
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."inbound_bill";
 CREATE TABLE "public"."inbound_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('inbound_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('inbound_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -5857,7 +5906,6 @@ CREATE TABLE "public"."material" (
   "trademark" varchar(20) COLLATE "pg_catalog"."default",
   "approval_no" varchar(20) COLLATE "pg_catalog"."default",
   "unit" varchar(8) COLLATE "pg_catalog"."default",
-  "packing_size" int8 NOT NULL DEFAULT 1,
   "purchasing_price" numeric(13,2) NOT NULL DEFAULT 0,
   "purchasing_unit" varchar(8) COLLATE "pg_catalog"."default",
   "purchasing_packing_size" int8 NOT NULL DEFAULT 1,
@@ -5870,6 +5918,8 @@ CREATE TABLE "public"."material" (
   "retail_packing_size" int8 NOT NULL DEFAULT 1,
   "output_tax_rate" numeric(5,4) NOT NULL DEFAULT 0,
   "cost_accounting_method" int2 NOT NULL DEFAULT 0,
+  "inventory_unit" varchar(8) COLLATE "pg_catalog"."default",
+  "inventory_packing_size" int8 NOT NULL DEFAULT 1,
   "inventory_ceiling" numeric(18,0) NOT NULL DEFAULT '-1'::integer,
   "inventory_floor" numeric(18,0) NOT NULL DEFAULT 0,
   "is_deleted" bool NOT NULL DEFAULT false,
@@ -5896,7 +5946,6 @@ COMMENT ON COLUMN "public"."material"."origin" IS '产地';
 COMMENT ON COLUMN "public"."material"."trademark" IS '商标';
 COMMENT ON COLUMN "public"."material"."approval_no" IS '批准文号';
 COMMENT ON COLUMN "public"."material"."unit" IS '单位';
-COMMENT ON COLUMN "public"."material"."packing_size" IS '包装规格';
 COMMENT ON COLUMN "public"."material"."purchasing_price" IS '进价';
 COMMENT ON COLUMN "public"."material"."purchasing_unit" IS '采购单位';
 COMMENT ON COLUMN "public"."material"."purchasing_packing_size" IS '采购包装规格';
@@ -5909,6 +5958,8 @@ COMMENT ON COLUMN "public"."material"."retail_unit" IS '零售单位';
 COMMENT ON COLUMN "public"."material"."retail_packing_size" IS '零售包装规格';
 COMMENT ON COLUMN "public"."material"."output_tax_rate" IS '销项税率';
 COMMENT ON COLUMN "public"."material"."cost_accounting_method" IS '成本核算方法';
+COMMENT ON COLUMN "public"."material"."inventory_unit" IS '库存单位';
+COMMENT ON COLUMN "public"."material"."inventory_packing_size" IS '包装规格';
 COMMENT ON COLUMN "public"."material"."inventory_ceiling" IS '库存上限';
 COMMENT ON COLUMN "public"."material"."inventory_floor" IS '库存下限';
 COMMENT ON COLUMN "public"."material"."is_deleted" IS '删除标记';
@@ -5926,16 +5977,20 @@ COMMENT ON TABLE "public"."material" IS '商品';
 -- ----------------------------
 -- Records of material
 -- ----------------------------
-INSERT INTO "public"."material" VALUES (1, '1001001', '康师傅方便面', 'KSFFBM', '', '', 1, '', '', '', '', '袋', 1, 30.00, '箱', 12, 0.1700, 35.00, '箱', 12, 3.00, '袋', 1, 0.0000, 3, 0, 0, 'f', 't', 0, '2023-10-18 16:23:48.985754+08', 1, '2023-12-10 10:20:34.072475+08', NULL, NULL, 2, '');
-INSERT INTO "public"."material" VALUES (2, '1001002', '统一方便面', 'TYFBM', '', '', 1, '', '', '', '', '袋', 1, 25.00, '箱', 12, 0.1700, 30.00, '箱', 12, 2.70, '袋', 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:24:13.040702+08', 1, '2023-12-10 10:20:34.072475+08', NULL, NULL, 2, '');
-INSERT INTO "public"."material" VALUES (3, '1002001', '康师傅冰红茶', 'KSFBHC', '', '', 1, '', '', '', '', '瓶', 1, 45.00, '箱', 24, 0.0000, 50.00, '箱', 24, 3.00, '瓶', 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:24:48.30758+08', 1, '2023-12-10 09:40:14.28854+08', NULL, NULL, 1, '');
-INSERT INTO "public"."material" VALUES (4, '1002002', '康师傅冰绿茶', 'KSFBLC', '', '', 1, '', '', '', '', '瓶', 1, 40.00, '箱', 24, 0.0000, 50.00, '箱', 24, 2.50, '瓶', 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:25:11.727541+08', 1, '2023-12-10 09:40:14.28854+08', NULL, NULL, 1, '');
-INSERT INTO "public"."material" VALUES (5, '1002003', '统一冰红茶', 'TYBHC', '', '', 1, '', '', '', '', '瓶', 1, 45.00, '箱', 24, 0.0000, 50.00, '箱', 24, 3.00, '瓶', 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:25:44.830548+08', 1, '2023-12-14 19:54:52.238848+08', NULL, NULL, 1, '');
-INSERT INTO "public"."material" VALUES (6, '1002004', '统一冰绿茶', 'TYBLC', '', '', 1, '', '', '', '', '瓶', 1, 40.00, '箱', 24, 0.0000, 45.00, '箱', 1, 2.50, '瓶', 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:26:11.481953+08', 1, '2023-12-14 19:54:52.238848+08', NULL, NULL, 1, '');
-INSERT INTO "public"."material" VALUES (7, '1002005', '可口可乐', 'KKKL', NULL, NULL, 1, NULL, NULL, NULL, NULL, '瓶', 1, 0.00, '瓶', 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:26:38.432087+08', 0, '2023-10-18 16:26:38.432087+08', NULL, NULL, 0, NULL);
-INSERT INTO "public"."material" VALUES (8, '1002006', '百事可乐', 'BSKL', NULL, NULL, 1, NULL, NULL, NULL, NULL, '瓶', 1, 0.00, '瓶', 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, 0, 0, 'f', 't', 0, '2023-10-18 16:27:01.33967+08', 0, '2023-10-18 16:27:01.33967+08', NULL, NULL, 0, NULL);
-INSERT INTO "public"."material" VALUES (9, '2001001', '中华香烟', 'ZHXY', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 0.00, NULL, 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, -1, 0, 'f', 't', 0, '2024-02-07 02:13:51.777951+08', 0, '2024-02-07 02:13:51.777951+08', NULL, NULL, 0, NULL);
-INSERT INTO "public"."material" VALUES (10, '2001002', '中华香烟（软）', 'ZHXYR', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 1, 0.00, NULL, 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, -1, 0, 'f', 't', 1, '2024-02-07 02:15:06.027605+08', 1, '2024-02-07 02:15:06.027605+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."material" VALUES (1, '1001001', '康师傅方便面', 'KSFFBM', '', '', 1, '', '', '', '', '袋', 30.00, '箱', 12, 0.1700, 35.00, '箱', 12, 3.00, '袋', 1, 0.0000, 3, '袋', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:23:48.985754+08', 1, '2023-12-10 10:20:34.072475+08', NULL, NULL, 2, '');
+INSERT INTO "public"."material" VALUES (2, '1001002', '统一方便面', 'TYFBM', '', '', 1, '', '', '', '', '袋', 25.00, '箱', 12, 0.1700, 30.00, '箱', 12, 2.70, '袋', 1, 0.0000, 0, '袋', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:24:13.040702+08', 1, '2023-12-10 10:20:34.072475+08', NULL, NULL, 2, '');
+INSERT INTO "public"."material" VALUES (3, '1002001', '康师傅冰红茶', 'KSFBHC', '', '', 1, '', '', '', '', '瓶', 45.00, '箱', 24, 0.0000, 50.00, '箱', 24, 3.00, '瓶', 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:24:48.30758+08', 1, '2023-12-10 09:40:14.28854+08', NULL, NULL, 1, '');
+INSERT INTO "public"."material" VALUES (4, '1002002', '康师傅冰绿茶', 'KSFBLC', '', '', 1, '', '', '', '', '瓶', 40.00, '箱', 24, 0.0000, 50.00, '箱', 24, 2.50, '瓶', 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:25:11.727541+08', 1, '2023-12-10 09:40:14.28854+08', NULL, NULL, 1, '');
+INSERT INTO "public"."material" VALUES (5, '1002003', '统一冰红茶', 'TYBHC', '', '', 1, '', '', '', '', '瓶', 45.00, '箱', 24, 0.0000, 50.00, '箱', 24, 3.00, '瓶', 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:25:44.830548+08', 1, '2023-12-14 19:54:52.238848+08', NULL, NULL, 1, '');
+INSERT INTO "public"."material" VALUES (6, '1002004', '统一冰绿茶', 'TYBLC', '', '', 1, '', '', '', '', '瓶', 40.00, '箱', 24, 0.0000, 45.00, '箱', 1, 2.50, '瓶', 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:26:11.481953+08', 1, '2023-12-14 19:54:52.238848+08', NULL, NULL, 1, '');
+INSERT INTO "public"."material" VALUES (7, '1002005', '可口可乐', 'KKKL', NULL, NULL, 1, NULL, NULL, NULL, NULL, '瓶', 0.00, '瓶', 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:26:38.432087+08', 0, '2023-10-18 16:26:38.432087+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."material" VALUES (8, '1002006', '百事可乐', 'BSKL', NULL, NULL, 1, NULL, NULL, NULL, NULL, '瓶', 0.00, '瓶', 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, '瓶', 1, 0, 0, 'f', 't', 0, '2023-10-18 16:27:01.33967+08', 0, '2023-10-18 16:27:01.33967+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."material" VALUES (9, '2001001', '中华香烟', 'ZHXY', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 0, '2024-02-07 02:13:51.777951+08', 0, '2024-02-07 02:13:51.777951+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."material" VALUES (10, '2001002', '中华香烟（软）', 'ZHXYR', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 0.00, NULL, 1, 0.0000, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 1, '2024-02-07 02:15:06.027605+08', 1, '2024-02-07 02:15:06.027605+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."material" VALUES (11, '3001001', '华为手机', 'HWSJ', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 4000.00, '部', 1, 0.1700, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 1, '2024-11-30 05:56:26.968175+08', 1, '2024-11-30 21:39:13.059711+08', NULL, NULL, 2, NULL);
+INSERT INTO "public"."material" VALUES (12, '3001002', '小米手机', 'XMSJ', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 3500.00, '部', 1, 0.1700, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 1, '2024-11-30 05:56:26.968175+08', 1, '2024-11-30 21:39:13.059711+08', NULL, NULL, 1, NULL);
+INSERT INTO "public"."material" VALUES (13, '3002001', '华为电脑', 'HWDN', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 7000.00, '台', 1, 0.1300, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 1, '2024-11-30 05:56:26.968175+08', 1, '2024-11-30 21:39:13.059711+08', NULL, NULL, 1, NULL);
+INSERT INTO "public"."material" VALUES (14, '3002002', '小米电脑', 'XMDN', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, 6500.00, '台', 1, 0.1300, 0.00, NULL, 1, 0.00, NULL, 1, 0.0000, 0, NULL, 1, -1, 0, 'f', 't', 1, '2024-11-30 05:56:26.968175+08', 1, '2024-11-30 21:39:13.059711+08', NULL, NULL, 1, NULL);
 
 -- ----------------------------
 -- Table structure for material_inventory
@@ -5971,7 +6026,11 @@ INSERT INTO "public"."material_inventory" VALUES (6, 1, 480, 0, '$800.00', 480, 
 INSERT INTO "public"."material_inventory" VALUES (4, 1, 96, 0, '$160.00', 1056, 0, 0.00);
 INSERT INTO "public"."material_inventory" VALUES (10, 1, 1, 0, '$0.00', 1, 0, 0.00);
 INSERT INTO "public"."material_inventory" VALUES (2, 1, 192, 0, '$389.92', 924, 0, 0.00);
-INSERT INTO "public"."material_inventory" VALUES (1, 1, 487, 0, '$1,052.50', 13051, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (11, 1, 25, 0, '$100,000.00', 25, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (12, 1, 20, 0, '$70,000.00', 20, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (13, 1, 35, 0, '$245,000.00', 35, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (14, 1, 50, 0, '$325,000.00', 50, 0, 0.00);
+INSERT INTO "public"."material_inventory" VALUES (1, 1, 583, 0, '$1,302.50', 13147, 0, 0.00);
 
 -- ----------------------------
 -- Table structure for material_inventory_detail
@@ -6050,6 +6109,21 @@ INSERT INTO "public"."material_inventory_detail" VALUES (352, 1, 10, 1, '$0.00',
 INSERT INTO "public"."material_inventory_detail" VALUES (353, 1, 1, 24, '$60.00', '2024-06-11 01:20:34.91331+08');
 INSERT INTO "public"."material_inventory_detail" VALUES (354, 1, 2, 36, '$75.00', '2024-06-11 01:20:34.91331+08');
 INSERT INTO "public"."material_inventory_detail" VALUES (45, 1, 1, 115, '$287.50', '2023-12-05 09:53:45.315234+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (357, 1, 11, 5, '$20,000.00', '2024-11-30 22:08:54.256327+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (358, 1, 12, 10, '$35,000.00', '2024-11-30 22:08:54.256327+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (359, 1, 13, 20, '$140,000.00', '2024-11-30 22:08:54.256327+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (360, 1, 14, 25, '$162,500.00', '2024-11-30 22:08:54.256327+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (361, 1, 1, 12, '$30.00', '2024-11-30 22:19:52.637174+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (362, 1, 11, 20, '$80,000.00', '2024-12-01 03:24:44.461295+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (363, 1, 12, 10, '$35,000.00', '2024-12-01 03:24:44.461295+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (364, 1, 13, 15, '$105,000.00', '2024-12-01 03:24:44.461295+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (365, 1, 14, 25, '$162,500.00', '2024-12-01 03:24:44.461295+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (366, 1, 1, 24, '$60.00', '2024-12-01 03:25:50.690257+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (367, 1, 1, 12, '$30.00', '2024-12-01 03:41:10.606302+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (368, 1, 1, 12, '$30.00', '2024-12-01 03:44:32.00852+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (369, 1, 1, 12, '$30.00', '2024-12-01 03:51:12.157794+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (370, 1, 1, 12, '$30.00', '2024-12-01 03:53:06.981329+08');
+INSERT INTO "public"."material_inventory_detail" VALUES (371, 1, 1, 12, '$30.00', '2024-12-01 03:56:47.6858+08');
 
 -- ----------------------------
 -- Table structure for material_wareroom_inventory
@@ -6129,15 +6203,17 @@ INSERT INTO "public"."menu" VALUES (9901, '权限管理', NULL, 9901);
 INSERT INTO "public"."menu" VALUES (9902, '结转', NULL, 9902);
 INSERT INTO "public"."menu" VALUES (9900, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (90, '业务账目', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (93104, '采购退补价单据查询', NULL, 93104);
 INSERT INTO "public"."menu" VALUES (4900, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (90001, '业务流水账', NULL, 90001);
 INSERT INTO "public"."menu" VALUES (90002, '仓库流水账', NULL, 90002);
-INSERT INTO "public"."menu" VALUES (4901, '应付流水账', NULL, 4901);
-INSERT INTO "public"."menu" VALUES (4902, '应收流水账', NULL, 4902);
 INSERT INTO "public"."menu" VALUES (10, '财务管理', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (10001, '科目管理', NULL, 10001);
+INSERT INTO "public"."menu" VALUES (93202, '销售开票单据查询', NULL, 93202);
 INSERT INTO "public"."menu" VALUES (10002, '凭证管理', NULL, 10002);
+INSERT INTO "public"."menu" VALUES (93203, '销售退货单据查询', NULL, 93203);
 INSERT INTO "public"."menu" VALUES (10003, '记账凭证汇总表', NULL, 10003);
+INSERT INTO "public"."menu" VALUES (93204, '销售退补价单据查询', NULL, 93204);
 INSERT INTO "public"."menu" VALUES (10005, '总账查询', NULL, 10005);
 INSERT INTO "public"."menu" VALUES (10004, '明细账查询', NULL, 10004);
 INSERT INTO "public"."menu" VALUES (10103, '财务结转', NULL, 10103);
@@ -6146,10 +6222,47 @@ INSERT INTO "public"."menu" VALUES (10102, '切换账期', NULL, 10102);
 INSERT INTO "public"."menu" VALUES (10100, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (93, '业务查询', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (96, '决策支持', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (93302, '入库单据查询', NULL, 93302);
 INSERT INTO "public"."menu" VALUES (3011, '采购入库开票', NULL, 3011);
 INSERT INTO "public"."menu" VALUES (3021, '销售出库开票', NULL, 3021);
 INSERT INTO "public"."menu" VALUES (90003, '进销存业务账', NULL, 90003);
 INSERT INTO "public"."menu" VALUES (90004, '进销存保管账', NULL, 90004);
+INSERT INTO "public"."menu" VALUES (93101, '采购明细查询', NULL, 93101);
+INSERT INTO "public"."menu" VALUES (93201, '销售明细查询', NULL, 93201);
+INSERT INTO "public"."menu" VALUES (93111, '商品采购汇总', NULL, 93111);
+INSERT INTO "public"."menu" VALUES (93112, '部门采购汇总', NULL, 93112);
+INSERT INTO "public"."menu" VALUES (93113, '业务员采购汇总', NULL, 93113);
+INSERT INTO "public"."menu" VALUES (93211, '商品销售汇总', NULL, 93211);
+INSERT INTO "public"."menu" VALUES (93212, '部门销售汇总', NULL, 93212);
+INSERT INTO "public"."menu" VALUES (93213, '业务员销售汇总', NULL, 93213);
+INSERT INTO "public"."menu" VALUES (93200, '-', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (93114, '供应商采购汇总', NULL, 93114);
+INSERT INTO "public"."menu" VALUES (93214, '客户销售汇总', NULL, 93214);
+INSERT INTO "public"."menu" VALUES (93300, '-', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (93301, '商品库存查询', NULL, 93301);
+INSERT INTO "public"."menu" VALUES (93401, '报价单', NULL, 93401);
+INSERT INTO "public"."menu" VALUES (96001, '客户账龄分析', NULL, 96001);
+INSERT INTO "public"."menu" VALUES (96002, '商品账龄分析', NULL, 96002);
+INSERT INTO "public"."menu" VALUES (96003, '部门账龄分析', NULL, 96003);
+INSERT INTO "public"."menu" VALUES (96004, '业务员账龄分析', NULL, 96004);
+INSERT INTO "public"."menu" VALUES (96010, '-', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (96011, '库龄分析', NULL, 96011);
+INSERT INTO "public"."menu" VALUES (96012, '库存分布', NULL, 96012);
+INSERT INTO "public"."menu" VALUES (96013, '库存上限预警', NULL, 96013);
+INSERT INTO "public"."menu" VALUES (96014, '库存下限预警', NULL, 96014);
+INSERT INTO "public"."menu" VALUES (93102, '采购开票单据查询', NULL, 93102);
+INSERT INTO "public"."menu" VALUES (93103, '采购退货单据查询', NULL, 93103);
+INSERT INTO "public"."menu" VALUES (93304, '报损报溢单据查询', NULL, 93304);
+INSERT INTO "public"."menu" VALUES (93305, '盘点单据查询', NULL, 93305);
+INSERT INTO "public"."menu" VALUES (93303, '出库单据查询', NULL, 93303);
+INSERT INTO "public"."menu" VALUES (93400, '-', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (4930, '-', NULL, NULL);
+INSERT INTO "public"."menu" VALUES (4931, '应付流水账', NULL, 4931);
+INSERT INTO "public"."menu" VALUES (4932, '应收流水账', NULL, 4932);
+INSERT INTO "public"."menu" VALUES (93306, '盘点单据历史查询', NULL, 93306);
+INSERT INTO "public"."menu" VALUES (93307, '移库单据查询', NULL, 93307);
+INSERT INTO "public"."menu" VALUES (4901, '应付结算单据查询', NULL, 4901);
+INSERT INTO "public"."menu" VALUES (4902, '应收结算单据查询', NULL, 4902);
 
 -- ----------------------------
 -- Table structure for menu_template
@@ -6224,6 +6337,45 @@ INSERT INTO "public"."menu_template" VALUES (0, 0, 93, 0, 93);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 96, 0, 96);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 90003, 90, 3);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 90004, 90, 4);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93201, 93, 201);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93111, 93, 111);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93101, 93, 101);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93112, 93, 112);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93113, 93, 113);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93200, 93, 200);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93211, 93, 211);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93212, 93, 212);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93213, 93, 213);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93114, 93, 114);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93214, 93, 214);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93300, 93, 300);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93301, 93, 301);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93401, 93, 401);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96001, 96, 1);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96002, 96, 2);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96003, 96, 3);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96004, 96, 4);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96010, 96, 10);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96011, 96, 11);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96012, 96, 12);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96013, 96, 13);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 96014, 96, 14);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93102, 93, 102);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93103, 93, 103);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93104, 93, 104);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93202, 93, 202);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93203, 93, 203);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93204, 93, 204);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93302, 93, 302);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93303, 93, 303);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93304, 93, 304);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93305, 93, 305);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93306, 93, 306);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 4930, 4, 930);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 4931, 4, 931);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 4932, 4, 932);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93400, 93, 400);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93307, 93, 307);
 
 -- ----------------------------
 -- Table structure for movement_bill
@@ -6463,7 +6615,7 @@ INSERT INTO "public"."no_outbound" VALUES (305, 7, 7, 0, 1, '23', NULL, '2024-01
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."outbound_bill";
 CREATE TABLE "public"."outbound_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('outbound_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('outbound_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -6565,7 +6717,7 @@ INSERT INTO "public"."outbound_bill_detail" VALUES (44, 51, 0, 305, 7, 1, 2, 1, 
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."person";
 CREATE TABLE "public"."person" (
-  "person_id" int8 NOT NULL DEFAULT nextval('person_person_id_seq1'::regclass),
+  "person_id" int8 NOT NULL DEFAULT nextval('person_person_id_seq'::regclass),
   "person_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "person_name" varchar(50) COLLATE "pg_catalog"."default",
   "person_mnemonic_code" varchar(50) COLLATE "pg_catalog"."default",
@@ -6621,7 +6773,9 @@ INSERT INTO "public"."person" VALUES (5, '1004', '关羽', 'GY', NULL, NULL, 1, 
 INSERT INTO "public"."person" VALUES (4, '1003', '典韦', 'DW', NULL, NULL, 1, 0, 1, '70lILJXV/LAQRgzSXVZ0H5mQv4cmGTyWY1T9JWlo+1w=', 1, NULL, 'f', 't', 0, '2023-10-18 16:18:08.848446+08', 0, '2023-10-18 16:18:08.848446+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."person" VALUES (3, '1002', '赵云', 'ZY', NULL, NULL, 1, 0, 1, '70lILJXV/LAQRgzSXVZ0H5mQv4cmGTyWY1T9JWlo+1w=', 1, NULL, 'f', 't', 0, '2023-10-18 16:17:50.794312+08', 0, '2023-10-18 16:17:50.794312+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."person" VALUES (2, '1001', '吕布', 'LB', NULL, NULL, 1, 0, 1, '70lILJXV/LAQRgzSXVZ0H5mQv4cmGTyWY1T9JWlo+1w=', 1, NULL, 'f', 't', 0, '2023-10-18 16:17:27.492052+08', 0, '2023-10-18 16:17:27.492052+08', NULL, NULL, 0, NULL);
-INSERT INTO "public"."person" VALUES (1, 'SuperMan', '超级用户', 'CJYH', NULL, NULL, 1, 0, 1, '70lILJXV/LAQRgzSXVZ0H5mQv4cmGTyWY1T9JWlo+1w=', 0, 202411, 'f', 't', 0, '2023-10-18 15:25:05.329754+08', 0, '2023-10-18 15:25:05.329754+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."person" VALUES (1, 'SuperMan', '超级用户', 'CJYH', NULL, NULL, 1, 0, 1, 'SbEUoCBCopTSR34zxEK1gcVyP2njn9IjDOrjRPXKjQw=', 0, 202411, 'f', 't', 0, '2023-10-18 15:25:05.329754+08', 0, '2023-10-18 15:25:05.329754+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."person" VALUES (7, '1006', '马超', 'MC', NULL, NULL, 1, 0, 0, NULL, 1, NULL, 'f', 't', 1, '2024-11-30 04:30:12.869285+08', 1, '2024-11-30 04:30:12.869285+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."person" VALUES (8, '1007', '黄忠', 'HZ', NULL, NULL, 1, 0, 0, NULL, 1, NULL, 'f', 't', 1, '2024-11-30 04:30:12.869285+08', 1, '2024-11-30 04:30:12.869285+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
 -- Table structure for plugin
@@ -6668,29 +6822,63 @@ INSERT INTO "public"."plugin" VALUES (3051, 'inventory/movement', NULL, -1, NULL
 INSERT INTO "public"."plugin" VALUES (3061, 'inventory/movementOutbound', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (3071, 'inventory/movementInbound', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (3081, 'inventory/movementReturn', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (4901, 'receivablePayable/apAccounts', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (4902, 'receivablePayable/arAccounts', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (9901, 'system/authorityManagement', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (9902, 'system/forward', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93202, 'businessQuery/sellingBilling', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90002, 'accounts/wareroom', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90001, 'accounts/business', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10002, 'finance/voucherManagement', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10001, 'finance/accountManagement', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10003, 'finance/summaryVouchers‌', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10004, 'finance/accountQuery', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93203, 'businessQuery/sellingReturn', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10005, 'finance/ledgerQuery', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93204, 'businessQuery/sellingPendingAdjustment', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10101, 'finance/updateAccountingDate', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10103, 'finance/carryOver', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10102, 'finance/changePeriod', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93302, 'businessQuery/inbound', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93303, 'businessQuery/outbound', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93304, 'businessQuery/damageOverflow', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90003, 'accounts/psiBusiness', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90004, 'accounts/psiWareroom', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93305, 'businessQuery/verification', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93101, 'businessQuery/purchaseDetails‌', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93201, 'businessQuery/salesDetails‌', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93111, 'businessQuery/materialPurchaseSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93112, 'businessQuery/departmentPurchaseSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93113, 'businessQuery/ownerPurchaseSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93114, 'businessQuery/supplierPurchaseSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93211, 'businessQuery/materialSalesSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93212, 'businessQuery/departmentSalesSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93213, 'businessQuery/ownerSalesSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93214, 'businessQuery/customerSalesSummary', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93301, 'businessQuery/materialInventory', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93401, 'businessQuery/priceSheet', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (4931, 'receivablePayable/apAccounts', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (4932, 'receivablePayable/arAccounts', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96001, 'decisionSupport/customerAgeAnalysis', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96002, 'decisionSupport/materialAgeAnalysis', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96003, 'decisionSupport/departmentAgeAnalysis', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96004, 'decisionSupport/ownerAgeAnalysis', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96011, 'decisionSupport/storageAgeAnalysis', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96012, 'decisionSupport/inventoryDistribution', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (4901, 'receivablePayable/paymentQuery', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (4902, 'receivablePayable/receiptQuery', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96013, 'decisionSupport/inventoryUpperWarning', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (96014, 'decisionSupport/inventoryLowerWarning', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93102, 'businessQuery/procurementBilling', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93103, 'businessQuery/procurementReturn', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93104, 'businessQuery/procurementPendingAdjustment', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93307, 'businessQuery/movement', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93306, 'businessQuery/verificationHistory', NULL, -1, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."procurement_billing_bill";
 CREATE TABLE "public"."procurement_billing_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_billing_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_billing_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -6783,6 +6971,15 @@ INSERT INTO "public"."procurement_billing_bill" VALUES (185, 1, '72', NULL, '202
 INSERT INTO "public"."procurement_billing_bill" VALUES (186, 1, '73', NULL, '2024-05-28', 1, 2, 1, NULL, 0, 1, '2024-05-28 15:19:33.905496+08', 0, '2024-05-28 15:19:33.905496+08', 0, NULL);
 INSERT INTO "public"."procurement_billing_bill" VALUES (187, 1, '74', NULL, '2024-05-29', 1, 2, 1, NULL, 0, 1, '2024-05-29 10:59:34.647712+08', 0, '2024-05-29 10:59:34.647712+08', 0, NULL);
 INSERT INTO "public"."procurement_billing_bill" VALUES (188, 1, '75', NULL, '2024-06-11', 1, 2, 1, NULL, 0, 1, '2024-06-11 01:20:34.91331+08', 0, '2024-06-11 01:20:34.91331+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (189, 1, '76', NULL, '2024-11-30', 2, 7, 6, NULL, 0, 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (190, 1, '77', NULL, '2024-11-30', 1, 2, 1, NULL, 0, 1, '2024-11-30 22:19:52.637174+08', 0, '2024-11-30 22:19:52.637174+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (191, 1, '78', NULL, '2024-12-01', 2, 7, 7, NULL, 0, 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (192, 1, '79', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:25:50.690257+08', 0, '2024-12-01 03:25:50.690257+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (193, 1, '80', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:41:10.606302+08', 0, '2024-12-01 03:41:10.606302+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (194, 1, '81', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:44:32.00852+08', 0, '2024-12-01 03:44:32.00852+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (195, 1, '82', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:51:12.157794+08', 0, '2024-12-01 03:51:12.157794+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (196, 1, '83', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:53:06.981329+08', 0, '2024-12-01 03:53:06.981329+08', 0, NULL);
+INSERT INTO "public"."procurement_billing_bill" VALUES (197, 1, '84', NULL, '2024-12-01', 1, 2, 1, NULL, 0, 1, '2024-12-01 03:56:47.6858+08', 0, '2024-12-01 03:56:47.6858+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill_detail
@@ -6893,11 +7090,26 @@ INSERT INTO "public"."procurement_billing_bill_detail" VALUES (351, 187, 0, 1, 1
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (352, 187, 1, 10, 1, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (353, 188, 0, 1, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (354, 188, 1, 2, 3, '箱', 12, 0, '$75.00', '$75.00', 0.1700, '$97.20', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (357, 189, 0, 11, 5, '部', 1, 0, '$20,000.00', '$20,000.00', 0.0000, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (358, 189, 1, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (359, 189, 2, 13, 20, '台', 1, 0, '$140,000.00', '$140,000.00', 0.1300, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (360, 189, 3, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (361, 190, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (287, 148, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (288, 148, 1, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (289, 149, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (290, 149, 1, 2, 1, '箱', 12, 0, '$25.00', '$25.00', 0.1700, '$32.40', NULL);
 INSERT INTO "public"."procurement_billing_bill_detail" VALUES (291, 150, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (362, 191, 0, 11, 20, '部', 1, 0, '$80,000.00', '$80,000.00', 0.1700, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (363, 191, 1, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (364, 191, 2, 13, 15, '台', 1, 0, '$105,000.00', '$105,000.00', 0.1300, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (365, 191, 3, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (366, 192, 0, 1, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (367, 193, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (368, 194, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (369, 195, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (370, 196, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
+INSERT INTO "public"."procurement_billing_bill_detail" VALUES (371, 197, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', NULL);
 
 -- ----------------------------
 -- Table structure for procurement_inbound_bill
@@ -7107,6 +7319,21 @@ INSERT INTO "public"."procurement_no_inbound" VALUES (101, 289, 149, 0, 1, '57',
 INSERT INTO "public"."procurement_no_inbound" VALUES (101, 290, 149, 1, 1, '57', NULL, '2024-02-04', 1, 2, 1, 0, 2, 1, '箱', 12, 0, '$25.00', '$25.00', 0.1700, '$32.40', 0, 0, 0, 0, 1, '2024-02-04 13:04:41.063724+08', 0, '2024-02-04 13:04:41.063724+08', 0, NULL);
 INSERT INTO "public"."procurement_no_inbound" VALUES (101, 291, 150, 0, 1, '58', NULL, '2024-02-04', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-02-04 13:05:23.1823+08', 0, '2024-02-04 13:05:23.1823+08', 0, NULL);
 INSERT INTO "public"."procurement_no_inbound" VALUES (101, 352, 187, 1, 1, '74', NULL, '2024-05-29', 1, 2, 1, 0, 10, 1, NULL, 1, 0, '$0.00', '$0.00', 0.0000, '$0.00', 0, 0, 0, 0, 1, '2024-05-29 10:59:34.647712+08', 0, '2024-05-29 10:59:34.647712+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 357, 189, 0, 1, '76', NULL, '2024-11-30', 2, 7, 6, 0, 11, 5, '部', 1, 0, '$20,000.00', '$20,000.00', 0.0000, '$0.00', 0, 0, 0, 0, 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 358, 189, 1, 1, '76', NULL, '2024-11-30', 2, 7, 6, 0, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', 0, 0, 0, 0, 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 359, 189, 2, 1, '76', NULL, '2024-11-30', 2, 7, 6, 0, 13, 20, '台', 1, 0, '$140,000.00', '$140,000.00', 0.1300, '$0.00', 0, 0, 0, 0, 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 360, 189, 3, 1, '76', NULL, '2024-11-30', 2, 7, 6, 0, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', 0, 0, 0, 0, 1, '2024-11-30 22:08:54.256327+08', 0, '2024-11-30 22:08:54.256327+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 361, 190, 0, 1, '77', NULL, '2024-11-30', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-11-30 22:19:52.637174+08', 0, '2024-11-30 22:19:52.637174+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 362, 191, 0, 1, '78', NULL, '2024-12-01', 2, 7, 7, 0, 11, 20, '部', 1, 0, '$80,000.00', '$80,000.00', 0.1700, '$0.00', 0, 0, 0, 0, 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 363, 191, 1, 1, '78', NULL, '2024-12-01', 2, 7, 7, 0, 12, 10, '部', 1, 0, '$35,000.00', '$35,000.00', 0.1700, '$0.00', 0, 0, 0, 0, 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 364, 191, 2, 1, '78', NULL, '2024-12-01', 2, 7, 7, 0, 13, 15, '台', 1, 0, '$105,000.00', '$105,000.00', 0.1300, '$0.00', 0, 0, 0, 0, 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 365, 191, 3, 1, '78', NULL, '2024-12-01', 2, 7, 7, 0, 14, 25, '台', 1, 0, '$162,500.00', '$162,500.00', 0.1300, '$0.00', 0, 0, 0, 0, 1, '2024-12-01 03:24:44.461295+08', 0, '2024-12-01 03:24:44.461295+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 366, 192, 0, 1, '79', NULL, '2024-12-01', 1, 2, 1, 0, 1, 2, '箱', 12, 0, '$60.00', '$60.00', 0.1700, '$72.00', 0, 0, 0, 0, 1, '2024-12-01 03:25:50.690257+08', 0, '2024-12-01 03:25:50.690257+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 367, 193, 0, 1, '80', NULL, '2024-12-01', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-12-01 03:41:10.606302+08', 0, '2024-12-01 03:41:10.606302+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 368, 194, 0, 1, '81', NULL, '2024-12-01', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-12-01 03:44:32.00852+08', 0, '2024-12-01 03:44:32.00852+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 369, 195, 0, 1, '82', NULL, '2024-12-01', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-12-01 03:51:12.157794+08', 0, '2024-12-01 03:51:12.157794+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 370, 196, 0, 1, '83', NULL, '2024-12-01', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-12-01 03:53:06.981329+08', 0, '2024-12-01 03:53:06.981329+08', 0, NULL);
+INSERT INTO "public"."procurement_no_inbound" VALUES (101, 371, 197, 0, 1, '84', NULL, '2024-12-01', 1, 2, 1, 0, 1, 1, '箱', 12, 0, '$30.00', '$30.00', 0.1700, '$36.00', 0, 0, 0, 0, 1, '2024-12-01 03:56:47.6858+08', 0, '2024-12-01 03:56:47.6858+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_order_bill
@@ -7233,7 +7460,7 @@ INSERT INTO "public"."procurement_order_bill_detail" VALUES (42, 184884, 3, 4, 5
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."procurement_pending_adjustment_bill";
 CREATE TABLE "public"."procurement_pending_adjustment_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_pending_adjustment_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_pending_adjustment_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -7274,6 +7501,7 @@ COMMENT ON TABLE "public"."procurement_pending_adjustment_bill" IS '采购退补
 -- ----------------------------
 INSERT INTO "public"."procurement_pending_adjustment_bill" VALUES (25, 1, '2', NULL, '2023-12-21', 1, 2, 1, NULL, 0, 1, '2023-12-21 23:11:59.396977+08', 0, '2023-12-21 23:11:59.396977+08', 0, NULL);
 INSERT INTO "public"."procurement_pending_adjustment_bill" VALUES (35, 1, '3', NULL, '2023-12-21', 1, 2, 1, NULL, 0, 1, '2023-12-21 23:14:59.446181+08', 0, '2023-12-21 23:14:59.446181+08', 0, NULL);
+INSERT INTO "public"."procurement_pending_adjustment_bill" VALUES (36, 1, '3', NULL, '2024-12-02', 1, 2, 1, NULL, 0, 1, '2024-12-02 16:12:29.004214+08', 0, '2024-12-02 16:12:29.004214+08', 0, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_pending_adjustment_bill_detail
@@ -7303,13 +7531,14 @@ COMMENT ON TABLE "public"."procurement_pending_adjustment_bill_detail" IS '采�
 -- ----------------------------
 INSERT INTO "public"."procurement_pending_adjustment_bill_detail" VALUES (20, 25, 0, 1, '$10.00', 0.1700, NULL);
 INSERT INTO "public"."procurement_pending_adjustment_bill_detail" VALUES (30, 35, 0, 2, '$10.00', 0.1700, NULL);
+INSERT INTO "public"."procurement_pending_adjustment_bill_detail" VALUES (31, 36, 0, 1, '$10.00', 0.1700, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_return_bill
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."procurement_return_bill";
 CREATE TABLE "public"."procurement_return_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_return_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('procurement_return_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -7608,6 +7837,45 @@ INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90003, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 90004, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93101, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93201, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93111, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93112, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93113, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93200, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93211, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93212, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93213, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93114, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93214, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93300, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93301, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93401, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96001, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96003, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96004, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96002, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96010, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96011, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96012, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96013, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 96014, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93102, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93103, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93104, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93202, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93203, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93204, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93302, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93303, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93304, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93305, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93306, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4930, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4931, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 4932, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93400, -1);
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93307, -1);
 
 -- ----------------------------
 -- Table structure for selling_billing_bill
@@ -7895,7 +8163,7 @@ INSERT INTO "public"."selling_outbound_bill_detail" VALUES (7, 24, 0, 202, 7, 1,
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."selling_pending_adjustment_bill";
 CREATE TABLE "public"."selling_pending_adjustment_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('selling_pending_adjustment_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('selling_pending_adjustment_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -7983,7 +8251,7 @@ INSERT INTO "public"."selling_pending_adjustment_bill_detail" VALUES (58, 63, 2,
 -- ----------------------------
 DROP TABLE IF EXISTS "public"."selling_return_bill";
 CREATE TABLE "public"."selling_return_bill" (
-  "bill_id" int8 NOT NULL DEFAULT nextval('selling_return_bill_bill_id_seq1'::regclass),
+  "bill_id" int8 NOT NULL DEFAULT nextval('selling_return_bill_bill_id_seq'::regclass),
   "tenant_id" int8 NOT NULL DEFAULT 0,
   "bill_code" varchar(30) COLLATE "pg_catalog"."default" NOT NULL,
   "manual_code" varchar(30) COLLATE "pg_catalog"."default",
@@ -8105,14 +8373,14 @@ INSERT INTO "public"."serial_no_info" VALUES (1, 304, 0, 1);
 INSERT INTO "public"."serial_no_info" VALUES (1, 203, 0, 7);
 INSERT INTO "public"."serial_no_info" VALUES (1, 102, 0, 4);
 INSERT INTO "public"."serial_no_info" VALUES (1, 202, 0, 3);
-INSERT INTO "public"."serial_no_info" VALUES (1, 103, 0, 3);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1002, 202410, 92);
 INSERT INTO "public"."serial_no_info" VALUES (1, 201, 0, 8);
-INSERT INTO "public"."serial_no_info" VALUES (1, 101, 0, 76);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1001, 202409, 11);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1001, 202410, 14);
 INSERT INTO "public"."serial_no_info" VALUES (1, 301, 0, 16);
 INSERT INTO "public"."serial_no_info" VALUES (1, 302, 0, 6);
+INSERT INTO "public"."serial_no_info" VALUES (1, 101, 0, 85);
+INSERT INTO "public"."serial_no_info" VALUES (1, 103, 0, 4);
 
 -- ----------------------------
 -- Table structure for supplier
@@ -8179,6 +8447,8 @@ INSERT INTO "public"."supplier" VALUES (2, '1002', '九州批发公司', 'JZPFGS
 INSERT INTO "public"."supplier" VALUES (3, '1003', '健康医药公司', 'JKYYGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-10-18 16:21:28.403817+08', 0, '2023-10-18 16:21:28.403817+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."supplier" VALUES (4, '1004', '红星食品公司', 'HXSPGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-10-18 16:22:06.334742+08', 0, '2023-10-18 16:22:06.334742+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."supplier" VALUES (5, '1005', '便民百货公司', 'BMBHGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 0, '2023-10-18 16:22:47.084015+08', 0, '2023-10-18 16:22:47.084015+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."supplier" VALUES (6, '2001', '华美电器经销公司', 'HMDQJXGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 1, '2024-11-30 05:47:28.57003+08', 1, '2024-11-30 05:47:28.57003+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."supplier" VALUES (7, '2002', '讯通通讯器材销售公司', 'XTTXQCXSGS', NULL, NULL, 1, NULL, NULL, NULL, NULL, NULL, '-$1.00', -1, 'f', 't', 1, '2024-11-30 05:47:28.57003+08', 1, '2024-11-30 05:47:28.57003+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
 -- Table structure for voucher
@@ -8451,6 +8721,7 @@ COMMENT ON TABLE "public"."wareroom" IS '仓库';
 INSERT INTO "public"."wareroom" VALUES (1, '1001', '后库', 'HK', NULL, NULL, 1, 'f', 't', 0, '2023-12-03 01:41:12.395661+08', 0, '2023-12-03 01:41:12.395661+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."wareroom" VALUES (2, '2001', '食品库', 'SPK', NULL, NULL, 1, 'f', 't', 0, '2023-12-03 01:41:44.225827+08', 0, '2023-12-03 01:41:44.225827+08', NULL, NULL, 0, NULL);
 INSERT INTO "public"."wareroom" VALUES (3, '2002', '百货库', 'BHK', NULL, NULL, 1, 'f', 't', 0, '2023-12-03 01:42:28.806877+08', 0, '2023-12-03 01:42:28.806877+08', NULL, NULL, 0, NULL);
+INSERT INTO "public"."wareroom" VALUES (4, '3001', '分店', 'FD', NULL, NULL, 1, 'f', 't', 1, '2024-11-28 06:43:36.43291+08', 1, '2024-11-28 06:43:36.43291+08', NULL, NULL, 0, NULL);
 
 -- ----------------------------
 -- Table structure for wareroom_account
@@ -9082,9 +9353,9 @@ SELECT setval('"public"."ap_non_payment_bill_detail_id_seq"', 1, false);
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."ap_payment_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."ap_payment_bill_bill_id_seq"
 OWNED BY "public"."ap_payment_bill"."bill_id";
-SELECT setval('"public"."ap_payment_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."ap_payment_bill_bill_id_seq"', 92, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9103,9 +9374,9 @@ SELECT setval('"public"."ar_non_receipt_bill_detail_id_seq"', 1, false);
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."ar_receipt_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."ar_receipt_bill_bill_id_seq"
 OWNED BY "public"."ar_receipt_bill"."bill_id";
-SELECT setval('"public"."ar_receipt_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."ar_receipt_bill_bill_id_seq"', 4, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9126,14 +9397,14 @@ SELECT setval('"public"."area_area_id_seq"', 1, false);
 -- ----------------------------
 ALTER SEQUENCE "public"."customer_customer_id_seq"
 OWNED BY "public"."customer"."customer_id";
-SELECT setval('"public"."customer_customer_id_seq"', 1, false);
+SELECT setval('"public"."customer_customer_id_seq"', 5, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."damage_overflow_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."damage_overflow_bill_bill_id_seq"
 OWNED BY "public"."damage_overflow_bill"."bill_id";
-SELECT setval('"public"."damage_overflow_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."damage_overflow_bill_bill_id_seq"', 37, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9147,14 +9418,14 @@ SELECT setval('"public"."damage_overflow_bill_detail_bill_detail_id_seq"', 28, t
 -- ----------------------------
 ALTER SEQUENCE "public"."department_department_id_seq"
 OWNED BY "public"."department"."department_id";
-SELECT setval('"public"."department_department_id_seq"', 6, true);
+SELECT setval('"public"."department_department_id_seq"', 8, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."inbound_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."inbound_bill_bill_id_seq"
 OWNED BY "public"."inbound_bill"."bill_id";
-SELECT setval('"public"."inbound_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."inbound_bill_bill_id_seq"', 25, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9182,7 +9453,7 @@ SELECT setval('"public"."inventory_verification_bill_detail_bill_detail_id_seq"'
 -- ----------------------------
 ALTER SEQUENCE "public"."material_material_id_seq"
 OWNED BY "public"."material"."material_id";
-SELECT setval('"public"."material_material_id_seq"', 10, true);
+SELECT setval('"public"."material_material_id_seq"', 14, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9215,9 +9486,9 @@ SELECT setval('"public"."no_outbound_bill_detail_id_seq"', 1, false);
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."outbound_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."outbound_bill_bill_id_seq"
 OWNED BY "public"."outbound_bill"."bill_id";
-SELECT setval('"public"."outbound_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."outbound_bill_bill_id_seq"', 51, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9229,23 +9500,21 @@ SELECT setval('"public"."outbound_bill_detail_bill_detail_id_seq"', 44, true);
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."person_person_id_seq1"
-OWNED BY "public"."person"."person_id";
-SELECT setval('"public"."person_person_id_seq1"', 1, false);
+SELECT setval('"public"."person_person_id_seq"', 8, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."procurement_billing_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."procurement_billing_bill_bill_id_seq"
 OWNED BY "public"."procurement_billing_bill"."bill_id";
-SELECT setval('"public"."procurement_billing_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."procurement_billing_bill_bill_id_seq"', 197, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."procurement_billing_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."procurement_billing_bill_detail"."bill_detail_id";
-SELECT setval('"public"."procurement_billing_bill_detail_bill_detail_id_seq"', 354, true);
+SELECT setval('"public"."procurement_billing_bill_detail_bill_detail_id_seq"', 371, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9285,23 +9554,23 @@ SELECT setval('"public"."procurement_order_bill_detail_bill_detail_id_seq"', 42,
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."procurement_pending_adjustment_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."procurement_pending_adjustment_bill_bill_id_seq"
 OWNED BY "public"."procurement_pending_adjustment_bill"."bill_id";
-SELECT setval('"public"."procurement_pending_adjustment_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."procurement_pending_adjustment_bill_bill_id_seq"', 36, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."procurement_pending_adjustment_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."procurement_pending_adjustment_bill_detail"."bill_detail_id";
-SELECT setval('"public"."procurement_pending_adjustment_bill_detail_bill_detail_id_seq"', 30, true);
+SELECT setval('"public"."procurement_pending_adjustment_bill_detail_bill_detail_id_seq"', 31, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."procurement_return_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."procurement_return_bill_bill_id_seq"
 OWNED BY "public"."procurement_return_bill"."bill_id";
-SELECT setval('"public"."procurement_return_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."procurement_return_bill_bill_id_seq"', 43, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9369,9 +9638,9 @@ SELECT setval('"public"."selling_outbound_bill_detail_bill_detail_id_seq"', 7, t
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."selling_pending_adjustment_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."selling_pending_adjustment_bill_bill_id_seq"
 OWNED BY "public"."selling_pending_adjustment_bill"."bill_id";
-SELECT setval('"public"."selling_pending_adjustment_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."selling_pending_adjustment_bill_bill_id_seq"', 63, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9383,9 +9652,9 @@ SELECT setval('"public"."selling_pending_adjustment_bill_detail_bill_detail_id_s
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
-ALTER SEQUENCE "public"."selling_return_bill_bill_id_seq1"
+ALTER SEQUENCE "public"."selling_return_bill_bill_id_seq"
 OWNED BY "public"."selling_return_bill"."bill_id";
-SELECT setval('"public"."selling_return_bill_bill_id_seq1"', 1, false);
+SELECT setval('"public"."selling_return_bill_bill_id_seq"', 3, false);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9406,7 +9675,7 @@ SELECT setval('"public"."subject_subject_id_seq"', 105, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."supplier_supplier_id_seq"
 OWNED BY "public"."supplier"."supplier_id";
-SELECT setval('"public"."supplier_supplier_id_seq"', 5, true);
+SELECT setval('"public"."supplier_supplier_id_seq"', 7, true);
 
 -- ----------------------------
 -- Alter sequences owned by
@@ -9434,7 +9703,7 @@ SELECT setval('"public"."voucher_voucher_id_seq"', 23, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."wareroom_wareroom_id_seq"
 OWNED BY "public"."wareroom"."wareroom_id";
-SELECT setval('"public"."wareroom_wareroom_id_seq"', 3, true);
+SELECT setval('"public"."wareroom_wareroom_id_seq"', 4, true);
 
 -- ----------------------------
 -- Indexes structure for table account

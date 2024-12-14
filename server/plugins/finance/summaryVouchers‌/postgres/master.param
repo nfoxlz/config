@@ -1,0 +1,15 @@
+Begin_Voucher_Code= AND CAST(Voucher_Summary_Code AS INT8) >= CAST(:Begin_Voucher_Code AS INT8)
+End_Voucher_Code= AND CAST(Voucher_Summary_Code AS INT8) <= CAST(:End_Voucher_Code AS INT8)
+Begin_Accounting_Date= AND Accounting_Date >= :Begin_Accounting_Date
+End_Accounting_Date= AND Accounting_Date <= :End_Accounting_Date
+Creator_User_Id= AND Creator_User_Id = :Creator_User_Id
+Last_Modifier_User_Id= AND Last_Modifier_User_Id = :Last_Modifier_User_Id
+Begin_Audit_Date_Time= AND Audit_Date_Time >= :Begin_Audit_Date_Time
+End_Audit_Date_Time= AND Audit_Date_Time <= :End_Audit_Date_Time
+Auditor_User_Id= AND Auditor_User_Id = :Auditor_User_Id
+Begin_Booked_Date_Time= AND Booked_Date_Time >= :Begin_Booked_Date_Time
+End_Booked_Date_Time= AND Booked_Date_Time <= :End_Booked_Date_Time
+Bookkeeper_User_Id= AND Bookkeeper_User_Id = :Bookkeeper_User_Id
+Begin_General_Booked_Date_Time= AND General_Booked_Date_Time >= :Begin_General_Booked_Date_Time
+End_General_Booked_Date_Time= AND General_Booked_Date_Time <= :End_General_Booked_Date_Time
+General_Bookkeeper_User_Id= AND General_Bookkeeper_User_Id = :General_Bookkeeper_User_Id

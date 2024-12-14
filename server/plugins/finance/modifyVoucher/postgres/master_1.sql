@@ -1,0 +1,1 @@
+SELECT Summary, Account_Id, CAST(Debit_Amount AS NUMERIC), CAST(Credit_Amount AS NUMERIC) FROM Voucher_Detail WHERE Voucher_Id = :Voucher_Id ORDER BY Sn

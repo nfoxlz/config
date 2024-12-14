@@ -16,12 +16,12 @@
 			"Wareroom_Name",
 			"Quantity",
 			"Unit",
-			"Packing_Size",
 			"Piece",
+			"Packing_Size",
 			"Retail_Unit",
-			"Retail_Packing_Size",
 			"Retail_Price",
 			"Retail_Amount",
+			"Retail_Packing_Size",
 			"Comment"
 		]
 	},
@@ -32,10 +32,6 @@
 		"Master": [
 			"Department_Name",
 			"Owner_Name"
-		],
-		"Detail": [
-			"Piece",
-			"Real_Selling_Amount"
 		]
 	},
 	"ReadOnlyColumns": {

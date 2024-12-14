@@ -1,7 +1,7 @@
 SELECT COUNT(*)
 	FROM AR_Non_receipt T1
 		LEFT JOIN Material T2 ON T1.Material_Id = T2.Material_Id
-	WHERE T1.Client_Id = :Client_Id
+	WHERE T1.Customer_Id = :Customer_Id
 		{Department_Id}
 		{Owner_Id}
 		{Begin_Bill_Date}

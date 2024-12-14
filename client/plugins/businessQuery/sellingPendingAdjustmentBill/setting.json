@@ -1,0 +1,25 @@
+{
+	"Title": "销售退补价单查询",
+	"ConditionMemoryDataSettings": [
+		"Bill_Id"
+	],
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Department_Name",
+			"Owner_Name",
+			"Customer_Name"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Amount",
+			"Caption": "金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		}
+	]
+}

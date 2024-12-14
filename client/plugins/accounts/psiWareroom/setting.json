@@ -1,0 +1,28 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Bill_Year_Month",
+		"Material_Code"
+	],
+	"ConditionRequiredColumns": [
+		"Bill_Year_Month"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "In_Quantity",
+			"Caption": "入库数量",
+			"TableName": "master"
+		},
+		{
+			"Name": "Out_Quantity",
+			"Caption": "出库数量",
+			"TableName": "master"
+		}
+	]
+}

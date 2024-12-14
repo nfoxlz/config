@@ -10,11 +10,11 @@
 	"IsAddMaster": false,
 	"InvisibleColumns": {
 		"master": [
-			"Client_Id"
+			"Customer_Id"
 		]
 	},
 	"ColumnCalculateScriptFileNames": {
-		"Master": {
+		"master": {
 			"Customer_Name": "Master_Customer_Name.cs"
 		}
 	},
@@ -22,11 +22,11 @@
 	"DifferentiatedSaveColumns": {
 		"master": {
 			"DeletedColumns": [
-				"Client_Id",
+				"Customer_Id",
 				"Version"
 			],
 			"ModifiedOriginalColumns": [
-				"Client_Id",
+				"Customer_Id",
 				"Version"
 			]
 		}
@@ -34,7 +34,7 @@
 	"DifferentiatedSaveRemoveColumns": {
 		"master": {
 			"AddedColumns": [
-				"Client_Id",
+				"Customer_Id",
 				"Tenant_Id",
 				"Is_Deleted",
 				"Creator_User_Id",
@@ -46,7 +46,7 @@
 				"Version"
 			],
 			"ModifiedColumns": [
-				"Client_Id",
+				"Customer_Id",
 				"Tenant_Id",
 				"Is_Deleted",
 				"Creator_User_Id",

@@ -14,7 +14,7 @@
 		]
 	},
 	"ColumnCalculateScriptFileNames": {
-		"Master": {
+		"master": {
 			"Person_Name": "Master_Person_Name.cs"
 		}
 	},

@@ -1,0 +1,17 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Begin_Bill_Code",
+		"End_Bill_Code",
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Customer_Id",
+		"Payment_Mode"
+	],
+	"DataLoadName": "master",
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"IsInitialQuery": false,
+	"RunColumns": [
+		"Bill_Id"
+	]
+}

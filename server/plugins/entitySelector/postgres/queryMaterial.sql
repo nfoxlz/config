@@ -1,1 +1,1 @@
-SELECT * FROM Material WHERE Tenant_Id = :tenant AND NOT Is_Deleted AND Is_Active{filter} ORDER BY Material_Code OFFSET :begin_No LIMIT :page_Size
+SELECT * FROM Material WHERE Tenant_Id = :tenant AND NOT Is_Deleted AND Is_Active{filter} ORDER BY {order_By}Material_Code OFFSET :begin_No LIMIT :page_Size

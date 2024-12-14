@@ -43,4 +43,5 @@ SELECT T1.Bill_Type,
 		{End_Bill_Date}
 		{Material_Code}
 		AND ABS(CAST(T1.Real_Purchasing_Amount AS NUMERIC)) > ABS(CAST(T1.Payment_Amount AS NUMERIC))
-	ORDER BY T1.Bill_Date DESC, T1.Creation_Date_Time DESC, T1.Sn
+	{order_By}
+	OFFSET :begin_No LIMIT :page_Size

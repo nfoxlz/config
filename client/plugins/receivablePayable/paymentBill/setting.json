@@ -1,0 +1,31 @@
+{
+	"Title": "应付结算单查询",
+	"ConditionMemoryDataSettings": [
+		"Bill_Id"
+	],
+	"DataLoadName": "master",
+	"InvisibleIdTables": [
+		"master_1"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Department_Name",
+			"Owner_Name",
+			"Supplier_Name"
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Payment_Amount",
+			"Caption": "支付金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		},
+		{
+			"Name": "Real_Payment_Amount",
+			"Caption": "实际支付金额合计",
+			"TableName": "master_1",
+			"Format": "C2"
+		}
+	]
+}

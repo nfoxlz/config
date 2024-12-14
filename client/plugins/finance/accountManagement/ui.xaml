@@ -38,14 +38,14 @@
 		<ScrollViewer Margin="10,34,0,0" VerticalScrollBarVisibility="Auto">
 			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
 				<controls:DataPanel.ColumnDefinitions>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
-					<ColumnDefinition Width="*"/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
 				</controls:DataPanel.ColumnDefinitions>
 			</controls:DataPanel>
 		</ScrollViewer>
 		<GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="True" ResizeDirection="Rows" Height="5" Background="Transparent"/>
-		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" IsReadOnly="True" Grid.Row="1" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}"/>
+		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" IsReadOnly="True" Grid.Row="1" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" RefreshCommand="{Binding QueryCommand}" SortDescription="{Binding SortDescription,Mode=OneWayToSource}" ColumnWidth="Auto" IsPaging="{Binding Setting.IsPagingQuery,Mode=OneWay}"/>
 		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="2">
 			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
 		</StackPanel>

@@ -1,0 +1,17 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Accounting_Year_Month"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Accounting_Year_Month"
+		]
+	},
+	"ColumnVerifyScriptFileNames": {
+		"Master": {
+			"Accounting_Year_Month": "Master_Accounting_Year_Month.cs"
+		}
+	}
+}

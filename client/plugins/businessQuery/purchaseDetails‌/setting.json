@@ -1,0 +1,33 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Begin_Bill_Date",
+		"End_Bill_Date",
+		"Begin_Bill_Code",
+		"End_Bill_Code",
+		"Department_Id",
+		"Owner_Id",
+		"Supplier_Id",
+		"Material_Code"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Real_In_Amount",
+			"Caption": "金额小计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "In_Retail_Amount",
+			"Caption": "零售金额小计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"MemoryDataSettings": {
+		"Master": [
+			"Accounting_Year_Month"
+		]
+	},
+	"RequiredColumns": {
+		"Master": [
+			"Accounting_Year_Month"
+		]
+	},
+	"UnmodifiedSaveTables": [
+		"Master"
+	]
+}

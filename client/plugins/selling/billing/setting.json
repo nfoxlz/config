@@ -16,7 +16,6 @@
 			"Material_Name",
 			"Selling_Quantity",
 			"Selling_Unit",
-			"Selling_Packing_Size",
 			"Selling_Piece",
 			"Selling_Price",
 			"Untaxed_Price",
@@ -26,10 +25,11 @@
 			"Selling_Amount",
 			"Deduction_Rate",
 			"Real_Selling_Amount",
+			"Selling_Packing_Size",
 			"Retail_Unit",
-			"Retail_Packing_Size",
 			"Retail_Price",
 			"Retail_Amount",
+			"Retail_Packing_Size",
 			"Comment"
 		]
 	},
@@ -41,15 +41,6 @@
 			"Department_Name",
 			"Owner_Name",
 			"Customer_Name"
-		],
-		"Detail": [
-			"Selling_Piece",
-			"Untaxed_Price",
-			"Untaxed_Amount",
-			"Output_Tax_Rate",
-			"Tax_Amount",
-			"Deduction_Rate",
-			"Real_Selling_Amount"
 		]
 	},
 	"ReadOnlyColumns": {

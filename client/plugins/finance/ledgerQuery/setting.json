@@ -1,0 +1,50 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Accounting_Year_Month",
+		"Ledger_Account_Id"
+	],
+	"ConditionRequiredColumns": [
+		"Accounting_Year_Month",
+		"Ledger_Account_Id"
+	],
+	"DataLoadName": "master",
+	"AdditionalDataColumns": {
+		"master": [
+			"Direction",
+			"Abs_Balance_Amount"
+		]
+	},
+	"IsInitialQuery": false,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"InvisibleColumns": {
+		"master": [
+			"Balance_Amount"
+		]
+	},
+	"CalculatedColumns": {
+		"master": [
+			{
+				"PlusColumn": "Debit_Amount",
+				"MinusColumn": "Credit_Amount",
+				"BalanceColumn": "Balance_Amount"
+			}
+		]
+	},
+	"TotalSettings": [
+		{
+			"Name": "Debit_Amount",
+			"Caption": "借方合计",
+			"TableName": "master",
+			"Format": "C2"
+		},
+		{
+			"Name": "Credit_Amount",
+			"Caption": "贷方合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	]
+}

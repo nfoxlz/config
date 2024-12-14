@@ -11,6 +11,7 @@
 		"General_Bookkeeper_User_Id"
 	],
 	"ConditionEditableColumns": [
+		"Creator_User_Id",
 		"Last_Modifier_User_Id",
 		"Auditor_User_Id",
 		"Bookkeeper_User_Id",
@@ -19,11 +20,6 @@
 	"DataLoadName": "master",
 	"IsPagingQuery": true,
 	"IsAddMaster": false,
-	"InvisibleColumns": {
-		"master": [
-			"Voucher_Id"
-		]
-	},
 	"RunColumns": [
 		"Voucher_Id"
 	]

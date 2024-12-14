@@ -3,7 +3,7 @@ SELECT T.Bill_Type,
 		T.Bill_Id,
 		T.Sn,
 		T.Tenant_Id,
-		T.Bill_Code,
+		CAST(T.Bill_Code AS INT8) AS Bill_Code_Num,
 		T.Manual_Code,
 		T.Bill_Date,
 		T.Department_Id,
@@ -41,4 +41,5 @@ SELECT T.Bill_Type,
 		{End_Bill_Date}
 		{Material_Code}
 		AND ABS(T.Quantity * T.Packing_Size) > ABS(T.Inbound_Quantity)
-	ORDER BY T.Bill_Date, T.Creation_Date_Time, T.Sn
+	{order_By}
+	OFFSET :begin_No LIMIT :page_Size

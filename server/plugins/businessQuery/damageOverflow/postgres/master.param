@@ -1,0 +1,6 @@
+Begin_Bill_Code= AND CAST(Bill_Code AS INT8) >= CAST(:Begin_Bill_Code AS INT8)
+End_Bill_Code= AND CAST(Bill_Code AS INT8) <= CAST(:End_Bill_Code AS INT8)
+Begin_Bill_Date= AND Bill_Date >= :Begin_Bill_Date
+End_Bill_Date= AND Bill_Date <= :End_Bill_Date
+Department_Id= AND Department_Id = :Department_Id
+Owner_Id= AND Owner_Id = :Owner_Id

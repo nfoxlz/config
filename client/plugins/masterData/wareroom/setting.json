@@ -14,7 +14,7 @@
 		]
 	},
 	"ColumnCalculateScriptFileNames": {
-		"Master": {
+		"master": {
 			"Wareroom_Name": "Master_Wareroom_Name.cs"
 		}
 	},

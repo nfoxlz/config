@@ -16,7 +16,6 @@
 			"Material_Name",
 			"Purchasing_Quantity",
 			"Purchasing_Unit",
-			"Purchasing_Packing_Size",
 			"Purchasing_Piece",
 			"Purchasing_Price",
 			"Untaxed_Price",
@@ -26,10 +25,11 @@
 			"Purchasing_Amount",
 			"Deduction_Rate",
 			"Real_Purchasing_Amount",
+			"Purchasing_Packing_Size",
 			"Retail_Unit",
-			"Retail_Packing_Size",
 			"Retail_Price",
 			"Retail_Amount",
+			"Retail_Packing_Size",
 			"Comment"
 		]
 	},
@@ -41,15 +41,6 @@
 			"Department_Name",
 			"Owner_Name",
 			"Supplier_Name"
-		],
-		"Detail": [
-			"Purchasing_Piece",
-			"Untaxed_Price",
-			"Untaxed_Amount",
-			"Input_Tax_Rate",
-			"Tax_Amount",
-			"Deduction_Rate",
-			"Real_Purchasing_Amount"
 		]
 	},
 	"ReadOnlyColumns": {

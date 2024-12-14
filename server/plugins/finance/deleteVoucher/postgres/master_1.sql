@@ -1,0 +1,1 @@
+SELECT Summary, Account_Id, Debit_Amount, Credit_Amount FROM Voucher_Detail WHERE Voucher_Id = :Voucher_Id ORDER BY Sn

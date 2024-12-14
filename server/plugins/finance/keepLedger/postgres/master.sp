@@ -1,0 +1,4 @@
+tenant
+new_Voucher_Code=accountingSerialNo:1002
+accountingDate
+user
