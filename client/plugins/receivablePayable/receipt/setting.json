@@ -20,14 +20,14 @@
 	"IsAddMaster": false,
 	"AdditionalDataColumns": {
 		"master": [
-			"Proreceipt_Amount",
+			"Expected_Receipt_Amount",
 			"Discount_Receipt_Amount",
 			"Residual_Receipt_Amount"
 		]
 	},
 	"ColumnDisplayIndexes": {
 		"master": {
-			"Proreceipt_Amount": 19,
+			"Expected_Receipt_Amount": 19,
 			"Discount_Receipt_Amount": 20,
 			"Residual_Receipt_Amount": 21		
 		}
@@ -37,13 +37,21 @@
 	],
 	"EditableColumns": {
 		"master": [
-			"Proreceipt_Amount",
+			"Expected_Receipt_Amount",
 			"Discount_Receipt_Amount"
 		]
 	},
+	"TotalSettings": [
+		{
+			"Name": "Expected_Receipt_Amount",
+			"Caption": "预收入金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	],
 	"ColumnVerifyScriptFileNames": {
 		"master": {
-			"Proreceipt_Amount": "master_Proreceipt_Amount.cs",
+			"Expected_Receipt_Amount": "master_Expected_Receipt_Amount.cs",
 			"Discount_Receipt_Amount": "master_Discount_Receipt_Amount.cs"
 		}
 	},
@@ -59,7 +67,7 @@
 			"Department_Id",
 			"Owner_Id",
 			"Material_Id",
-			"Proreceipt_Amount",
+			"Expected_Receipt_Amount",
 			"Discount_Receipt_Amount",
 			"Version",
 			"Comment"

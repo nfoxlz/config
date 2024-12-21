@@ -1393,6 +1393,7 @@
 		"ColumnName": "Bill_Type",
 		"Caption": "单据类型",
 		"Comment": "单据类型",
+		"IsVisible": false,
 		"MaxLength": 5,
 		"AllowDBNull": false,
 		"IsRequired": true,
@@ -1945,7 +1946,7 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
-		"ColumnName": "Propayment_Amount",
+		"ColumnName": "Expected_Payment_Amount",
 		"Caption": "预支付金额",
 		"Comment": "预支付金额",
 		"MaxLength": 20,
@@ -1953,7 +1954,6 @@
 		"DefaultValue": "0",
 		"IsRequired": true,
 		"Precision": 2,
-		"MinValue": 0,
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
@@ -1984,7 +1984,7 @@
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY",
-		"Expression": "No_Payment_Amount - Propayment_Amount - Discount_Payment_Amount"
+		"Expression": "No_Payment_Amount - Expected_Payment_Amount - Discount_Payment_Amount"
 	},
 	{
 		"ColumnName": "Payment_Mode",
@@ -2290,7 +2290,7 @@
 		"DbPhysicalType": "MONEY"
 	},
 	{
-		"ColumnName": "Proreceipt_Amount",
+		"ColumnName": "Expected_Receipt_Amount",
 		"Caption": "预收入金额",
 		"Comment": "预收入金额",
 		"MaxLength": 20,
@@ -2298,7 +2298,6 @@
 		"DefaultValue": "0",
 		"IsRequired": true,
 		"Precision": 2,
-		"MinValue": 0,
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
@@ -2329,7 +2328,7 @@
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY",
-		"Expression": "No_Receipt_Amount - Proreceipt_Amount - Discount_Receipt_Amount"
+		"Expression": "No_Receipt_Amount - Expected_Receipt_Amount - Discount_Receipt_Amount"
 	},
 	{
 		"ColumnName": "Outbound_Wareroom_Id",
@@ -3151,7 +3150,7 @@
 		"Comment": "结存数量",
 		"MaxLength": 18,
 		"AllowDBNull": false,
-		"DefaultValue": "1",
+		"DefaultValue": "0",
 		"IsRequired": true,
 		"DbDataType": 7,
 		"DbPhysicalType": "DECIMAL(18)"
@@ -3285,5 +3284,26 @@
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY",
 		"Expression": "IIF(Inventory_Quantity = 0, 0, Inventory_Cost / Inventory_Quantity * (Quantity * Packing_Size - Inventory_Quantity))"
+	},
+	{
+		"ColumnName": "Inventory_Unit",
+		"Caption": "库存单位",
+		"Comment": "库存单位",
+		"MaxLength": 8,
+		"DbDataType": 16,
+		"DbPhysicalType": "VARCHAR(8)"
+	},
+	{
+		"ColumnName": "Inventory_Packing_Size",
+		"Caption": "库存包装规格",
+		"Comment": "库存包装规格",
+		"MaxLength": 8,
+		"AllowDBNull": false,
+		"DefaultValue": "1",
+		"IsRequired": true,
+		"MinValue": 1,
+		"DbDataType": 12,
+		"DbPhysicalType": "INT8",
+		"ErrorText": "【{0}】不能小于1。"
 	}
 ]

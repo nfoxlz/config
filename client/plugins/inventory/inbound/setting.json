@@ -40,6 +40,11 @@
 	"InvisibleIdTables": [
 		"master"
 	],
+	"RequiredColumns": {
+		"master": [
+			"Wareroom_Id"
+		]
+	},
 	"EditableColumns": {
 		"master": [
 			"Wareroom_Id",

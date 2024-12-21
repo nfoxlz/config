@@ -4,7 +4,7 @@ INSERT INTO Wareroom_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id,
 		In_Quantity, In_Unit, In_Packing_Size, In_Piece, 
 		Creator_User_Id, Comment)
 	SELECT 308, D.Bill_Detail_Id, D.Bill_Id, D.Sn, B.Tenant_Id, B.Bill_Date, B.Bill_Code, B.Manual_Code, D.Material_Id, B.Wareroom_Id, B.Outbound_Wareroom_Id, D.Department_Id, D.Owner_Id,
-		D.Real_Inbound_Quantity, D.Unit, D.Inbound_Packing_Size, D.Real_Inbound_Piece,
+		D.Real_Inbound_Quantity, D.Inbound_Unit, D.Inbound_Packing_Size, D.Real_Inbound_Piece,
 		B.Creator_User_Id, D.Comment
 	FROM Return_Bill B
 		INNER JOIN Return_Bill_Detail D ON B.Bill_Id = D.Bill_Id

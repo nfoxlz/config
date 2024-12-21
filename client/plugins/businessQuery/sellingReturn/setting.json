@@ -11,6 +11,7 @@
 	"DataLoadName": "master",
 	"IsPagingQuery": true,
 	"IsAddMaster": false,
+	"IsInitialQuery": false,
 	"RunColumns": [
 		"Bill_Id"
 	]

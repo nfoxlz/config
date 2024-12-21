@@ -1,4 +1,4 @@
-DELETE FROM AR_Non_receipt WHERE ABS(Real_Selling_Amount) <= ABS(Receipt_Amount);
+DELETE FROM AR_Non_receipt WHERE ABS(CAST(Real_Selling_Amount AS DECIMAL)) <= ABS(CAST(Receipt_Amount AS DECIMAL));
 
 UPDATE AR A
 	SET AR_Balance = AR_Balance - D.Receipt_Amount

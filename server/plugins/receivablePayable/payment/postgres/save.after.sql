@@ -1,4 +1,4 @@
-DELETE FROM AP_Non_payment WHERE ABS(Real_Purchasing_Amount) <= ABS(Payment_Amount);
+DELETE FROM AP_Non_payment WHERE ABS(CAST(Real_Purchasing_Amount AS DECIMAL)) <= ABS(CAST(Payment_Amount AS DECIMAL));
 
 UPDATE AP A
 	SET AP_Balance = AP_Balance - D.Payment_Amount

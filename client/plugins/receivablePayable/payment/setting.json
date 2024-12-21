@@ -20,14 +20,14 @@
 	"IsAddMaster": false,
 	"AdditionalDataColumns": {
 		"master": [
-			"Propayment_Amount",
+			"Expected_Payment_Amount",
 			"Discount_Payment_Amount",
 			"Residual_Payment_Amount"
 		]
 	},
 	"ColumnDisplayIndexes": {
 		"master": {
-			"Propayment_Amount": 19,
+			"Expected_Payment_Amount": 19,
 			"Discount_Payment_Amount": 20,
 			"Residual_Payment_Amount": 21		
 		}
@@ -37,13 +37,21 @@
 	],
 	"EditableColumns": {
 		"master": [
-			"Propayment_Amount",
+			"Expected_Payment_Amount",
 			"Discount_Payment_Amount"
 		]
 	},
+	"TotalSettings": [
+		{
+			"Name": "Expected_Payment_Amount",
+			"Caption": "预支付金额合计",
+			"TableName": "master",
+			"Format": "C2"
+		}
+	],
 	"ColumnVerifyScriptFileNames": {
 		"master": {
-			"Propayment_Amount": "master_Propayment_Amount.cs",
+			"Expected_Payment_Amount": "master_Expected_Payment_Amount.cs",
 			"Discount_Payment_Amount": "master_Discount_Payment_Amount.cs"
 		}
 	},
@@ -59,7 +67,7 @@
 			"Department_Id",
 			"Owner_Id",
 			"Material_Id",
-			"Propayment_Amount",
+			"Expected_Payment_Amount",
 			"Discount_Payment_Amount",
 			"Version",
 			"Comment"

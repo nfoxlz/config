@@ -9,7 +9,7 @@
 	</UserControl.DataContext>
 	<Grid>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="114"/>
+			<RowDefinition Height="116"/>
 			<RowDefinition Height="*"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>

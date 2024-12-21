@@ -47,7 +47,8 @@
 	"InvisibleColumns": {
 		"master": [
 			"Bill_Type",
-			"Sn"
+			"Sn",
+			"Discount_Inbound_Quantity"
 		]
 	},
 	"EditableColumns": {

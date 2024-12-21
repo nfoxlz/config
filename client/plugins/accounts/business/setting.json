@@ -23,12 +23,12 @@
 			{
 				"PlusColumn": "In_Quantity",
 				"MinusColumn": "Out_Quantity",
-				"BalanceColumn": "Quantity"
+				"BalanceColumn": "Balance_Quantity"
 			},
 			{
 				"PlusColumn": "In_Piece",
 				"MinusColumn": "Out_Piece",
-				"BalanceColumn": "Piece"
+				"BalanceColumn": "Balance_Piece"
 			},
 			{
 				"PlusColumn": "Real_In_Amount",

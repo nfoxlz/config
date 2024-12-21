@@ -26,6 +26,7 @@
 		]
 	},
 	"RequiredTables": {
+		"Master": "抬头项不能无数据。",
 		"Detail": "明细项不能无数据。"
 	},
 	"InvisibleColumns": {

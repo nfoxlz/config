@@ -2,4 +2,4 @@ SELECT FORMAT('【%s(%s)】可用库存数量不足。', M.Material_Name, M.Mate
 	FROM Material M
 		LEFT JOIN Material_Inventory I ON M.Material_Id = I.Material_Id 
 	WHERE M.Material_Id = :Material_Id
-		AND COALESCE(I.Available_Inventory_Quantity, 0) < :Purchasing_Quantity * :Purchasing_Packing_Size
+		AND COALESCE(I.Available_Inventory_Quantity, 0) < CAST(:Purchasing_Quantity AS DECIMAL) * CAST(:Purchasing_Packing_Size AS INT8)
