@@ -8,7 +8,7 @@ INSERT INTO Inventory_Verification_Bill_Detail (Bill_Id, Sn, Material_Id, Invent
 		COALESCE(T.Inventory_Piece, 0),
 		COALESCE(CAST(T.Inventory_Cost AS NUMERIC) / T.Sum_Inventory_Quantity * T.Inventory_Quantity, 0),
 		M.Unit,
-		M.Packing_Size,
+		1,
 		COALESCE(M.Retail_Price / M.Retail_Packing_size * T.Inventory_Quantity, 0)
 	FROM Material M
 	LEFT JOIN (SELECT T1.Material_Id,

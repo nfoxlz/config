@@ -5,26 +5,21 @@
     xmlns:plugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteMis"
 	xmlns:basePlugins="clr-namespace:Compete.Mis.Plugins;assembly=CompeteBase">
 	<UserControl.DataContext>
-		<plugins:SettingDataViewModel/>
+		<plugins:ThreecolumnViewModel/>
 	</UserControl.DataContext>
 	<Grid>
 		<Grid.RowDefinitions>
             <RowDefinition Height="38"/>
-			<RowDefinition Height="90"/>
+			<RowDefinition Height="61"/>
 			<RowDefinition Height="*"/>
+			<RowDefinition Height="55"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">
 			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding QueryCommand}" PageSizeChangedCommand="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource QueryButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
-			<Button Content="{DynamicResource AddButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding DirectAddCommand}" Visibility="{Binding HasDirectAddAuthorition,Mode=OneTime}"/>
-			<Button Content="{DynamicResource ModifyButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding RunCommand}" Visibility="{Binding HasRunAuthorition,Mode=OneTime}">
-				<Button.CommandParameter>
-					<basePlugins:PluginCommandParameter RequiredCurrentItem="True" Path="inventory/modifyVerification"/>
-				</Button.CommandParameter>
-			</Button>
 		</StackPanel>
-        <TextBlock TextWrapping="Wrap" Text="盘 点 管 理" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
+        <TextBlock TextWrapping="Wrap" Text="商 品 仓 库 库 存 表" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
 		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">
 			<controls:DataPanel x:Name="conditionPanel" Margin="0,0,10,0" ItemsSource="{Binding ConditionData}">
 				<controls:DataPanel.ColumnDefinitions>
@@ -35,12 +30,24 @@
 			</controls:DataPanel>
 		</ScrollViewer>
 		<GridSplitter Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Top" ShowsPreview="True" ResizeDirection="Rows" Height="5" Background="Transparent"/>
-		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" ColumnWidth="Auto" CanUserAddRows="False" CanUserDeleteRows="False" RefreshCommand="{Binding QueryCommand}" SortDescription="{Binding SortDescription,Mode=OneWayToSource}" IsPaging="{Binding Setting.IsPagingQuery,Mode=OneWay}" Command="{Binding RunCommand}">
-			<controls:EnhancedDataGrid.CommandParameter>
-				<basePlugins:PluginCommandParameter CommandAuthorition="Query" RequiredCurrentItem="True" Path="inventory/modifyVerification"/>
-			</controls:EnhancedDataGrid.CommandParameter>
-		</controls:EnhancedDataGrid>
+		<controls:EnhancedDataGrid x:Name="MainDataGrid" Margin="0,5,0,0" Grid.Row="2" IsSynchronizedWithCurrentItem="True" SelectionMode="Single" ItemsSource="{Binding MasterData}" RefreshCommand="{Binding QueryCommand}" SortDescription="{Binding SortDescription,Mode=OneWayToSource}" ColumnWidth="Auto" IsReadOnly="True" IsPaging="{Binding Setting.IsPagingQuery,Mode=OneWay}"/>
         <GridSplitter HorizontalAlignment="Stretch" ResizeDirection="Rows" Height="5" ShowsPreview="True" Background="Transparent" Grid.Row="3" VerticalAlignment="Top"/>
+        <ScrollViewer Margin="0,5,0,0" Grid.Row="3" VerticalScrollBarVisibility="Auto">
+			<StackPanel>
+				<controls:DataPanel ItemsSource="{Binding TotalTable}" IsReadOnly="True">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+				</controls:DataPanel>
+				<controls:DataPanel Margin="0,3,0,0" ItemsSource="{Binding Data.Tables[master_1]}" IsReadOnly="True" TitleSuffix="{DynamicResource TitleSuffixTotal}">
+					<controls:DataPanel.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</controls:DataPanel.ColumnDefinitions>
+				</controls:DataPanel>
+			</StackPanel>
+        </ScrollViewer>
 		<StackPanel Margin="5,0,0,5" Orientation="Horizontal" Grid.Row="4">
 			<TextBlock TextWrapping="Wrap" Text="{Binding MessageText}" VerticalAlignment="Top"/>
 		</StackPanel>

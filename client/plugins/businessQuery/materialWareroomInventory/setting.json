@@ -1,0 +1,20 @@
+{
+	"ConditionMemoryDataSettings": [
+		"Wareroom_Id",
+		"Material_Code"
+	],
+	"DataLoadName": "master",
+	"IsInitialQuery": false,
+	"IsPagingQuery": true,
+	"IsAddMaster": false,
+	"InvisibleIdTables": [
+		"master"
+	],
+	"TotalSettings": [
+		{
+			"Name": "Inventory_Quantity",
+			"Caption": "库存数量小计",
+			"TableName": "master"
+		}
+	]
+}

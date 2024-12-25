@@ -12,7 +12,7 @@
  Target Server Version : 160001 (160001)
  File Encoding         : 65001
 
- Date: 21/12/2024 20:10:47
+ Date: 25/12/2024 14:28:04
 */
 
 
@@ -789,6 +789,7 @@ COMMENT ON TABLE "public"."action" IS '动作';
 -- ----------------------------
 INSERT INTO "public"."action" VALUES (E'\\226\\003\\214Q\\025\\034<I\\277\\\\\\331\\013\\314\\232\\322\\272');
 INSERT INTO "public"."action" VALUES (E'\\017)\\320\\300\\223h\\264M\\230\\252\\011\\267_''\\255n');
+INSERT INTO "public"."action" VALUES (E'LN\\024\\016Y\\343\\322M\\274L\\263d\\245\\335\\215\\311');
 INSERT INTO "public"."action" VALUES (E'*\\3634VN\\\\KD\\244C/\\311DR\\371\\324');
 INSERT INTO "public"."action" VALUES (E'\\024\\273\\244/\\350\\335\\216M\\276\\204n\\267(\\335\\205n');
 INSERT INTO "public"."action" VALUES (E'\\210M\\345\\004\\020k\\234F\\276A\\320\\244\\013\\312O\\304');
@@ -1032,6 +1033,7 @@ INSERT INTO "public"."action" VALUES (E'\\323Q\\352\\374W\\301\\034L\\235\\233\\
 INSERT INTO "public"."action" VALUES (E'2]\\204)\\256\\247\\305E\\242''(\\313\\355\\204\\304K');
 INSERT INTO "public"."action" VALUES (E'\\237\\\\\\247\\234E{KE\\220\\333\\262\\211t=\\350;');
 INSERT INTO "public"."action" VALUES (E']\\033E\\230\\3519\\022N\\250\\342e\\030\\303U\\354\\271');
+INSERT INTO "public"."action" VALUES (E'o\\235\\2475<\\201 G\\254\\206/=\\321H\\273)');
 INSERT INTO "public"."action" VALUES (E'tp\\362\\276\\034\\217\\375L\\276\\246O\\2015zn\\265');
 INSERT INTO "public"."action" VALUES (E'`\\2574\\366\\223F\\266O\\213\\326\\242-/mF\\233');
 INSERT INTO "public"."action" VALUES (E']\\326\\012:\\220\\340\\337D\\226\\223%:r\\256\\033\\336');
@@ -5864,6 +5866,7 @@ COMMENT ON TABLE "public"."inventory_verification_bill" IS '盘点单';
 INSERT INTO "public"."inventory_verification_bill" VALUES (9, 1, '18', NULL, '2023-12-26', 0, 0, 2, 0, 1, '2023-12-26 14:40:36.844017+08', 0, '2023-12-26 14:40:36.844017+08', 0, NULL);
 INSERT INTO "public"."inventory_verification_bill" VALUES (10, 1, '19', NULL, '2023-12-26', 0, 0, 3, 0, 1, '2023-12-26 14:40:46.672322+08', 0, '2023-12-26 14:40:46.672322+08', 0, NULL);
 INSERT INTO "public"."inventory_verification_bill" VALUES (11, 1, '20', NULL, '2023-12-27', 0, 0, 1, 0, 1, '2023-12-27 22:19:38.397225+08', 0, '2023-12-27 22:19:38.397225+08', 0, NULL);
+INSERT INTO "public"."inventory_verification_bill" VALUES (13, 1, '25', NULL, '2024-12-21', 1, 2, 4, 0, 1, '2024-12-21 17:08:53.579478+08', 0, '2024-12-21 17:08:53.579478+08', 1, NULL);
 
 -- ----------------------------
 -- Table structure for inventory_verification_bill_detail
@@ -5915,6 +5918,20 @@ INSERT INTO "public"."inventory_verification_bill_detail" VALUES (37, 11, 5, 5, 
 INSERT INTO "public"."inventory_verification_bill_detail" VALUES (38, 11, 6, 6, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
 INSERT INTO "public"."inventory_verification_bill_detail" VALUES (39, 11, 7, 7, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
 INSERT INTO "public"."inventory_verification_bill_detail" VALUES (40, 11, 8, 8, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (41, 13, 1, 1, 85, 0, '$189.90', 0, '袋', 1, 0, '$255.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (42, 13, 2, 2, 81, 0, '$164.50', 0, '袋', 1, 0, '$218.70', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (43, 13, 3, 3, 96, 0, '$276.16', 0, '瓶', 1, 0, '$288.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (44, 13, 4, 4, 120, 0, '$200.00', 0, '瓶', 1, 0, '$300.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (45, 13, 5, 5, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (46, 13, 6, 6, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (47, 13, 7, 7, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (48, 13, 8, 8, 0, 0, '$0.00', 0, '瓶', 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (49, 13, 9, 9, 0, 0, '$0.00', 0, NULL, 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (50, 13, 10, 10, 0, 0, '$0.00', 0, NULL, 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (51, 13, 11, 11, 16, 0, '$64,036.67', 0, NULL, 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (52, 13, 12, 12, 5, 0, '$17,472.73', 0, NULL, 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (53, 13, 13, 13, -2, 0, '-$14,000.00', 0, NULL, 1, 0, '$0.00', NULL);
+INSERT INTO "public"."inventory_verification_bill_detail" VALUES (54, 13, 14, 14, -2, 0, '-$13,000.00', 0, NULL, 1, 0, '$0.00', NULL);
 
 -- ----------------------------
 -- Table structure for inventory_verification_bill_detail_history
@@ -6329,6 +6346,8 @@ INSERT INTO "public"."menu" VALUES (93104, '采购退补价单据查询', NULL, 
 INSERT INTO "public"."menu" VALUES (4900, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (90001, '业务流水账', NULL, 90001);
 INSERT INTO "public"."menu" VALUES (90002, '仓库流水账', NULL, 90002);
+INSERT INTO "public"."menu" VALUES (93307, '盘点单据历史查询', NULL, 93307);
+INSERT INTO "public"."menu" VALUES (93306, '盘点单据查询', NULL, 93306);
 INSERT INTO "public"."menu" VALUES (10, '财务管理', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (10001, '科目管理', NULL, 10001);
 INSERT INTO "public"."menu" VALUES (93202, '销售开票单据查询', NULL, 93202);
@@ -6344,7 +6363,6 @@ INSERT INTO "public"."menu" VALUES (10102, '切换账期', NULL, 10102);
 INSERT INTO "public"."menu" VALUES (10100, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (93, '业务查询', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (96, '决策支持', NULL, NULL);
-INSERT INTO "public"."menu" VALUES (93302, '入库单据查询', NULL, 93302);
 INSERT INTO "public"."menu" VALUES (3011, '采购入库开票', NULL, 3011);
 INSERT INTO "public"."menu" VALUES (3021, '销售出库开票', NULL, 3021);
 INSERT INTO "public"."menu" VALUES (90003, '进销存业务账', NULL, 90003);
@@ -6374,17 +6392,17 @@ INSERT INTO "public"."menu" VALUES (96013, '库存上限预警', NULL, 96013);
 INSERT INTO "public"."menu" VALUES (96014, '库存下限预警', NULL, 96014);
 INSERT INTO "public"."menu" VALUES (93102, '采购开票单据查询', NULL, 93102);
 INSERT INTO "public"."menu" VALUES (93103, '采购退货单据查询', NULL, 93103);
-INSERT INTO "public"."menu" VALUES (93304, '报损报溢单据查询', NULL, 93304);
-INSERT INTO "public"."menu" VALUES (93305, '盘点单据查询', NULL, 93305);
-INSERT INTO "public"."menu" VALUES (93303, '出库单据查询', NULL, 93303);
+INSERT INTO "public"."menu" VALUES (93305, '报损报溢单据查询', NULL, 93305);
+INSERT INTO "public"."menu" VALUES (93304, '出库单据查询', NULL, 93304);
+INSERT INTO "public"."menu" VALUES (93303, '入库单据查询', NULL, 93303);
+INSERT INTO "public"."menu" VALUES (93302, '商品仓库库存查询', NULL, 93302);
 INSERT INTO "public"."menu" VALUES (93400, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (4930, '-', NULL, NULL);
 INSERT INTO "public"."menu" VALUES (4931, '应付流水账', NULL, 4931);
 INSERT INTO "public"."menu" VALUES (4932, '应收流水账', NULL, 4932);
-INSERT INTO "public"."menu" VALUES (93306, '盘点单据历史查询', NULL, 93306);
-INSERT INTO "public"."menu" VALUES (93307, '移库单据查询', NULL, 93307);
 INSERT INTO "public"."menu" VALUES (4901, '应付结算单据查询', NULL, 4901);
 INSERT INTO "public"."menu" VALUES (4902, '应收结算单据查询', NULL, 4902);
+INSERT INTO "public"."menu" VALUES (93308, '移库单据查询', NULL, 93308);
 
 -- ----------------------------
 -- Table structure for menu_template
@@ -6498,6 +6516,7 @@ INSERT INTO "public"."menu_template" VALUES (0, 0, 4931, 4, 931);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 4932, 4, 932);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 93400, 93, 400);
 INSERT INTO "public"."menu_template" VALUES (0, 0, 93307, 93, 307);
+INSERT INTO "public"."menu_template" VALUES (0, 0, 93308, 93, 308);
 
 -- ----------------------------
 -- Table structure for movement_bill
@@ -6986,12 +7005,8 @@ INSERT INTO "public"."plugin" VALUES (93204, 'businessQuery/sellingPendingAdjust
 INSERT INTO "public"."plugin" VALUES (10101, 'finance/updateAccountingDate', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10103, 'finance/carryOver', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (10102, 'finance/changePeriod', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93302, 'businessQuery/inbound', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93303, 'businessQuery/outbound', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93304, 'businessQuery/damageOverflow', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90003, 'accounts/psiBusiness', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (90004, 'accounts/psiWareroom', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93305, 'businessQuery/verification', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (93101, 'businessQuery/purchaseDetails‌', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (93201, 'businessQuery/salesDetails‌', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (93111, 'businessQuery/materialPurchaseSummary', NULL, -1, NULL);
@@ -7019,8 +7034,13 @@ INSERT INTO "public"."plugin" VALUES (96014, 'decisionSupport/inventoryLowerWarn
 INSERT INTO "public"."plugin" VALUES (93102, 'businessQuery/procurementBilling', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (93103, 'businessQuery/procurementReturn', NULL, -1, NULL);
 INSERT INTO "public"."plugin" VALUES (93104, 'businessQuery/procurementPendingAdjustment', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93307, 'businessQuery/movement', NULL, -1, NULL);
-INSERT INTO "public"."plugin" VALUES (93306, 'businessQuery/verificationHistory', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93308, 'businessQuery/movement', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93307, 'businessQuery/verificationHistory', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93306, 'businessQuery/verification', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93305, 'businessQuery/damageOverflow', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93304, 'businessQuery/outbound', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93303, 'businessQuery/inbound', NULL, -1, NULL);
+INSERT INTO "public"."plugin" VALUES (93302, 'businessQuery/materialWareroomInventory', NULL, -1, NULL);
 
 -- ----------------------------
 -- Table structure for procurement_billing_bill
@@ -7954,6 +7974,7 @@ COMMENT ON TABLE "public"."role_menu" IS '角色菜单';
 -- ----------------------------
 -- Records of role_menu
 -- ----------------------------
+INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 93308, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 1, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 2, -1);
 INSERT INTO "public"."role_menu" VALUES (0, 0, 1, 3, -1);
@@ -8667,6 +8688,7 @@ INSERT INTO "public"."serial_no_info" VALUES (1, 101, 0, 602);
 INSERT INTO "public"."serial_no_info" VALUES (1, 308, 0, 2);
 INSERT INTO "public"."serial_no_info" VALUES (1, 202, 0, 4);
 INSERT INTO "public"."serial_no_info" VALUES (1, 203, 0, 8);
+INSERT INTO "public"."serial_no_info" VALUES (1, 305, 0, 26);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1002, 202410, 92);
 INSERT INTO "public"."serial_no_info" VALUES (1, 302, 0, 7);
 INSERT INTO "public"."serial_no_info" VALUES (1, 402, 0, 3);
@@ -8674,7 +8696,6 @@ INSERT INTO "public"."serial_no_info" VALUES (1, 401, 0, 13);
 INSERT INTO "public"."serial_no_info" VALUES (1, 303, 0, 7);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1001, 202409, 11);
 INSERT INTO "public"."serial_no_info" VALUES (1, 301, 0, 17);
-INSERT INTO "public"."serial_no_info" VALUES (1, 305, 0, 25);
 INSERT INTO "public"."serial_no_info" VALUES (1, 306, 0, 7);
 INSERT INTO "public"."serial_no_info" VALUES (1, 1001, 202410, 14);
 
@@ -9750,14 +9771,14 @@ SELECT setval('"public"."inbound_bill_detail_bill_detail_id_seq"', 26, true);
 -- ----------------------------
 ALTER SEQUENCE "public"."inventory_verification_bill_bill_id_seq"
 OWNED BY "public"."inventory_verification_bill"."bill_id";
-SELECT setval('"public"."inventory_verification_bill_bill_id_seq"', 11, true);
+SELECT setval('"public"."inventory_verification_bill_bill_id_seq"', 13, true);
 
 -- ----------------------------
 -- Alter sequences owned by
 -- ----------------------------
 ALTER SEQUENCE "public"."inventory_verification_bill_detail_bill_detail_id_seq"
 OWNED BY "public"."inventory_verification_bill_detail"."bill_detail_id";
-SELECT setval('"public"."inventory_verification_bill_detail_bill_detail_id_seq"', 40, true);
+SELECT setval('"public"."inventory_verification_bill_detail_bill_detail_id_seq"', 54, true);
 
 -- ----------------------------
 -- Alter sequences owned by

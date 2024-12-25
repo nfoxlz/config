@@ -1,0 +1,2 @@
+Wareroom_Id= AND I.Wareroom_Id = :Wareroom_Id
+Material_Code= AND M.Material_Code LIKE :Material_Code || '%'
