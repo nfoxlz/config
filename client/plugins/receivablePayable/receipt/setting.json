@@ -35,6 +35,9 @@
 	"InvisibleIdTables": [
 		"master"
 	],
+	"RequiredTables": {
+		"master": "明细项不能无数据。"
+	},
 	"EditableColumns": {
 		"master": [
 			"Expected_Receipt_Amount",
@@ -60,6 +63,9 @@
 		"Customer_Id",
 		"Payment_Mode"
 	],
+	"SaveFilters": {
+		"master": "Expected_Receipt_Amount <> 0 OR Discount_Receipt_Amount <> 0"
+	},
 	"SaveColumns": {
 		"master": [
 			"Bill_Type",

@@ -40,6 +40,9 @@
 	"InvisibleIdTables": [
 		"master"
 	],
+	"RequiredTables": {
+		"master": "明细项不能无数据。"
+	},
 	"RequiredColumns": {
 		"master": [
 			"Wareroom_Id"
@@ -69,6 +72,9 @@
 	"SaveConditionColumns": [
 		"Supplier_Id"
 	],
+	"SaveFilters": {
+		"master": "Real_Inbound_Quantity <> 0 OR Discount_Inbound_Quantity <> 0"
+	},
 	"SaveColumns": {
 		"master": [
 			"Bill_Type",

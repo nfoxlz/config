@@ -1831,10 +1831,8 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)",
-		"ErrorText": "【{0}】不能小于0。"
+		"DbPhysicalType": "DECIMAL(18)"
 	},
 	{
 		"ColumnName": "Discount_Inbound_Quantity",
@@ -1844,7 +1842,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 7,
 		"DbPhysicalType": "DECIMAL(18)",
 		"ErrorText": "【{0}】不能小于0。"
@@ -1878,7 +1875,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"ErrorText": "【{0}】不能小于0。"
@@ -1892,7 +1888,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"ErrorText": "【{0}】不能小于0。"
@@ -1967,7 +1962,6 @@
 		"DefaultValue": "0",
 		"IsRequired": true,
 		"Precision": 2,
-		"MinValue": 0,
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
@@ -2175,10 +2169,8 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 7,
-		"DbPhysicalType": "DECIMAL(18)",
-		"ErrorText": "【{0}】不能小于0。"
+		"DbPhysicalType": "DECIMAL(18)"
 	},
 	{
 		"ColumnName": "Discount_Outbound_Quantity",
@@ -2188,7 +2180,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 7,
 		"DbPhysicalType": "DECIMAL(18)",
 		"ErrorText": "【{0}】不能小于0。"
@@ -2222,7 +2213,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"ErrorText": "【{0}】不能小于0。"
@@ -2236,7 +2226,6 @@
 		"AllowDBNull": false,
 		"DefaultValue": "0",
 		"IsRequired": true,
-		"MinValue": 0,
 		"DbDataType": 12,
 		"DbPhysicalType": "INT8",
 		"ErrorText": "【{0}】不能小于0。"
@@ -2311,7 +2300,6 @@
 		"DefaultValue": "0",
 		"IsRequired": true,
 		"Precision": 2,
-		"MinValue": 0,
 		"Format": "C2",
 		"DbDataType": 4,
 		"DbPhysicalType": "MONEY"
