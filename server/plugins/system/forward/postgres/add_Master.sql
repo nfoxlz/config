@@ -64,7 +64,7 @@ DELETE FROM AP_Carry_Over WHERE Tenant_Id = :tenant AND TO_CHAR(Bill_Date, 'YYYY
 
 INSERT INTO AP_Carry_Over (Bill_Date, Tenant_Id, Supplier_Id, Balance_Amount, Creator_User_Id)
 SELECT DATE_TRUNC('MONTH', CAST(:Carry_Over_Year_Month AS DATE)) + INTERVAL '1 MONTH', :tenant, Supplier_Id, SUM(Payable_Amount) - SUM(Payment_Amount), :user
-FROM (SELECT Supplier_Id, Balance_Amount, CAST(0 AS MONEY) Payment_Amount
+FROM (SELECT Supplier_Id, Balance_Amount AS Payable_Amount, CAST(0 AS MONEY) Payment_Amount
 		FROM AP_Carry_Over
 		WHERE Tenant_Id = :tenant
 			AND TO_CHAR(Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Carry_Over_Year_Month AS DATE), 'YYYYMM')
@@ -81,7 +81,7 @@ DELETE FROM AR_Carry_Over WHERE Tenant_Id = :tenant AND TO_CHAR(Bill_Date, 'YYYY
 
 INSERT INTO AR_Carry_Over (Bill_Date, Tenant_Id, Customer_Id, Balance_Amount, Creator_User_Id)
 SELECT DATE_TRUNC('MONTH', CAST(:Carry_Over_Year_Month AS DATE)) + INTERVAL '1 MONTH', :tenant, Customer_Id, SUM(Receivable_Amount) - SUM(Receipt_Amount), :user
-FROM (SELECT Customer_Id, Balance_Amount, CAST(0 AS MONEY) Receipt_Amount
+FROM (SELECT Customer_Id, Balance_Amount AS Receivable_Amount, CAST(0 AS MONEY) Receipt_Amount
 		FROM AR_Carry_Over
 		WHERE Tenant_Id = :tenant
 			AND TO_CHAR(Bill_Date, 'YYYYMM') = TO_CHAR(CAST(:Carry_Over_Year_Month AS DATE), 'YYYYMM')

@@ -1985,7 +1985,7 @@
 		"Caption": "支付方式",
 		"Comment": "支付方式",
 		"MaxLength": 3,
-		"DefaultValue": "1",
+		"DefaultValue": "2",
 		"DbDataType": 14,
 		"DbPhysicalType": "INT2"
 	},

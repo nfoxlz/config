@@ -21,10 +21,10 @@ DO UPDATE SET Inventory_Quantity = Material_Inventory.Inventory_Quantity + EXCLU
     Available_Inventory_Piece = Material_Inventory.Available_Inventory_Piece + EXCLUDED.Available_Inventory_Piece;
 
 INSERT INTO Business_Account (Bill_Type, Bill_Detail_Id, Bill_Id, Sn, Tenant_Id, Bill_Date, Bill_Code, Manual_Code, Supplier_Customer_Id, Department_Id, Owner_Id, Material_Id,
-		In_Quantity, In_Unit, In_Packing_Size, In_Piece, In_Amount, Real_In_Amount, Input_Tax_Rate, In_Retail_Amount, Out_Cost_Amount,
+		In_Quantity, In_Unit, In_Packing_Size, In_Piece, In_Amount, Real_In_Amount, Input_Tax_Rate, In_Retail_Amount,
 		Creator_User_Id, Comment)
 	SELECT 102, D.Bill_Detail_Id, D.Bill_Id, D.Sn, B.Tenant_Id, B.Bill_Date, B.Bill_Code, B.Manual_Code, B.Supplier_Id, B.Department_Id, B.Owner_Id, D.Material_Id,
-		- D.Purchasing_Quantity, D.Purchasing_Unit, D.Purchasing_Packing_Size, - D.Purchasing_Piece, CAST(0 AS MONEY) - D.Purchasing_Amount, CAST(0 AS MONEY) - D.Real_Purchasing_Amount, D.Input_Tax_Rate, CAST(0 AS MONEY) - D.Retail_Amount, D.Cost_Amount,
+		- D.Purchasing_Quantity, D.Purchasing_Unit, D.Purchasing_Packing_Size, - D.Purchasing_Piece, CAST(0 AS MONEY) - D.Purchasing_Amount, CAST(0 AS MONEY) - D.Real_Purchasing_Amount, D.Input_Tax_Rate, CAST(0 AS MONEY) - D.Retail_Amount,
 		B.Creator_User_Id, D.Comment
 	FROM Procurement_Return_Bill B
 		INNER JOIN Procurement_Return_Bill_Detail D ON B.Bill_Id = D.Bill_Id
