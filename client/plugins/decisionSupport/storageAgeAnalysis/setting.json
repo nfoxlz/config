@@ -53,5 +53,12 @@
 			"TableName": "master",
 			"Format": "C2"
 		}
-	]
+	],
+	"ChartSettings": [
+		{
+			"Type": 1,
+			"ColumnNames": ["Cost_Amount"]
+		}
+	],
+	"YLabel": "成本金额"
 }

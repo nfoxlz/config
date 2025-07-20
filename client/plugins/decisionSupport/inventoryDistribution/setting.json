@@ -15,5 +15,12 @@
 			"Caption": "库存数量小计",
 			"TableName": "master"
 		}
-	]
+	],
+	"ChartSettings": [
+		{
+			"Type": 2,
+			"ColumnNames": ["Inventory_Quantity"]
+		}
+	],
+	"YLabel": "库存数量"
 }

@@ -10,14 +10,15 @@
 	<Grid>
 		<Grid.RowDefinitions>
             <RowDefinition Height="38"/>
-			<RowDefinition Height="115"/>
+			<RowDefinition Height="117"/>
 			<RowDefinition Height="*"/>
-			<RowDefinition Height="55"/>
+			<RowDefinition Height="60"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">
 			<controls:Navigator HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" VerticalAlignment="Top" CurrentPageNo="{Binding CurrentPageNo,Mode=OneWayToSource}" PageSize="{Binding PageSize,Mode=OneWayToSource}" RecordCount="{Binding RecordCount}" CurrentPageNoChangedCommand="{Binding QueryCommand}" PageSizeChangedCommand="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 			<Button Content="{DynamicResource QueryButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding QueryCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
+			<Button Content="{DynamicResource ChartButton}" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Command="{Binding ShowChartCommand}" Visibility="{Binding HasQueryAuthorition,Mode=OneTime}"/>
 		</StackPanel>
         <TextBlock TextWrapping="Wrap" Text="客 户 账 龄 分 析" Grid.Row="1" VerticalAlignment="Top" TextAlignment="Center" FontSize="24"/>
 		<ScrollViewer Margin="10,35,0,0" Grid.Row="1" VerticalScrollBarVisibility="Auto">

@@ -10,9 +10,9 @@
 	<Grid>
 		<Grid.RowDefinitions>
             <RowDefinition Height="38"/>
-			<RowDefinition Height="59"/>
+			<RowDefinition Height="61"/>
 			<RowDefinition Height="*"/>
-			<RowDefinition Height="55"/>
+			<RowDefinition Height="60"/>
 			<RowDefinition Height="Auto"/>
 		</Grid.RowDefinitions>
 		<StackPanel Orientation="Horizontal">

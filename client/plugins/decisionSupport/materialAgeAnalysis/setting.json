@@ -53,5 +53,12 @@
 			"TableName": "master",
 			"Format": "C2"
 		}
-	]
+	],
+	"ChartSettings": [
+		{
+			"Type": 1,
+			"ColumnNames": ["AR_Amount"]
+		}
+	],
+	"YLabel": "应收金额"
 }
